@@ -1,0 +1,35 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**images/**",
+          "**media/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "templates/material"
+    ],
+    "globalMetadata": {
+      "_appName": "Microsoft 365 Community Content",
+      "_appTitle": "Microsoft 365 Community Content",
+      "_enableSearch": true,
+      "pdf": false
+    }
+  }
+}

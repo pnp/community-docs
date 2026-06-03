@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Creating Useful Views for Lists &amp; Libraries | Microsoft 365 Community Content </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Creating Useful Views for Lists &amp; Libraries | Microsoft 365 Community Content ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../mm4m365logo-small.svg" alt="Microsoft 365 Community Content">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <label class="glyphicon glyphicon-search" for="search-query"></label>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+                
+                  <div class="contribution-panel mobile-hide pull-right">
+                      <a href="https://github.com/sympmarc/Community-Docs/blob/main/docs/articles/creating-useful-views-in-lists-libraries.md/#L1" title="Edit this page" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                  </div>
+  <h1 id="creating-useful-views-for-lists--libraries">Creating Useful Views for Lists &amp; Libraries</h1>
+
+[!include[content-disclaimer](includes/content-disclaimer.md)]<h2 id="all-items">All Items</h2>
+<p>As a SharePoint Site Owner, you benefit directly by having users who find the product <em>useful</em> with a good <em>user experience.</em> Some things you have control over  - navigation structure, page structure, content types, and List/Library Views. If you totally ignore what you have influence over, your users might perceive SharePoint as <em>something IT imposed on us</em>. If you lend a hand as Site Owner, you can change that perception. You can be the one who makes Lists/Libraries a joy to work in, a <em>useful</em> thing to work in.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Microsoft Lists is available both in SharePoint and on its own as the Microsoft Lists app.</p>
+</div>
+<p>You should lend a hand to your users by making List/Library default Views meaningful and useful from the start. Users can make their own Views, of course, but by showing them what a good View is like, you can empower them to work efficiently.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This article is left-to-right language focused - and should <strong>not</strong> be considered best practice for right-to-left languages (like Arabic or Hebrew).</p>
+</div>
+<ul>
+<li><a href="https://github.com/MicrosoftDocs/microsoft-365-community">Get involved and improve this open source article</a></li>
+<li><a href="/sharepoint/sites/plan-for-multilingual-sites">Multilingual SharePoint guidance from Microsoft</a></li>
+<li><a href="https://support.microsoft.com/office/create-multilingual-communication-sites-pages-and-news-2bb7d610-5453-41c6-a0e8-6f40b3ed750c">SharePoint Online Communication Sites and Pages</a></li>
+</ul>
+<h2 id="how-to-make-a-great-default-view">How to make a great default View</h2>
+<p>Set your users up for success when you help them create a List or Library: create an excellent default View. This is as much a UX (User eXperience) thought-process as it is a technical one. Your goal should always be to display only the necessary columns for a user in the default View. Here are the high-level steps to think about:</p>
+<ol>
+<li>Have a firm understanding of what a SharePoint View can do</li>
+<li>Think about <em>how</em> your users might work in the List/Library</li>
+<li>Think about the <em>quantity</em> of items/documents in play</li>
+<li>Think about the <em>devices</em> or platforms being used</li>
+<li>Understand and apply proven <em>UX principles</em> for laying out things on a screen.</li>
+<li>Make that default View!</li>
+</ol>
+<h2 id="understanding-listlibrary-view-capability">Understanding List/Library View capability</h2>
+<p>As a site owner, get yourself up to speed on <a href="https://support.microsoft.com/office/create-change-or-delete-a-view-of-a-list-or-library-27ae65b8-bc5b-4949-b29b-4ee87144a9c9">SharePoint List/Library View features and capabilities</a>. You should know how to show/hide columns, change the sort order, make multiple views, and how to add column choices to the filters pane.</p>
+<blockquote>
+<p><strong>SharePoint Designer Views:</strong>
+If someone told you to make a View in <em>SharePoint Designer</em>, years ago, this was a viable tool for customizing views, but SharePoint Designer is deprecated and will be unsupported in a few years. SharePoint Designer doesn't work with modern SharePoint views.</p>
+</blockquote>
+<p>You should also learn concepts like item/document View metadata filtering and grouping content.</p>
+<ul>
+<li><a href="https://support.microsoft.com/office/edit-a-list-view-in-sharepoint-15916903-e79a-423f-b4e2-02d37e1ff372">Overview of View creation</a></li>
+<li><a href="/microsoft-365/community/list-column-or-site-column-which-one-to-choose">List Column and Site column usage</a></li>
+</ul>
+<h2 id="how-will-your-users-use-this-view">How will your users <em>use</em> this View?</h2>
+<p>Ask this question: how will users use this View? Is it a document collaboration space? Is it a mini database filled with approval requests? Is it a data source for another application through SharePoint's REST services? Will <em>no humans</em> use ever use the List/Library, but must be supported and maintained? Is it the document repository of record, with lots of reading but few updates?</p>
+<p>By taking a beat and thinking about the <em>tasks</em> your users will perform, you'll get a head start on making a useful View.</p>
+<h2 id="how-many-items-are-in-this-listlibrary">How many items are in this List/Library?</h2>
+<p>It can be tough to know the answer to this up front, but once you've been a Site Owner for a few years, you'll get a feel for it. This question lends itself to thinking about performance, pagination in Classic (e.g., <em>1-30 of 3000 items</em>), folders in Libraries, Grouping content in a View, and data-driven views.</p>
+<p>Check the guide to handling Views where there is a lot of content: <a href="/microsoft-365/community/large-lists-large-libraries-in-sharepoint">Living Large with Large Lists and Large Libraries</a></p>
+<h2 id="where-are-you-users-accessing-this-view">Where are you users accessing this View?</h2>
+<p>As Site Owners or developers, we frequently have the privilege of modern equipment, fast connections, and wide-screen monitors. Ask yourself - will your users be accessing this View in mobile device with a small screen? In a low-bandwidth or disconnected area? On an underpowered netbook that's a decade old?</p>
+<p>Ask the question, then shrink your monitor down, and put your browser's Developer tools into 3G mode, or mobile simulator mode (Edge, Chrome, Firefox all do this) to simulate the experience. Speed of the user interface is a critical component of good UX, and something you can control in a View with careful planning.</p>
+<h2 id="apply-proven-user-experience-principles-to-page-layouts">Apply proven User Experience principles to page layouts</h2>
+<p>Of which there are many, and it's better to think of this as a spectrum rather than a strict technical guideline. For instance: <em>simple</em> is good, but <em>too simple</em> reduces functionality and comprehension. Only displaying the <em>Title</em> column is simple, but not showing the Modified date column might deny your user enough context to act.</p>
+<p>Think about:</p>
+<ul>
+<li><strong>Effective Visual Hierarchy</strong> - A View is mostly rows and columns, so hierarchy might not be the first thing that comes to mind. But it's there - left-to-right reading, column order (more important columns on the left) and relationship to the filters pane.</li>
+</ul>
+<p>Read more about hierarchy: <a href="https://xd.adobe.com/ideas/process/information-architecture/visual-hierarchy-in-ux-design/">Visual hierarchy in ux design</a></p>
+<ul>
+<li><strong>Use of color</strong> - With Column Formatting and View Formatting there are real opportunities to apply a plethora of color, icon, and font treatments to your default View. Use <em>sparingly</em> to deliver the most impact. If every column and row is colored in, the user can feel overwhelmed instead of informed.</li>
+</ul>
+<p>Coloring in rows of data delivers the most impact when its tied to a business goal and provides actionable information to your List/Library user.</p>
+<p>Read more about this:</p>
+<ul>
+<li><p><a href="/sharepoint/dev/declarative-customization/column-formatting">Column formatting</a></p>
+</li>
+<li><p><a href="/sharepoint/dev/declarative-customization/view-formatting">View formatting</a></p>
+</li>
+<li><p><strong>The F-shaped pattern</strong> is another classic User Experience principle that directly applies to List/Library Views. The most important, most actionable columns in your default View should be on the left and sorted by what-needs-attention towards the top. If you imagine a large letter F superimposed on the page, this will help you visualize it. User Experience Researchers have used eye tracking to record this phenomenon. Users are reading left-to-right and scanning quickly to find the information they need. Does your View support this?</p>
+</li>
+</ul>
+<p>Read more: <a href="https://uxplanet.org/f-shaped-pattern-for-reading-content-80af79cd3394">F-shaped pattern for reading content</a></p>
+<p>Here's how this eye-tracking might apply to a View. This graphic simulates the output of eye-tracking heatmap results. Red areas are scanned more thoroughly by your user than green.</p>
+<p><img src="images/creating-useful-views-in-lists-libraries/creating-useful-views-in-lists-libraries-f-shape.png" alt="Screenshot of SharePoint View with simulated heat map"></p>
+<h2 id="modern-listlibrary-views-the-filters-pane">Modern List/Library Views: The Filters Pane</h2>
+<p>The Filters Pane - available in any modern View - is the underrated biggest improvement to List/Library Views in SharePoint's user interface history. By adding context-aware <em>refiners</em> to the View, you're empowering your users to filter down rows quickly without needing to display ten extra columns in the view.</p>
+<p>As the Site Owner, you're doing your users a service by <em>pinning</em> choice and date columns to the Filters Pane, and maybe those columns from the default View. You'll need to instruct your users about the pane's existence, but if they've ever used SharePoint Search refiners or any shopping website before, they'll totally get it.</p>
+<h2 id="general-and-usually-correct-default-view-strategies">General and <em>usually-correct</em> default View strategies</h2>
+<p>Sometimes little-to-no UX research will be done, and sometimes you won't know how or where your List/Library will be used. These tips will help you establish a good default View that applies in most cases:</p>
+<ul>
+<li><p><strong>Title column on the left</strong> side of the view (same with <em>Name</em>, if it's a Library). Maybe the most left you can, but not in the middle or the right. Give users a target to click on where they're looking.</p>
+</li>
+<li><p><strong>In a browser, zero percent of users want to scroll horizontally</strong> even though it's super easy to three-finger horizontal swipe on your brand-new state-of-the-art developer-grade laptop track pad. Use the Filters Pane instead. Or create a secondary View that shows more columns.</p>
+</li>
+<li><p><strong>In a Modern View, Item Count (Pagination) is often ignored</strong> in favor of infinite scrolling. This comes at performance tradeoff at your user's expense. Additional rows are loaded and rendered dynamically as the user scrolls. Displaying <em>fewer</em> columns in your View can increase perceived scrolling speed. Smooth scrolling is what your users want in a View. Let the filters pane work for you.</p>
+</li>
+<li><p><strong>Sort Modified date descending</strong> and display the Modified date column. This provides the context of <em>freshness</em> for a given List/Library's View. In many cases, the user's needs to act on the most recent item in the list, like approving a travel expense or reviewing a document update.</p>
+</li>
+<li><p><strong>Default view probably doesn't need a Group-By</strong> because it makes sorting/filtering weird. Easy for the user to lose context to <em>where</em> they are in the View, especially in Modern. Advise against Folders and Group-By <em>together</em> in nearly all cases.</p>
+</li>
+<li><p><strong>Display 1 or 2 extra metadata columns for the default View</strong> but more than that may be a higher cognitive load than what your users can handle. And more columns could lead to horizontal scrolling.</p>
+</li>
+<li><p><strong>You almost never need a Multiline column in a default View</strong> as it breaks up the flow of rows in your list by adding different heights of text. This can slow down your user's reading/scanning of content in the View.</p>
+</li>
+</ul>
+<hr>
+<p><strong>Principal author</strong>:</p>
+<p><a href="https://www.linkedin.com/in/PatrickDoran">Patrick M. Doran</a></p>
+<hr>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Maturity Model for Microsoft 365</span><br><span>Generated by <strong>DocFX</strong></span>
+            <img src="https://m365-visitor-stats.azurewebsites.net/pnpcoresdk/docs" alt="spacer">
+          </div>
+        </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+</html>

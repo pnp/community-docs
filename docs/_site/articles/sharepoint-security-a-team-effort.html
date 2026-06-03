@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Managing SharePoint Online Security: A Team Effort | Microsoft 365 Community Content </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Managing SharePoint Online Security: A Team Effort | Microsoft 365 Community Content ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../mm4m365logo-small.svg" alt="Microsoft 365 Community Content">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <label class="glyphicon glyphicon-search" for="search-query"></label>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+                
+                  <div class="contribution-panel mobile-hide pull-right">
+                      <a href="https://github.com/sympmarc/Community-Docs/blob/main/docs/articles/sharepoint-security-a-team-effort.md/#L1" title="Edit this page" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                  </div>
+  <h1 id="managing-sharepoint-online-security-a-team-effort">Managing SharePoint Online Security: A Team Effort</h1>
+
+[!include[content-disclaimer](includes/content-disclaimer.md)]
+<p>Security has always been an important topic, and even more nowadays.
+We want our users to securely access the environment, share files, and our IT team to sleep at night don't we?</p>
+<p>In this article, we'll look at the <em>most important settings</em> in Microsoft 365 to help you secure your SharePoint Online environment, and see how it involves more than SharePoint administrators!</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Details on how to configure each settings is out of scope of this article, but links to the official Microsoft documentation will be provided whenever possible.</p>
+</div>
+<h2 id="tenant-settings">Tenant settings</h2>
+<p>This should be the <strong>first</strong> place to go before even getting the users into SharePoint. But unfortunately, most of the time the default settings remain untouched, and users start using the platform.</p>
+<p>There are a few tenant settings to pay attention to however. <strong>Sharing</strong> settings are <em>extremely</em> important. If left to default, they can have dramatic consequences and lead to data breaches. So let's start with this setting.</p>
+<h3 id="sharing-settings">Sharing settings</h3>
+<p>To access the Sharing settings (<em>tenant level</em>), navigate to the SharePoint Admin Center, under <em>Policies</em>, select <em>Sharing</em>.</p>
+<p>The first thing that should make your heart beat faster at this stage is the slider for SharePoint and OneDrive being at the same level as the word &quot;Anyone&quot;. Isn't it a scary thing to read that <em><strong>users can share files and folders using links that don't require sign-in</strong></em> from the recipient? ANY recipient for that matter.</p>
+<p>So unless you're absolutely sure that you want to keep it that way, slide down one level immediately!</p>
+<p><img src="images%5Cmanaging-sharepoint-online-security-a-team-effort%5Cexternal-sharing-settings-default.png" alt="Image of the SharePoint sharing settings slider for SharePoint and OneDrive."></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You don't even need to know the exact company policy for OneDrive for Business at this point. The slider will also follow the SharePoint setting down one level. That's because you can't have a more permissive sharing policy for OneDrive for Business than you have for SharePoint.</p>
+</div>
+<p>When you know what the company policy is, you can choose the appropriate sharing settings between the following:</p>
+<ul>
+<li>New and existing guests</li>
+<li>Existing guests</li>
+<li>Only people in your organization</li>
+</ul>
+<h3 id="more-external-sharing-settings">More external sharing settings</h3>
+<p>Again, we have a few options available to help securing a bit more if necessary. You can select them all or not. But it's not because you can that you should!</p>
+<p><strong>Limit external sharing by domain</strong>: If selected, you can <em>Allow</em> or <em>Block</em> specific domains. A common scenario would be collaborating with specific customers or partners. This setting is available at the <em>tenant</em> level, as well as at the <em>site</em> level.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>From the moment you choose to &quot;Allow&quot; one or more domains, the other ones will be blocked. If you decide to &quot;Block&quot; one or more domains, the other ones will be allowed.</p>
+</div>
+<p><strong>Allow only users in specific Security Groups to share externally</strong>: If selected, members of the security group(s) will be the only ones capable of sharing externally.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This option is only available if your sharing settings (tenant) are set to &quot;New and Existing Guests&quot; or &quot;Anyone&quot;. For more information, please refer to the official Microsoft documentation: <a href="/sharepoint/manage-security-groups">Manage Security Groups</a>.</p>
+</div>
+<p><strong>People who use a verification code must reauthenticate after this many days [number of days]</strong>: New method where guests will authenticate using a one-time passcode for the number of days you configured.</p>
+<p>For more information about this feature, please refer to the official Microsoft documentation: <a href="/sharepoint/what-s-new-in-sharing-in-targeted-release">Secure external sharing recipient experience</a>.</p>
+<h2 id="site-settings">Site settings</h2>
+<p>SharePoint permissions... A vast topic, which most of the time, ends up in hair pulling and sleepless nights. And things are not getting better when sites are group-connected!</p>
+<p>See the permissions as <em>crescendo</em>. We start at the top (site level), and going down in a granular fashion, we can assign them to items (documents).</p>
+<h3 id="sharepoint-groups">SharePoint Groups</h3>
+<p>Regardless of the type of site (<em>group-connected or not</em>), when you create a site (<em>although it depends on the template</em>), by default 3x SharePoint groups are created:</p>
+<ul>
+<li>Owners</li>
+<li>Members</li>
+<li>Visitors</li>
+</ul>
+<p>Each (built-in) group has a <em>permission level</em> assigned to it. Use those ones first, but if they don't fit your needs, <strong><em>create a new SharePoint group</em></strong>, and assign your own custom permission level to it.</p>
+<p>You can copy a permission level, and select or deselect options for your requirements.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p><strong>Best Practice</strong>. If necessary, create your own SharePoint group and permission level, and avoid modifying or deleting the built-in groups. For more information, please refer to the official Microsoft documentation about the <a href="/sharepoint/default-sharepoint-groups">Default SharePoint Groups</a>.</p>
+</div>
+<h3 id="active-directory-ad-security-groups">Active Directory (AD) Security Groups</h3>
+<p>Most organizations already have an on-premises Active Directory, which is synchronized to Microsoft 365. When assigning permissions to a SharePoint site, the recommended approach is to <strong><em>add security groups to those SharePoint groups</em></strong>.</p>
+<p>However, it's entirely possible to create Microsoft 365 security groups directly in the admin center, and add those to your SharePoint site as well!</p>
+<p>Active Directory groups are different from SharePoint groups. When you create a SharePoint group, it will only be available within the site where it's been created.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p><strong>Best Practice</strong>. Add security groups to your SharePoint groups for easy management. Although it's possible to add users individually to sites, it will be harder to manage down the line.</p>
+</div>
+<h3 id="breaking-permission-inheritance">Breaking permission inheritance</h3>
+<p>Sometimes, you might need to share only a library or a document with a user, and not the entire site. That's where we can break permission inheritance. This is more a <em>Site Owner</em> responsibility, rather than for a site member responsibility.</p>
+<p>When you create a site and then start creating libraries, lists, and upload documents, all users accessing the site also have access to those libraries and documents. Remember the <em>crescendo</em> thing? 😉</p>
+<p>When breaking permission inheritance <em><strong>after</strong></em> creating the library or list, the default SharePoint groups (<em>i.e.: Owners, Members, Visitors</em>) will still appear under the <em>site permissions</em> settings.
+Add your account (to keep access), then <em>remove</em> the default SharePoint groups, and <em>add</em> whoever needs access to this library, which has now unique permissions.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you opt to break inheritance after creating the library or list <em>and</em> choose to leave the default permissions in place (<em>i.e.: Owners, Members, Visitors</em>), then changes at the parent level to those permissions will be rolled down to the child object.  For example, if you had a user with explicit permissions at the parent level when breaking inheritance, if you choose to leave that person in the list or library, then decide later to remove that person from the parent site, they will also be removed from the list or library with broken inheritance.</p>
+</div>
+<h3 id="site-sharing">Site Sharing</h3>
+<p>Site sharing will differ if your site is connected to a Microsoft 365 Group or not. The modern interface allows for a more comprehensive way to control permissions, and offers more granularity when sharing.</p>
+<h4 id="sites-not-connected-to-microsoft-365-groups">Sites <em>not connected</em> to Microsoft 365 groups</h4>
+<p>If your site is <em>not</em> connected to a group, then not much has changed really. Despite the modern interface, SharePoint aficionados will still recognize how to share a site, or be familiar with the <em>Advanced Permissions Settings</em>.</p>
+<p><img src="images%5Cmanaging-sharepoint-online-security-a-team-effort%5Cshare-site-not-connected.png" alt="Image of the Share site button on the Permissions pane."></p>
+<h4 id="sites-connected-to-microsoft-365-groups">Sites <em>connected</em> to Microsoft 365 groups</h4>
+<p>When connected to a group, you still have the possibility to <strong>share the <em>Site Only</em></strong>. Meaning that you don't have to share other resources associated with a Microsoft 365 group (<em>i.e.: shared mailbox, Planner, etc...</em>).</p>
+<p>If however, you wish to share the site as well as including the user(s) within all the resources provisioned with the Microsoft 365 group, then you need to select <strong>Invite people</strong> &gt;&gt; <strong>Add members to group</strong>. The choice is yours! 😉</p>
+<p><img src="images%5Cmanaging-sharepoint-online-security-a-team-effort%5Csharing-site-connected-to-group.png" alt="Image of the Invite people button on the SharePoint permissions pane with options to Add members to group or Share site only."></p>
+<h4 id="change-how-members-can-share">Change how members can share</h4>
+<p>Something else that might also mitigate how sharing occurs, is the possibility to select between the following 3 options:</p>
+<ul>
+<li><p>Site owners and members can share files, folders, and the site. People with Edit permissions can share files and folders.</p>
+</li>
+<li><p>Site owners and members, and people with Edit permissions can share files and folders, but only site owners can share the site.</p>
+</li>
+<li><p>Only site owners can share files, folders, and the site.</p>
+</li>
+</ul>
+<p>With regards to first 2 bullet points, the difference is that in option 2, only the site owner will be able to share the entire site. Members will not. I have to admit, it confused me at first, and I had to read it a few times!</p>
+<p>While the 3rd bullet point is self explanatory, we can imagine that it might prevent users from performing their tasks? What if you need to share something with a colleague or a customer? And this will also add more work for the site owner...</p>
+<p>This option could be used if your users are new to SharePoint, pending training for them to be more confident in sharing, or simply because you really want to prevent them from sharing.</p>
+<p><img src="images%5Cmanaging-sharepoint-online-security-a-team-effort%5Chow-members-can-share.png" alt="Image of the Site sharing settings pane."></p>
+<h3 id="access-requests">Access Requests</h3>
+<p>If you observed the screenshot above, we also had <em>Access Requests</em> turned on by default. What is this?</p>
+<p>This feature has been around for a while, and is better that the dreaded &quot;Access denied&quot; message with no possible interaction whatsoever! Although there is more configuration to be done in SharePoint on-premises, everything is ready to go in SharePoint Online!
+We don't have to worry about anything else than choosing who should receive those requests, add a custom message for the requestor, and review the pending requests.</p>
+<p>Two options for who should receive Access Requests:</p>
+<ul>
+<li>Site Owners</li>
+<li>Specific email</li>
+</ul>
+<p>To know more about how to configure Access Requests, have a look at the official Microsoft documentation: <a href="https://support.microsoft.com/office/set-up-and-manage-access-requests-94b26e0b-2822-49d4-929a-8455698654b3">Set up and manage access requests</a>.</p>
+<h2 id="other-security-features-to-consider">Other Security Features To Consider</h2>
+<h3 id="multi-factor-authentication-mfa">Multi-Factor Authentication (MFA)</h3>
+<p>The first that springs to mind, and not only related to SharePoint, is MFA to secure your identities. A few years back, we were only thinking about applying MFA to (at least) Global Admins, but really we recommend that it be applied on all accounts whenever possible.</p>
+<h3 id="security-and-compliance">Security and Compliance</h3>
+<p>After securing SharePoint as an environment, we'd also like to secure the <em>data</em> hosted in SharePoint, right?</p>
+<p>So we'll hear about <strong>Sensitivity labels</strong>, <strong>Retention labels and policies</strong>, <strong>Data Loss Prevention (DLP)</strong>, <strong>Sensitive info types</strong>... But where are those? Well, they are managed in the <em>Security and Compliance Center</em>.</p>
+<p>Should I <em>manage and create</em> those as a SharePoint Administrator? Probably not. This will require someone with permissions to the Security and Compliance center, as well as the knowledge to create labels and policies.</p>
+<p>Ideally, this should be directed by company requirements, thoughtfully planned, and carefully implemented.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Depending on your current Microsoft 365 licensing subscription(s), and the way features evolve quickly, please refer to the official Microsoft documentation: <a href="/purview/">Microsoft 365 compliance</a>_.</p>
+</div>
+<h3 id="devices-accessing-sharepoint-data">Devices Accessing SharePoint Data</h3>
+<p>More options are available within the SharePoint Online Admin Center, but may rely on an Azure subscription.</p>
+<p><img src="images%5Cmanaging-sharepoint-online-security-a-team-effort%5Caccess-control.png" alt="Image of the Access control settings."></p>
+<p>The following documentation is very interesting to help understand how Microsoft is protecting the SharePoint and OneDrive for Business data, as well as providing other links for your reference: <a href="/sharepoint/safeguarding-your-data">How SharePoint and OneDrive safeguard your data in the cloud</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>As we've seen throughout this article, SharePoint security is not only a matter of having SharePoint admin permissions. It definitely is a team effort where so many other roles are involved!</p>
+<hr>
+<p><strong>Principal author</strong>: <a href="https://www.linkedin.com/in/veronique-lengelle-48a71b31">Veronique Lengelle, MVP</a></p>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Maturity Model for Microsoft 365</span><br><span>Generated by <strong>DocFX</strong></span>
+            <img src="https://m365-visitor-stats.azurewebsites.net/pnpcoresdk/docs" alt="spacer">
+          </div>
+        </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+</html>

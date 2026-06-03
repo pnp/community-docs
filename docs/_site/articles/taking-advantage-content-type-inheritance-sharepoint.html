@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Taking Advantage of the Content Type Inheritance Model in SharePoint | Microsoft 365 Community Content </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Taking Advantage of the Content Type Inheritance Model in SharePoint | Microsoft 365 Community Content ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../mm4m365logo-small.svg" alt="Microsoft 365 Community Content">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <label class="glyphicon glyphicon-search" for="search-query"></label>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+                
+                  <div class="contribution-panel mobile-hide pull-right">
+                      <a href="https://github.com/sympmarc/Community-Docs/blob/main/docs/articles/taking-advantage-content-type-inheritance-sharepoint.md/#L1" title="Edit this page" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                  </div>
+  <h1 id="taking-advantage-of-the-content-type-inheritance-model-in-sharepoint">Taking Advantage of the Content Type Inheritance Model in SharePoint</h1>
+
+[!include[content-disclaimer](includes/content-disclaimer.md)]
+<p>Taking advantage of the Content Type hierarchy is an important part of a powerful information architecture, regardless whether you're working with documents, list items, pages, etc.</p>
+<p>Let's use this example to illustrate the points:</p>
+<p><img src="images/taking-advantage-content-type-inheritance-sharepoint/content-type-hierarchy.png" alt="Content Type Hierarchy"></p>
+<p>SharePoint gives us the <strong>Document</strong> Content Type &quot;out of the box&quot;. Every Document Library you create in SharePoint (assuming you don't use some fancy template) has the <strong>Document</strong> Content Type enabled for it. So, many people just start dumping their files into the Documents (aka Shared Documents) library with every file becoming a <strong>Document</strong> and then wonder why no magic is happening.</p>
+<p>In the example above, we have two <a href="https://www.dictionary.com/browse/interstice">interstitial</a> Content Types. (Interstitial - or interstices - means spaces between things.) We can create these interstitial Content Types, but never enable them in a Document Library; they generally only exist to create a strong content hierarchy.</p>
+<ul>
+<li><strong>Org Base Document</strong> - When you start setting up the information architecture in a tenant, it makes sense to create a Content Type like this, usually putting the name of the organization in place of &quot;Org&quot;. You may never touch this Content Type again after you create it, but it really comes in handy when someone says something like, &quot;let's add X to ALL our custom Content Types&quot;.</li>
+<li><strong>Contract</strong> - This is also a Content Type which we may not ever enable in a Document Library, but it allows us to search for Content Types which inherit from it.</li>
+</ul>
+<p>Most of the time, you'll want to create <strong>Org Base Document</strong> and <strong>Contract</strong> at the tenant level (in the Content Type Hub, via the Content Type Gallery in the SharePoint Admin Center). We use that enterprise level capability for Content Types which <em>may</em> be used in one or more sites. It gives us a central place to manage our information architecture - where it makes sense to do so. Since we're going to inherit from <strong>Org Base Document</strong> for all the custom <strong>Document</strong>-derived Content Types, we create it at the tenant level.</p>
+<p>When we set up a custom Content Type and inherit from an existing Content Type, there's a brilliant logic under the covers. The out of the box <strong>Document</strong> Content Type at the tenant level has its <code>ContentTypeId=0x0101</code>. <code>0x0101</code> represents a <strong>Document</strong> in every tenant. (See: <a href="/previous-versions/office/developer/sharepoint-2010/ms452896(v=office.14)">Base Content Type Hierarchy</a> for the full list of base Content Types in SharePoint.)</p>
+<p>When we create the <strong>Org Base Document</strong> Content Type in the Content Type Gallery, it gets a <code>ContentTypeId</code> which starts with <code>0x0101</code> and then has a unique GUID-like part. Here is an example full hierarchy tree for the Content Types with their <code>ContentTypeIds</code> in a tenant. (Your actual <code>ContentTypeIds</code> will vary.)</p>
+<table>
+<thead>
+<tr>
+<th>Content Type</th>
+<th>Inherits from</th>
+<th>ContentTypeId</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Item</td>
+<td>[System]</td>
+<td><code>0x01</code></td>
+</tr>
+<tr>
+<td>Document</td>
+<td>Item</td>
+<td><code>0x0101</code></td>
+</tr>
+<tr>
+<td>Org Base Document</td>
+<td>Document</td>
+<td><code>0x0101002FBDBE6A1A315F438E41F10681463A61</code></td>
+</tr>
+<tr>
+<td>Contract</td>
+<td>Org Base Document</td>
+<td><code>0x0101002FBDBE6A1A315F438E41F10681463A6101</code></td>
+</tr>
+<tr>
+<td>Employment Contract</td>
+<td>Contract</td>
+<td><code>0x0101002FBDBE6A1A315F438E41F10681463A610101</code></td>
+</tr>
+<tr>
+<td>Real Estate Contract</td>
+<td>Contract</td>
+<td><code>0x0101002FBDBE6A1A315F438E41F10681463A610102</code></td>
+</tr>
+</tbody>
+</table>
+<p>As you can see, the inheritance model makes a lot of sense. Each inheritance appends something unique to the <code>ContentTypeId</code>. Once we've enabled the appropriate Content Types in Document Libraries (in this case), we can take advantage of the hierarchy using queries like:</p>
+<table>
+<thead>
+<tr>
+<th>Intent</th>
+<th>Query</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show me all my custom Content Type -based documents</td>
+<td><code>ContentTypeId:0x0101002FBDBE6A1A315F438E41F10681463A61*</code></td>
+</tr>
+<tr>
+<td>Show me all the Contracts</td>
+<td><code>ContentTypeId:0x0101002FBDBE6A1A315F438E41F10681463A6101*</code></td>
+</tr>
+<tr>
+<td>Show me all the Employment Contracts</td>
+<td><code>ContentTypeId:0x0101002FBDBE6A1A315F438E41F10681463A610101*</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Show me all the Contracts</strong> is the really powerful query here. By requesting all content with a <code>ContentTypeId</code> which <strong><em>starts with</em></strong> the <strong>Contract</strong> Content Type's <code>ContentTypeId</code> (That's what the asterisk does for us.), it doesn't matter if we create a new Content Type inheriting from <strong>Contract</strong>. The query will automagically continue to do what we want because the next Content Type inheriting from <strong>Contract</strong> will have a <code>ContentTypeId</code> of <code>0x0101002FBDBE6A1A315F438E41F10681463A610103</code>. In other words, the <code>ContentTypeId:0x0101002FBDBE6A1A315F438E41F10681463A6101*</code> query will just pick that new content up for us without any adjustment.</p>
+<p>Pair this good information architecture with the <a href="https://microsoft-search.github.io/pnp-modern-search/">PnP Modern Search</a> Web Parts, and you can build search-driven experiences which are highly specific, easily maintained, and extremely reliable. This is NOT &quot;just Google&quot;. It's you building solutions to match the user stories and content needs in YOUR organization. If you extrapolate from these examples, you probably can imagine some potential hierarchies in your information architecture which may help you create more powerful solutions for your end users.</p>
+<hr>
+<p>Principal author: <a href="https://www.linkedin.com/in/marcanderson">Marc D Anderson, MVP</a></p>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Maturity Model for Microsoft 365</span><br><span>Generated by <strong>DocFX</strong></span>
+            <img src="https://m365-visitor-stats.azurewebsites.net/pnpcoresdk/docs" alt="spacer">
+          </div>
+        </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+</html>

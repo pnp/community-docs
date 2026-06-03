@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Defining a Power Platform Environment Strategy | Microsoft 365 Community Content </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Defining a Power Platform Environment Strategy | Microsoft 365 Community Content ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../mm4m365logo-small.svg" alt="Microsoft 365 Community Content">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <label class="glyphicon glyphicon-search" for="search-query"></label>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+                
+                  <div class="contribution-panel mobile-hide pull-right">
+                      <a href="https://github.com/sympmarc/Community-Docs/blob/main/docs/articles/defining-a-power-platform-environment-strategy.md/#L1" title="Edit this page" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                  </div>
+  <h1 id="defining-a-power-platform-environment-strategy">Defining a Power Platform Environment Strategy</h1>
+
+<h2 id="what-is-a-power-platform-environment">What is a Power Platform environment?</h2>
+[!include[content-disclaimer](includes/content-disclaimer.md)]
+<p>The Power Platform is Microsoft’s answer to the growing need in business for a way to build and customize professional-grade business solutions quickly, with the ability to connect to over 200 data sources including, SharePoint Online, Azure SQL, Twitter and more.</p>
+<h2 id="what-type-of-environments-are-there">What type of environments are there?</h2>
+<p>Environments are containers that administrators can use to manage apps, automation, connections, and other assets; along with permissions to allow organization users to use the resources.</p>
+<p>There are multiple types of environments. The type indicates the purpose of the environment and determines its characteristics.</p>
+<h2 id="why-is-the-default-environment-special">Why is the Default Environment special?</h2>
+<p>A single default environment is automatically created by Power Apps for each tenant and shared by all users in that tenant. Whenever a new user signs up for Power Apps, they're automatically added to the Maker role of the default environment.</p>
+<p>The default environment is created in the region closest to the default region of the Microsoft Entra tenant.
+There is specific guidance for the Default environment to call out because of its unique nature:</p>
+<ul>
+<li>It’s automatically created with the first user in the region closest to the Microsoft Entra tenant</li>
+<li>New users that sign up for Power Apps are automatically added to the Maker role</li>
+<li>Users are not automatically added to the Environment Admin role</li>
+<li>The default environment can’t be deleted, but you can rename it – e.g., Personal Productivity (do it now, if you haven't!)</li>
+</ul>
+<h2 id="why-do-i-need-to-define-a-strategy">Why do I need to define a strategy?</h2>
+<p>Developing an environment strategy means configuring environments and other layers of data security (DLP) in a way that supports the productive development in an organization, while securing and organizing resources.</p>
+<p>If you want to follow application lifecycle management (ALM) principles, you'll need separate environments for app development and production. Although you can perform basic ALM with only separate development and production environments, it's recommended that you also maintain at least one test environment that's separate from your development and production environments.</p>
+<h3 id="environment-scenarios">Environment scenarios</h3>
+<ul>
+<li>Scenario 1 - The ‘Out of the Box’, default environment.</li>
+<li>Scenario 2 - Scenario 1 + Dedicated departmental environments</li>
+<li>Scenario 3 - Scenario 2 + Dedicated application environments</li>
+<li>Scenario 4 - Multi-Tenant ALM environment separation.</li>
+</ul>
+<h3 id="scenario-1--personal-productivity-default-environment">Scenario 1 – Personal Productivity (default environment)</h3>
+<p><img src="images/defining-a-power-platform-environment-strategy/Scenario01-Personal-Productivity.png" alt="Personal Productivity Approach."></p>
+<p>Uses include: Personal Productivity Apps and Flows, Custom SharePoint Lists and Library forms.</p>
+<h3 id="scenario-2--departmental">Scenario 2 – Departmental</h3>
+<p><img src="images/defining-a-power-platform-environment-strategy/Scenario02-DepartmentEnvironments.png" alt="Departmental Approach."></p>
+<p>Uses include: Personal Productivity Apps and Flows, Custom SharePoint Lists and Library forms and dedicated department environments.</p>
+<h3 id="scenario-3--departmental-and-application">Scenario 3 – Departmental and Application</h3>
+<p><img src="images/defining-a-power-platform-environment-strategy/Scenario03-ApplicationEnvironments.png" alt="Departmental and Application Approach."></p>
+<p>Uses include: Default environment, dedicated department environments and a dedicated environment(s) for a single application.</p>
+<h3 id="scenario-4--multi-tenant-alm-approach">Scenario 4 – Multi-Tenant ALM Approach</h3>
+<p><img src="images/defining-a-power-platform-environment-strategy/Scenario04-Multi-Tenant.png" alt="Multi-Tenant ALM Approach."></p>
+<p>Uses include: Separating Power Platform environments across physical tenants. Could be used to separate Production, Staging and Development environments, or could be used for geo-location reasons.</p>
+<h2 id="recommendations--best-practices">Recommendations / Best Practices</h2>
+<p>Based on successful experience with other customer engagements, below is a list of additional recommendations that can help make managing environments easier.</p>
+<ul>
+<li>Assign your admins the Power Platform service admin or Dynamics 365 service admin role.</li>
+<li>Restrict the creation of net-new trial and production environments to admins</li>
+<li>Rename the default environment to ‘Personal Productivity’</li>
+<li>Provision a new Production environment for non-personal apps/flows</li>
+<li>Define and implement your DLP policies for your environments</li>
+<li>When establishing a DLP strategy, you may need multiple environments for the same department</li>
+<li>When establishing your Power Platform environment strategy, based upon your licensing, you may find that you need to provision environments without a Dataverse (previously called Common Data Service) database and also use DLP policies to restrict the user of premium connectors.</li>
+<li>Establish a process for requesting access or creation of environments</li>
+<li>Dev/Test/Production environments for specific business groups or application</li>
+<li>Individual-use environments for Proof of Concepts and training workshops</li>
+<li>Use a service account to deploy production solutions</li>
+<li>Reduce the number of shared development environments</li>
+<li>Share resources with Microsoft Entra Security Groups.</li>
+</ul>
+<h2 id="further-reading">Further Reading</h2>
+<p><a href="/power-platform/admin/environments-overview">Microsoft documentation</a></p>
+<hr>
+<p><strong>Principal author</strong>: <a href="https://www.linkedin.com/in/aaron-rendell/">Aaron Rendell</a></p>
+<hr>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Maturity Model for Microsoft 365</span><br><span>Generated by <strong>DocFX</strong></span>
+            <img src="https://m365-visitor-stats.azurewebsites.net/pnpcoresdk/docs" alt="spacer">
+          </div>
+        </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+</html>

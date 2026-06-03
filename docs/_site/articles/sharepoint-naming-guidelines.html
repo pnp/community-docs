@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SharePoint Naming Guidelines | Microsoft 365 Community Content </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SharePoint Naming Guidelines | Microsoft 365 Community Content ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../mm4m365logo-small.svg" alt="Microsoft 365 Community Content">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <label class="glyphicon glyphicon-search" for="search-query"></label>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+                
+                  <div class="contribution-panel mobile-hide pull-right">
+                      <a href="https://github.com/sympmarc/Community-Docs/blob/main/docs/articles/sharepoint-naming-guidelines.md/#L1" title="Edit this page" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                  </div>
+  <h1 id="sharepoint-naming-guidelines">SharePoint Naming Guidelines</h1>
+
+[!include[content-disclaimer](includes/content-disclaimer.md)]
+<p>This article describes some useful guidance in naming artifacts such as sites, lists, columns and content types; this helps to avoid issues later with either technical limits, adoption and best practice.</p>
+<p>The article uses an example: an HR department requiring a SharePoint site with a set of libraries and metadata; from this, a set of examples uses this scenario.</p>
+<h2 id="basics">Basics</h2>
+<h3 id="avoid-highly-generalized-words">Avoid highly generalized words</h3>
+<p>When naming artifacts, it is most helpful to be descriptive to the content that the artefact that is referring to on creation - this help users know what the site is for, what data they are expecting to populate, for example, avoid terms that are too generalized like &quot;stuff&quot;, &quot;other&quot;, &quot;information&quot;. These words don't mean anything to the user because it lacks specific meaning and invites users to overuse or place unexpected content into the artefact.</p>
+<h3 id="use-descriptions">Use descriptions</h3>
+<p>For artifacts, there is the option to include a description; this can provide the users with more information about the location they are storing data and the type of data you require them to complete.</p>
+<p>It might sound obvious, but this not often done, if the type of metadata isn't immediately apparent what kinds of information that might be stored, then these provide guidance to aid users to understand what this is for and what you expect them to complete - if possible provide an example.</p>
+<h2 id="column-naming">Column naming</h2>
+<p>Creating a column sets the following:</p>
+<ul>
+<li>Display name - when you enter a name, this is your input.</li>
+<li>Internal name - system reference to the column</li>
+<li>Multilingual alternatives for your display names.</li>
+</ul>
+<h3 id="display-names">Display Names</h3>
+<p>Display names are the visual name that users see when working with list items or documents via forms and views. When working with these columns, on top of the basic recommendations list above, consider the following:</p>
+<ul>
+<li>Be clear on what this column represents; you know what you want to capture as metadata, the user of the item may not.</li>
+<li>If you use abbreviations, expand the meaning in the description to ensure the user understands the data</li>
+<li>If the title refers to the data type of the information, ensure the column data type reflects this, e.g. Number of Widgets, the data type is number not string.</li>
+</ul>
+<h3 id="internal-names">Internal Names</h3>
+<p>In SharePoint columns, typically have multiple representations of their name, typically the Display Name and the Internal Name are the most commonly used.</p>
+<p>Internal names are set once at the point of creation; you cannot change them later. Additionally, Internal names encode special characters in your display name including spaces not in the same way as URLs, they use a combination of underscores and x0 numbers to represent the character, for example:</p>
+<p>e.g <strong>_x0020_</strong> for &quot; &quot; or <strong>_x003a_</strong> for &quot;:&quot;</p>
+<p>For example, &quot;HR Department&quot; would encode to &quot;HR_x0020_Department&quot;. While this isn't necessarily essential for the end-user to know, it is essential to bear in mind when working with CAML or making API calls, as most often these are used to reference fields.</p>
+<p>You can easily find out the internal name by editing an existing column and viewing the last parameter for the URL, e.g. &amp;Field=the_x0020_quick_x0020_brown_x0020_fox...</p>
+<p><img src="images/sharepoint-naming-guidelines/finding-internal-field.png" alt="Finding internal field"></p>
+<p>In classic interfaces, I often create the column without spaces and special characters to avoid the encoding, then rename to a friendly format. On creating lookup fields, there are some unavoidable encoding for the colon and spaces between the field</p>
+<p>Modern interfaces remove spaces when users with edit permissions add columns to lists or libraries.</p>
+<p>Internal names are generally limited to a specific length up to 32 characters in SharePoint. In SharePoint Online, it is possible to create site columns with internal names of length up to 256 characters, although the page for column creation supports only 255 characters in column name (if you include a special character like space, it will be encoded into 7 characters &quot;_x0020_&quot;, that way you can create internal name with more characters than the UI allows). Columns with full internal names up to 256 characters can be added to document libraries. Lists are limited to 32 characters and adding column with longer internal name will truncate the internal name. To avoid problems, it is best to keep the length of internal names up to 32 characters.</p>
+<h3 id="multilingual-display-names">Multilingual Display Names</h3>
+<p>Multilingual display names are stored as title resources within the field. Under the hood, this sets the title resource for the current language in which you created this column, e.g. Payroll ID.</p>
+<p>If you change your language preference by using the user profile service, to specify your preferred language and then rename the column, this sets this for that language. For example, in English Payroll ID becomes &quot;ID y gyflogres&quot; in Welsh, or &quot;ID de paie&quot; in French. Note: Bing Translator for illustration.</p>
+<p><img src="images/sharepoint-naming-guidelines/multilingual-fields.png" alt="Multilingual display names"></p>
+<h2 id="list-and-library-naming">List and Library Naming</h2>
+<p>With naming lists or libraries in the modern interface, be aware of the titles you are giving the libraries, for example, in the screenshot below, I have created a library called &quot;Finance, HR, combined strategic team collaboration area&quot;, there are a few factors to consider:</p>
+<ul>
+<li>The URL gets encoded to: &quot;Finance%20HR%20combined%20strategic%20team%20collaboration%20a&quot;</li>
+<li>Without the encoding:&quot;/sites/Team/<strong>Finance HR combined strategic team collaboration a</strong>/Forms/AllItems.aspx&quot;</li>
+<li>There is a maximum length for the URL part of the library to be: 62 characters</li>
+</ul>
+<p><code>*https://test.sharepoint.com/sites/Tean/Finance%20HR%20combined%20strategic%20team%20collaboration%20a/Forms/AllItems.aspx*</code></p>
+<p><img src="images/sharepoint-naming-guidelines/naming-libraries.png" alt="List and library names"></p>
+<p>When naming your libraries, points to consider:</p>
+<ul>
+<li>Using short names or setting titles with characters and spaces in mind: <strong>finance-hr-combined-strategic-team-collaboration-area</strong></li>
+<li>Remove any unnecessary or noise words such as area, team, combined; this keeps the URL shorter: <strong>finance-hr-strategic-collaboration</strong></li>
+<li>Once created, you can rename the title to be in the originally descriptive manner with a clean URL.</li>
+<li>URL length is a premium, your tenant organization name, site URL, library URL all lower the amount of URL space remaining for folders and document titles.</li>
+</ul>
+<hr>
+<p><strong>Principal author</strong>: <a href="https://www.linkedin.com/in/pkbullock">Paul Bullock</a></p>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Maturity Model for Microsoft 365</span><br><span>Generated by <strong>DocFX</strong></span>
+            <img src="https://m365-visitor-stats.azurewebsites.net/pnpcoresdk/docs" alt="spacer">
+          </div>
+        </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+</html>

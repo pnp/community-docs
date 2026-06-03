@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Should everyone create Teams - Low Code Provisioning solution | Microsoft 365 Community Content </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Should everyone create Teams - Low Code Provisioning solution | Microsoft 365 Community Content ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../mm4m365logo-small.svg" alt="Microsoft 365 Community Content">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <label class="glyphicon glyphicon-search" for="search-query"></label>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+                
+                  <div class="contribution-panel mobile-hide pull-right">
+                      <a href="https://github.com/sympmarc/Community-Docs/blob/main/docs/articles/should-everyone-create-teams.md/#L1" title="Edit this page" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                  </div>
+  <h1 id="should-everyone-create-teams-a-low-code-provisioning-solution">Should everyone create Teams? A Low Code Provisioning solution</h1>
+
+[!include[content-disclaimer](includes/content-disclaimer.md)]
+<p>This article shall shed a light on two aspects of Modern Workplace: Microsoft Teams Provisioning using a low-code solution while ensuring that Teams Owners are digitally literate enough to be responsible owners.</p>
+<p>Uncle Ben was right: With great power comes great responsibility. If we give users great tools with great power, we also need to make sure to properly skill them up. We also need a lean process to deal with common asks.</p>
+<p>Everyone wants to work with Teams, as it provides us the collaborative workplace we need to be able to work from anywhere. And with Teams comes the relatively new concept (at least for an end-user) of ownership. Owning a Team empowers users to determine how they want to collaborate, but we should also enable users to make wise decisions so they are literate enough to understand the implications.</p>
+<p>Just blocking Microsoft 365 Groups / Teams creation and having an established approval process owned by IT won't meet business needs. Your users will work around that and find shadow IT solutions. Yet allowing everyone to create Groups and Teams will lead to over adoption: too many Teams which should be channels, too many channels which should be chats.</p>
+<p>The key therefore is to balance these extremes.</p>
+<h2 id="solution-overview">Solution Overview</h2>
+<p><img src="images/should-everyone-create-teams/solution-overview.png" alt="Solution overview chart containing the information found in the following paragraph."></p>
+<p>A user asks a chatbot for a new Team in natural language. A Power Automate flow picks up this information and checks if the user is already in a Microsoft Entra security group called Educated Users. If the owner to be is already a member in this Educated Users security group, a second Power Automate flow gets the manager's approval and provisions the team. If the user is not a member of this group, the user will be invited for training and testing.</p>
+<p>If the user passes the tests, he/she will be added to the group of Educated Users (which means that for the next Team request, he/she doesn't need to pass a test again) and the second flow gets the manager's approval and provisions the Team.</p>
+<p>If the user doesn't pass the test OR if the manager doesn't approve, notifications will be sent and the process ends.</p>
+<h2 id="what-we-need-to-build-before-we-do-the-chatbot">What we need to build before we do the Chatbot</h2>
+<ul>
+<li>2 Security Groups in Microsoft Entra ID: Educated Users and Uneducated Users</li>
+<li>Events for training in a calendar</li>
+<li>Form for training session invitations in Microsoft Forms</li>
+<li>Flow to send session invitations</li>
+<li>Form to test users</li>
+<li>Flow to log tests in a SharePoint list</li>
+<li>SharePoint list to calculate the result with a few calculated columns</li>
+<li>SharePoint list to log all teams requests</li>
+</ul>
+<p><a name='2-security-groups-in-azure-ad'></a></p>
+<h3 id="2-security-groups-in-microsoft-entra-id">2 Security Groups in Microsoft Entra ID</h3>
+<p>Go to portal.azure.com, click on GROUPS and then on NEW GROUP. Give the group names like &quot;Educated&quot; and &quot;Uneducated&quot;.  Assign your users to the groups. By default, all users should be in the group of Uneducated Users.</p>
+<h3 id="form-for-training-session-invitations-in-microsoft-forms">Form for training session invitations in Microsoft Forms</h3>
+<p>Go to forms.microsoft.com and set up a form to ask which training sessions the user wants to attend.</p>
+<h3 id="flow-to-send-session-invitations">Flow to send session invitations</h3>
+<p>Go to <a href="https://make.powerautomate.com">make.powerautomate.com</a> and create a new flow without a template. Use the &quot;When a new response is submitted&quot; trigger from Forms, then the  &quot;Get the response details&quot; of the form add a filter query to get the right event from the calendar, then update the event by adding the user to it.</p>
+<p><img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-flow-session-invitation.png" alt="Image of session invitation flow."></p>
+<h3 id="form-to-test-users">Form to test users</h3>
+<p>Forms is able to do surveys (there are no correct answers) and quizzes (there ARE correct answers). Unfortunately, you can't use the score of a quiz in Power Automate to see if a user has passed the test. Therefore, create a normal survey and use a SharePoint list to calculate the result of the test.</p>
+<h3 id="sharepoint-list-to-calculate-the-result-with-a-few-calculated-columns">SharePoint list to calculate the result with a few calculated columns</h3>
+<p>Create a new list in SharePoint with these columns:</p>
+<p><img src="images/should-everyone-create-teams/demo-answers-to-quiz.png" alt="SP List columns."></p>
+<ul>
+<li>Title</li>
+<li>Given answer 1</li>
+<li>Correct answer 1</li>
+<li>Given answer 2</li>
+<li>Correct answer 2</li>
+<li>is answer 1 correct</li>
+<li>is answer 2 correct</li>
+<li>Total score</li>
+<li>Result</li>
+</ul>
+<p>For the calculated columns enter the following information in the <strong>Formula</strong> box.</p>
+<p><img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-SP-List-results.png" alt="SP List results."></p>
+<ul>
+<li><strong>is answer 1 correct:</strong> =IF([Given answer 1])=[Correct answer 1],&quot;5&quot;,&quot;0&quot;)</li>
+<li><strong>is answer 2 correct:</strong> =IF([Given answer 2])=[Correct answer 2],&quot;5&quot;,&quot;0&quot;)</li>
+<li><strong>Total score:</strong> =[is answer 1 correct]+[is answer 2 correct]</li>
+<li><strong>Result:</strong> =IF[Total score]&lt;10,&quot;not educated&quot;,&quot;educated&quot;)</li>
+</ul>
+<p>Choose <strong>Number</strong> as the data type for the first three, and <strong>Single line of text</strong> as the data type for Result.</p>
+<h3 id="flow-to-log-tests-in-a-sharepoint-list">Flow to log tests in a SharePoint list</h3>
+<p>This Power Automate flow creates items in our SharePoint list. Go to <a href="https://make.powerautomate.com">make.powerautomate.com</a> and click TEMPLATES, search for the &quot;Record form responses in SharePoint&quot; template.</p>
+<h3 id="sharepoint-list-to-log-teams-requests">SharePoint list to log Teams requests</h3>
+<p>Create a new list and add columns Teamname, Description, Owner, Privacy, Status, etc.</p>
+<h2 id="chatbot-in-power-virtual-agents">Chatbot in Power Virtual Agents</h2>
+<p>We will now:</p>
+<ul>
+<li>create a  ChatBot in Power Virtual Agent (PVA)</li>
+<li>create a Power Automate flow that's called from PVA</li>
+<li>create a 2nd Power Automate flow to provision a Team based on the information we got out of the first flow</li>
+<li>add our bot as an App to Teams to publish it</li>
+</ul>
+<h3 id="create-a-bot-in-power-virtual-agent">Create a Bot in Power Virtual Agent</h3>
+<p>Go to <a href="https://powerva.microsoft.com">Power Virtual Agents</a> to create a new bot. Create a new topic and enter some trigger phrases. Don't try to be too formal: the chatbot supports natural language understanding powered by LUIS.</p>
+<p>Outline the conversation in the Authoring Canvas. Ask all the questions we need to have answered to provision a Team like: team name, description, owner, and visibility. You can also ask for the first members or channel names. Save all inputs as Variables and give them easily recognizable names like VarOwner or VarTeamName.</p>
+<h3 id="a-flow-thats-called-from-pva">A flow that's called from PVA</h3>
+<p>Click on the + sign to create the next node after your last question / message in Power Virtual Agent and click on CALL AN ACTION and then CREATE A FLOW</p>
+<p>The PVA template will open up in a new browser tab. Save this template with a new name.</p>
+<p><img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-flow-from-pva.png" alt="flow from pva"></p>
+<p>Initialize your variables for all the information the user gives us so we can provision the team: team name, description, privacy, owner, members and first channel.</p>
+<p><img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-flow-initialize-vars.png" alt="flow initialize vars"></p>
+<p>After we took care of all variables we need to check the group membership of our owner.</p>
+<p>The CHECK GROUP MEMBERSHIP action returns the string of the Group ID if a user is a member of the group and will return NULL if the user isn't member of that group.</p>
+<p><img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-flow-check-membership.png" alt="flow check membership"></p>
+<p>Expression: <code>empty(null)</code></p>
+<p>If he/she is in the educated group, we can just log the request in the SharePoint list we already prepared.</p>
+<p><img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-flow-create-item.png" alt="flow create item"></p>
+<p>If the user is still in the Uneducated Group, we need to invite him/her to a training and test him/her (and wait a bit so he/she can complete this).</p>
+<p><img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-flow-invite.png" alt="flow invite"></p>
+<p>To invite the user to the training and link him/her to the test, we can use Adaptive Cards. If you never used Adaptive Cards before, just go to <a href="https://adaptivecards.io/designer">Adaptive Cards</a>, select MICROSOFT TEAMS as host applications and replace the text of one of the samples with your text in the visual editor. Below, the Designer auto generates some JSON for you — copy-paste this into a POST YOUR OWN ADAPTIVE CARD AS A FLOW BOT TO A USER action.</p>
+<p>This is how our card looks then:</p>
+<p><img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-flow-AC.png" alt="flow Adaptive Cards"></p>
+<p>The clickable buttons link directly to the forms for training sessions (remember, we already built a flow to invite users automatically!) and the quiz (yet again, our flow logs the answers and SharePoint calculates the result for us!)</p>
+<p>Now we need to know if the user passed the test:</p>
+<p><img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-get-tested-user.png" alt="get tested user"></p>
+<p>If the user passes the test, he/she will be added to the Educated Group and we log the request in SharePoint. If the user doesn't pass, we will just send notifications and end the process.</p>
+<p><img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-flow-log-request.png" alt="flow log request"></p>
+<h3 id="create-a-2nd-flow-to-provision-a-team-based-on-the-information-we-got-out-of-the-first-flow">Create a 2nd flow to provision a Team based on the information we got out of the first flow</h3>
+<p><img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-provisioningflow.png" alt="provisioning flow"></p>
+<p><strong>Microsoft Graph</strong>
+Power Automate doesn't provide an action &quot;Create a Team&quot;. Therefore, we will call Microsoft Graph to create teams, add members, create channels, and a lot more, but we first need to authenticate to make this magic happen.</p>
+<p><a name='register-an-app-in-azure-ad'></a></p>
+<h3 id="register-an-app-in-microsoft-entra-id">Register an app in Microsoft Entra ID</h3>
+<p>Go to portal.azure.com and click on APP REGISTRATIONS, and click NEW REGISTRATION. Give it a name and save the ID of your tenant and the ID of our App (Client) After that, click on API PERMISSIONS (use APPLICATION) and select MICROSOFT GRAPH. We need to add the <code>Group.Read.Write.All</code> permission and grant admin consent for that as well.
+<img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-Application.png" alt="Application"></p>
+<p>To make it work, we also need an App Secret. Please, save this. In this minimal viable product, I just saved it in a variable, better to use Key Vault for that. Regardless where we store the App Secret: You only have ONE chance to save it, as soon as you leave this blade, you can't see it anymore.</p>
+<h3 id="this-is-what-you-need-to-do-in-the-2nd-flow-in-power-automate">This is what you need to do in the 2nd flow in Power Automate</h3>
+<p>Your trigger is WHEN A NEW ITEM IS CREATED (remember, the PVA flow will end with this action, so basically, the PVA flow kicks off our second flow).</p>
+<p>Now we need to initialize the following variables:</p>
+<p><img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-2ndflow-initialize-vars.png" alt="initialize variable"></p>
+<ul>
+<li>Tenant ID, App ID, App Secret are strings and we get all these IDs out of the app registration of the previous step</li>
+<li>Group ID is a string as well but is empty for now</li>
+<li>I was so tired of typing the Graph URL over and over that I put it into a var as well — this is optional</li>
+<li>We will later need the MailNickname to provision the Team.Mailnickname is the Displayname of the Team WITHOUT spaces. Use the replace expression: <code>replace(DISPLAYNAME,&quot; &quot;,&quot;&quot;)</code> which just means, replace all spaces with nothing.</li>
+</ul>
+<h3 id="managers-approval">Manager's Approval</h3>
+<p>We will again create an Adaptive Card for this:</p>
+<p><img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-2ndflow-managers-approval.png" alt="managers approval"></p>
+<p>Depending on the outcome we let Microsoft Graph create first a group and then update it to a team or we will end the process if the manager doesn't approve. Here is what happens if the Outcome is not Approved:</p>
+<p>We update our SharePoint list (status is now rejected) and we post another Adaptive Card to our user to inform him/her and terminate the process.</p>
+<p><img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-2ndflow-managers-approvalNO.png" alt="managers-approval with outcome not approved"></p>
+<p>If the Outcome of the Approval is Approved, we need to update our List as well and add an HTTP Call to first create a Group:</p>
+<p><img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-2ndflow-managers-approvalYES.png" alt="managers approval with outcome approved"></p>
+<p>As we do not only want a Microsoft 365 Group but also a Team based on that group, we need the Group ID. To get this ID (remember, we initialized an empty var for that already!), we need the parse JSON action and set our Group ID var to that value:</p>
+<p><img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-2ndflowparsejson.png" alt="parse json"></p>
+<p>Now it's time to use another two HTTP calls for creating the Team and adding the channel:</p>
+<p><img src="images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-2ndflowupdateteam.png" alt="flow to update a team"></p>
+<p>Please keep in mind to expand the SHOW ADVANCED OPTIONS and enter all authentication information as shown in the Create a group step. Now update your SharePoint list (status is no created) and inform your user with another Adaptive Card in Teams:</p>
+<h3 id="publish-our-bot--add-it-as-an-app-in-teams">Publish our Bot &amp; add it as an App in Teams</h3>
+<p>To publish your Bot, just click on PUBLISH in PVA and choose Microsoft Teams as Channel. Copy the APP ID and open App Studio in Teams, where you can create apps. Paste in this App ID and fill in Name, Description, and some links for your privacy statement and terms of use. As valid Domain use token.botframework.com. Download your app as a package and then install it from Teams App Catalogue.</p>
+<p>This is our result as a gif:</p>
+<p><img src="images/should-everyone-create-teams/provisionbot.gif" alt="provision bot"></p>
+<p><strong>Coming back to the purpose of solutions like this:</strong></p>
+<p>The goal is to enable users and to give them great powers! We now have an easily maintainable solution for IT and a very lean process for the business side of a company to request common asks. We are more efficient as we only need to involve human working time if needed. We don't need to spend lots of time to make users adopt this system as the interface is easy to understand even for users who are not that tech-savvy, plus we have a good chance to narrow the historical gap between business and IT. It's a #BetterTogether story.</p>
+<p>If you don't like the chatbot approach, you can also work with a request form in Microsoft Forms or with Power Apps if you prefer another UI.</p>
+<h2 id="a-few-words-on-licensing">A few words on licensing</h2>
+<p>Licensing for this solution isn't covered by Microsoft 365 E3 or E5 subscription:</p>
+<ul>
+<li>The HTTP connector is a Premium connector and requires therefore a Power Automate Standalone Plan <a href="/power-platform/admin/powerapps-flow-licensing-faq">Learn more about Power Platform licensing.</a></li>
+<li>Power Virtual Agents needs to be purchased separately, <a href="https://powervirtualagents.microsoft.com/pricing/">more info here</a></li>
+<li>If you use a Power Apps Canvas App instead of Power Virtual Agents, you will still need a Standalone License because of the HTTP connector.</li>
+</ul>
+<hr>
+<p><strong>Principal author</strong>: <a href="https://www.linkedin.com/in/luisefreese/">Luise Freese</a></p>
+<hr>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Maturity Model for Microsoft 365</span><br><span>Generated by <strong>DocFX</strong></span>
+            <img src="https://m365-visitor-stats.azurewebsites.net/pnpcoresdk/docs" alt="spacer">
+          </div>
+        </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+</html>

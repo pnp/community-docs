@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Using Shared Channels (Teams Connect) for External Collaboration | Microsoft 365 Community Content </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Using Shared Channels (Teams Connect) for External Collaboration | Microsoft 365 Community Content ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../mm4m365logo-small.svg" alt="Microsoft 365 Community Content">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <label class="glyphicon glyphicon-search" for="search-query"></label>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+                
+                  <div class="contribution-panel mobile-hide pull-right">
+                      <a href="https://github.com/sympmarc/Community-Docs/blob/main/docs/articles/using-shared-channels-for-external-collaboration.md/#L1" title="Edit this page" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                  </div>
+  <h1 id="using-shared-channels-teams-connect-for-external-collaboration">Using Shared Channels (Teams Connect) for External Collaboration</h1>
+
+[!include[content-disclaimer](includes/content-disclaimer.md)]
+<p>One of the most exciting <a href="https://techcommunity.microsoft.com/t5/microsoft-teams-blog/what-s-new-in-microsoft-teams-microsoft-ignite-2021/ba-p/2118226">announcements</a> from <strong>Ignite 2021</strong> was that of <strong>Shared Channels (Microsoft Teams Connect)</strong> which seemingly promised to finally resolve the considerable friction involved with cross-tenant collaboration (collaborating with other organizations using Microsoft 365). The idea of Shared Channels was simple, yet powerful. Instead of moving between Tenants to access information, allow for that same information to be available within your home tenant! Now that we've been able to see it in action in the Public Preview, what do we think? Has it realized the hype from last year?</p>
+<h2 id="what-are-shared-channels">What Are Shared Channels</h2>
+<p>At its simplest, a Shared Channel is essentially a 'collaboration space' that can be re-used in multiple places. Because it is reused, it implies that it can be accessed by different users than those who are in the Team. Only members of the Shared Channel can access it.</p>
+<p>There are a few ways these channels can be re-used:</p>
+<ol>
+<li><strong>Reused in multiple Teams across tenants</strong> (this article) so that users from multiple organizations can work together in the same 'space' without needing to switch tenants.</li>
+<li><strong>Reused in multiple Teams in the same tenant</strong> (<a href="using-shared-channels-for-external-collaboration.html">see this article for details</a>) so that users from multiple Teams can work together in the same space without needing access to the same Teams</li>
+</ol>
+<h2 id="shared-channel-limitations">Shared Channel Limitations</h2>
+<p>While Shared Channels offer most of the same functionalities available within other channels, there are a few features that are not supported, including:</p>
+<ul>
+<li>Only Microsoft Entra work or school accounts are supported for external participants. <strong>Guests cannot be added to Shared Channels (see <a href="https://support.microsoft.com/office/guests-and-shared-channels-in-teams-612de4ce-e7a3-4579-b086-bb8ff9f2d11e">here</a>).</strong></li>
+<li>Shared channels support tabs except for Stream, Planner, and Forms.</li>
+<li>Line of business (LOB) apps, bots, connectors, and message extensions are not supported.</li>
+<li>You cannot remove a shared channel from the parent team within which it was first created</li>
+<li>When you create a team from an existing team, any shared channels in the existing team won't be copied over.</li>
+<li>Notifications from shared channels are not included in missed activity emails.</li>
+<li>No Loop Components</li>
+<li>Not supported in Class Teams</li>
+</ul>
+<p>For more details see <a href="/microsoftteams/shared-channels">Shared channels in Microsoft Teams</a>.</p>
+<h2 id="potential-benefits-for-external-collaboration">Potential Benefits for External Collaboration</h2>
+<p>Shared Channels promised to resolve a list of common challenges with effective collaboration between organizations, including:</p>
+<ul>
+<li><strong>No more painful tenant switching</strong>: By seeing cross-tenant channels as Shared Channels within our own environment, the lines between organizations become blurred and work can take place unhindered</li>
+<li><strong>Avoid over-sharing information</strong>: By allowing for privacy of content at the channel level, we avoid the risk of users seeing content elsewhere within the Team and Microsoft365 Group.</li>
+<li><strong>Reduce Team proliferation</strong>: Instead of creating a long list of barebones and shallow Teams, merely to support a sharing across organizations, we can now facilitate fewer but 'architecturally deeper' Teams</li>
+<li><strong>Improve visibility of information and reduce duplication of content</strong>: By allowing for centralized channels, we can reduce and eliminate channels created for the same purposes but spread across multiple teams, and reduce them with a single source of truth which also simplifies the management and monitoring of information within the channel</li>
+</ul>
+<p><img src="images/using-shared-channels-for-external-collaboration%5Csharedchannels1_1.png" alt="Shared Channel Benefits"></p>
+<h2 id="potential-challenges">Potential Challenges</h2>
+<p>Without getting into the technical details, Teams Connect (Shared Channels) relies on something called Azure B2B Direct Connect, which is different than B2B Collaboration used for External Collaboration (Guests). The big difference is that this requires organizations to trust one another's security (essentially to 'federate' identities) in order for this feature to be available.</p>
+<p>The key portion here is that B2B Direct Connect requires <strong>a mutual trust relationship between two Microsoft Entra organizations</strong> to allow access to each other's resources. Both the resource organization and the external organization need to mutually enable B2B Direct Connect in their cross-tenant access settings. While this may not seem like the end of the world, it does seem counter to the well-known concept in Cyber Security of Zero Trust, especially its well-known adage 'never trust, always verify.'</p>
+<p><img src="images/using-shared-channels-for-external-collaboration%5Csharedchannels1_2.png" alt="Shared Channel Mutual Trust"></p>
+<p>A more 'trusting' security stance may be possible for organizations with subsidiaries, or companies that all operate under shared ownership, we feel this is going to be a massive challenge for most organizations, especially those with strict security policies. This is hugely disappointing and we've heard this sentiment echoed by many clients and partners with whom we've discussed the topic.</p>
+<h2 id="how-to-set-it-up">How To Set It Up</h2>
+<ol>
+<li>Access Microsoft Entra ID &gt; Identity Governance &gt; Cross-tenant Access Settings</li>
+<li>Add an organization to enable B2B Direct Connect</li>
+<li>Find an organization by domain or Azure ID</li>
+<li>Setup Default Inbound/Outbound Settings  (Host Tenant)</li>
+<li>Have other tenant admin perform these steps for their organization (Recipient Tenant)</li>
+<li>Setup Shared Channel (Host Tenant)</li>
+<li>Send Channel Share Request (Host Tenant)</li>
+<li>Accept Shared Channel (Recipient Tenant) and select Team for it to reside in</li>
+<li>Approve Shared Channel Placement (Host Tenant)</li>
+</ol>
+<p><strong>The result:</strong></p>
+<p><img src="images/using-shared-channels-for-external-collaboration%5Csharedchannels1_3.png" alt="Shared Channel Result"></p>
+<p>Note: This sample opened up bi-directional sharing for all users in both organizations. Microsoft allows further granular controls on B2B direct connect and many additional security settings.</p>
+<hr>
+<p><strong>Principal author</strong>: <a href="https://www.linkedin.com/in/dfrancoeur/">David Francoeur</a></p>
+<hr>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Maturity Model for Microsoft 365</span><br><span>Generated by <strong>DocFX</strong></span>
+            <img src="https://m365-visitor-stats.azurewebsites.net/pnpcoresdk/docs" alt="spacer">
+          </div>
+        </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+</html>

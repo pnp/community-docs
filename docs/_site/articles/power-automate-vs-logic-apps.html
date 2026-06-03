@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Power Automate vs Logic Apps | Microsoft 365 Community Content </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Power Automate vs Logic Apps | Microsoft 365 Community Content ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../mm4m365logo-small.svg" alt="Microsoft 365 Community Content">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <label class="glyphicon glyphicon-search" for="search-query"></label>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+                
+                  <div class="contribution-panel mobile-hide pull-right">
+                      <a href="https://github.com/sympmarc/Community-Docs/blob/main/docs/articles/power-automate-vs-logic-apps.md/#L1" title="Edit this page" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                  </div>
+  <h1 id="power-automate-vs-logic-apps">Power Automate vs Logic Apps</h1>
+
+[!include[content-disclaimer](includes/content-disclaimer.md)]<h2 id="what-are-these-services">What are these services</h2>
+<p>Power Automate and Azure Logic Apps are workflow services that can automate your processes, business, or system and integrate with Microsoft and 3rd party services with over 300 connectors. These powerful services are designed to get you going quickly, building the workflow between business services providing that familiarity without having the steep learning curve.</p>
+<p><strong>Power Automate</strong> provides a user-friendly and focused experience within Office 365 that can easily get end-users going once assigned an appropriate license.</p>
+<p><strong>Azure Logic Apps</strong> provide a user-friendly designer surface similar to Power Automate with the option to build complex integration solutions, utilise advanced development tools, DevOps and monitoring, if required.</p>
+<p>Both options aim to significantly reduce the effort and quickly build and automate processes between services, allowing you to focus on higher-value tasks.</p>
+<h2 id="highlight-key-differences-between-logic-apps-and-power-automate">Highlight key differences between Logic Apps and Power Automate</h2>
+<p>Whilst Power Automate is built on top of Azure Logic Apps, there are differences in terms of the environments they are used from, e.g. Office 365 and Azure, which provides unique features and optional methods of construction. Here are some of the following key differences:</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Power Automate</th>
+<th>Logic Apps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Focus</td>
+<td>End Users and Makers in Office 365, Users of Microsoft Power Platform Solutions</td>
+<td>IT Pros, Developers, Admins using Office 365 and Azure Services</td>
+</tr>
+<tr>
+<td>Licensing Model*</td>
+<td>Per-User License in Office 365</td>
+<td>Consumption-Based or Fixed Pricing Model via an Azure Subscription</td>
+</tr>
+<tr>
+<td>Flow Creation</td>
+<td>Web-Based Designer, Web and Mobile UI</td>
+<td>Visual Studio, JSON Definition and Web-Based Designer</td>
+</tr>
+<tr>
+<td>Restricting Connectors</td>
+<td><a href="/power-platform/admin/wp-data-loss-prevention">Data Loss Prevention</a></td>
+<td><a href="/azure/logic-apps/block-connections-connectors">Azure Policy</a></td>
+</tr>
+<tr>
+<td>Error Handling</td>
+<td>Flow Checker - providing a list of errors within the Flow</td>
+<td>Save Failed - highlighting errors</td>
+</tr>
+<tr>
+<td>Trigger Types</td>
+<td>Automated, Instant, Scheduled, UI Flow, Business Process</td>
+<td>HTTP (Automated), WebHook, Scheduled, HTTP Call (Manual)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>*Check out the license plan details for each of the services, this article only serves as a guide not pricing information.</p>
+</blockquote>
+<p>For a detailed comparison, check out: <a href="/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs#compare-microsoft-power-automate-and-azure-logic-apps">Compare Power Automate and Azure Logic Apps</a></p>
+<h2 id="what-tools-you-can-use-to-build-each-of-them">What tools you can use to build each of them</h2>
+<p>Focusing on the Microsoft options, there are a variety of tools that can be used to create your Flows within both of the services.</p>
+<h3 id="web-based-designer-tool">Web-Based Designer tool</h3>
+<p>Applies to: <strong>Power Automate</strong> and <strong>Logic Apps</strong></p>
+<p>Both tools have a rich web-based design tool to author the Flows, connect to services and monitor their usage. For example, the experience offers:</p>
+<ul>
+<li>Design Canvas for adding triggers (what starts your Flow), connectors (the services you integrate with)</li>
+<li>Expression editor for advanced manipulation of input/output values</li>
+<li>Flow Checker - these are presented differently but inform you that the Flow you have created contains an error that needs to be rectified before saving.</li>
+<li>History and Connector status  - after a Flow run provides useful information to see what information passed through a Flow</li>
+</ul>
+<p>Since both tools have this, learning Power Automate can be easily transferrable to Logic Apps if your requirements are better suited in the other product.</p>
+<p><strong>Power Automate - web based designer</strong>
+<img src="images%5Cpower-automate-vs-logic-apps%5Cpower-automate-example.png" alt="Power Automate Web Designer."></p>
+<p><strong>Azure Logic Apps - web based designer</strong>
+<img src="images%5Cpower-automate-vs-logic-apps%5Cazure-logic-app-example.png" alt="Azure Logic Apps - web based designer"></p>
+<p>Power Automate flows created before September 2020 can be exported to Logic Apps. If you are working with the Azure Portal it will require some knowledge of JSON, or for a friendlier experience using Visual Studio, check out the docs to consider your approach: <a href="/azure/logic-apps/export-from-microsoft-flow-logic-app-template">Export flows from Power Automate and deploy to Azure Logic Apps</a></p>
+<h3 id="mobile-app">Mobile App</h3>
+<p>Applies to: <strong>Power Automate</strong></p>
+<p>For iOS and Android, there is a Power Automate app that can allow you to build Flows, quickly and control existing Flow settings. The app includes:</p>
+<ul>
+<li>a designer surface that will enable you to add and edit actions</li>
+<li>create from templates</li>
+<li>manage existing flows - if you want to quickly create a Flow on the move</li>
+<li>there isn't an expression builder or the ability to add parallel branches.</li>
+</ul>
+<p><img src="images%5Cpower-automate-vs-logic-apps%5Cmobile.jpg" alt="Mobile view of Power Automate."></p>
+<h3 id="visual-studio">Visual Studio</h3>
+<p>Applies to: <strong>Logic Apps</strong></p>
+<p>Visual Studio is an enterprise grade integrated development environment that allows you to create cloud, ASP.NET C#, VB, Visual J#, Windows Forms, Windows Presentation Foundation apps even classic SharePoint On-Premises Farm &amp; Sandbox solutions.</p>
+<p>Visual Studio supports working with Azure solutions, including Logic Apps, that allows you to connect to a subscription and provides a logic app editor experience.</p>
+<p>For further information on editing Logic apps with Visual Studio, please refer to <a href="/azure/logic-apps/manage-logic-apps-with-visual-studio">Manage logic apps with Visual Studio</a>.</p>
+<h3 id="visual-studio-code">Visual Studio Code</h3>
+<p>Applies to: <strong>Logic Apps</strong></p>
+<p>Visual Studio Code is a free and open-source code editor with wide-range support for programming languages with IntelliSense, extensions to select the tools you work with extending the functionality of the tool as best fits the project you are working on.</p>
+<p><img src="images%5Cpower-automate-vs-logic-apps%5Cexample-visual-studio-code.png" alt="Visual Studio Code."></p>
+<p>You can install the extension (Azure Logic Apps for Visual Studio Code) from the Marketplace - <a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-logicapps">Visual Studio Marketplace</a></p>
+<h3 id="visio">Visio</h3>
+<p>Applies to: <strong>Power Automate</strong></p>
+<p>Visio Plan 2 offers the feature to create Business Process Model and Notation (BPMN) diagrams and export for Power Automate.</p>
+<p>For more details of this feature, visit the Power Automate announcement for more information <a href="https://flow.microsoft.com/blog/export-visio-diagrams-to-microsoft-flow-is-now-generally-available/">Export Visio diagrams to Microsoft Flow is now generally available</a></p>
+<h2 id="getting-started-and-points-to-consider">Getting started and points to consider</h2>
+<h3 id="who-will-create-the-flows">Who will create the Flows</h3>
+<p>When considering Power Automate and Logic Apps, who will create them? Is this intended for staff to develop on-demand quick flows, or will you this integrate into a series of backend services, that your ICT service needs to ramp up on?</p>
+<h4 id="learning-power-automate">Learning Power Automate</h4>
+<p>For users and staff, there is a set of courses on <a href="/training/browse/?terms=Automate&amp;products=power-platform">Microsoft Learn training</a> if you want to know more about building flows to gain more in-depth knowledge about the usage of the services.</p>
+<h4 id="learning-azure-logic-apps">Learning Azure Logic Apps</h4>
+<p>For ICT or SME users looking to improve their knowledge, there is a set of courses on <a href="/training/browse/?products=azure&amp;terms=Logic%20Apps">Microsoft Learn training</a> if you want to know more about Logic Apps to gain a deeper understanding about the usage of the services and how they can integrate with a range of connectors.</p>
+<h3 id="consider-the-cost-of-connectors">Consider the cost of connectors</h3>
+<p>What services do you intend to connect with?, are they Office 365?, Azure or 3rd Party API.</p>
+<p>This is quite important to work out ahead of time as different connectors bear a &quot;Premium&quot; or &quot;Enterprise&quot; (in the case of Logic Apps) which affect the overall cost of running the workflow in your decision-making process.</p>
+<p>You may find that within your Office licenses you already have what you need to start building Flows with Power Automate - however for Premium connectors, additional licenses may be required.</p>
+<p>For Logic Apps, you can use the <a href="https://azure.microsoft.com/pricing/calculator/">Azure Calculator</a> to estimate the cost of your application. Bear in mind since Logic Apps act as a glue between services, ensure you include the cost of the services that the Logic Apps connect to, e.g. Azure Resources, Office 365, third-party APIs.</p>
+<h3 id="security">Security</h3>
+<p>Security is an essential factor with considering the usage of these services, as these can connect to a range of 3rd Party sources internally and externally, you may want to consider implementing a Data Loss Prevention policy or Azure Policy to restrict the usage of connectors.</p>
+<p>In both products, security should always be considered and determine an appropriate policy for your organization.</p>
+<hr>
+<p><strong>Principal author</strong> <a href="https://www.linkedin.com/in/pkbullock">Paul Bullock, MVP</a></p>
+<p>I invite authors with their knowledge on this topic to contribute to this article, sharing their experience.</p>
+<hr>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Maturity Model for Microsoft 365</span><br><span>Generated by <strong>DocFX</strong></span>
+            <img src="https://m365-visitor-stats.azurewebsites.net/pnpcoresdk/docs" alt="spacer">
+          </div>
+        </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+</html>

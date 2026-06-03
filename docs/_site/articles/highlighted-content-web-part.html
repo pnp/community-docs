@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Advanced Highlighted Content Web Part | Microsoft 365 Community Content </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Advanced Highlighted Content Web Part | Microsoft 365 Community Content ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../mm4m365logo-small.svg" alt="Microsoft 365 Community Content">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <label class="glyphicon glyphicon-search" for="search-query"></label>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+                
+                  <div class="contribution-panel mobile-hide pull-right">
+                      <a href="https://github.com/sympmarc/Community-Docs/blob/main/docs/articles/highlighted-content-web-part.md/#L1" title="Edit this page" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                  </div>
+  <h1 id="advanced-highlighted-content-web-part">Advanced Highlighted Content Web Part</h1>
+
+[!include[content-disclaimer](includes/content-disclaimer.md)]<h2 id="highlighted-content-web-part---tldr">Highlighted Content Web Part - tl;dr</h2>
+<ul>
+<li><p>The Highlighted Content Web Part (HCWP) is used for displaying content from one or more <em>buckets</em> – more than one list, library, or data source in a single place on a page.</p>
+</li>
+<li><p>It's an out of the box web part - style options are <em>Grid, List, Carousel,</em> and <em>Filmstrip.</em> This article assumes you're a site owner and not looking to custom code your own solutions.</p>
+</li>
+<li><p>The type of content - and where you query it from – change your HCWP configuration and filtering choices.</p>
+</li>
+<li><p>HCWP filtering capabilities are more complex than most other modern web parts. You can use <strong>KQL</strong>, <strong>CAML</strong>, and/or <strong>Managed Properties</strong> to filter and display specific results. We'll cover examples of that here.</p>
+</li>
+</ul>
+<hr>
+<p>As a site owner making pages for SharePoint or Teams, you understand the value of automatically rolling up content from multiple lists, libraries, and sites to display them on a page. Using built-in list or library web parts work fine... but your end users never put things in <em>just one place</em>. They're empowered to self-organize their content across multiple sites! The Highlighted Content Web Part can help here, automatically showing users the right content on a page, regardless of its physical location.</p>
+<blockquote>
+<p><strong>Modern pages, modern web parts</strong></p>
+<p>Site Owners may remember classic web part pages and their content rollup web parts. The Highlighted Content Web Part is the successor to the <em>Content Query</em> and <em>Content Search</em> web parts. The mental model is very similar, but HCWPs only work in modern pages.</p>
+</blockquote>
+<h2 id="what-should-i-learn">What should I learn?</h2>
+<p>To dig into the real power of the HCWP you'll need to increase your knowledge in key SharePoint areas and technologies. Here's the learning path you should traverse:</p>
+<ol>
+<li>HCWP fundamentals</li>
+<li>Site Columns</li>
+<li>Managed Properties and SharePoint Search</li>
+<li>KQL</li>
+<li>Maybe CAML (But, maybe you don't have to?)</li>
+</ol>
+<h3 id="1-fundamentals">1. Fundamentals</h3>
+<p>If you're new to the Highlighted Content Web Part you can start by reading Microsoft's documentation. In fact, even if you <em>have</em> used the HCWP before, this existing documentation is a must read.</p>
+<p><a href="https://support.microsoft.com/office/use-the-highlighted-content-web-part-e34199b0-ff1a-47fb-8f4d-dbcaed329efd">Use the Highlighted content web part</a></p>
+<p>This <em>Community Docs</em> article won't rehash what's already covered there.</p>
+<h3 id="2-learn-about-site-columns">2. Learn about Site Columns</h3>
+<p>Knowing what a Site Column is, and how it relates to SharePoint Search, will be important for setting up Managed Properties (the next step).</p>
+<p>Start your <em>Site Column</em> learning with these Microsoft Community Docs articles:</p>
+<ul>
+<li><p><a href="/microsoft-365/community/what-is-site-column">What is a Site Column</a></p>
+</li>
+<li><p><a href="/microsoft-365/community/list-column-or-site-column-which-one-to-choose">List Column or Site Column - Which one to choose?</a></p>
+</li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<p>It is fast and easy to make a new list or library column – but if there's a chance you think you'll need to filter by it with a HCWP, create that List Column into a <em>Site Column</em> instead. Taking an existing List Column and converting it to a Site Column can be a lot of manual work.</p>
+</div>
+<h3 id="3-managed-properties">3. Managed Properties</h3>
+<p>Beyond the basic filter options of the HCWP (like &quot;Title includes&quot; or &quot;content includes&quot; or dates), the HCWP allows more advanced filtering and sorting by a <em>Managed Property</em>.</p>
+<p>For the HCWPs, the Managed Property is one of two things:</p>
+<ol>
+<li>A built-in property, no search configuration required. <code>IsDocument</code> is an example - this one lets you include or exclude documents in a query. Another built-in Managed Property is <code>Author</code> which queries content based on the Microsoft 365 user who created (<em>Created By</em>) the object.</li>
+<li>A Site Column associated Managed Property - where a Site Column in a list or library is made available through SharePoint Search as a Managed Property. This requires some configuration.</li>
+</ol>
+<p>Managed Properties are available to filter and sort in HCWPs either through the regular filter interface or via the more customizable KQL and CAML interfaces. More on that later.</p>
+<p>Start your <em>Managed Property</em> learning with this Microsoft Community Docs article:</p>
+<ul>
+<li><a href="/microsoft-365/community/how-do-site-columns-become-managed-properties-thus-available-for-search">How do Site Columns Become Managed Properties for Search?</a></li>
+</ul>
+<p>And more here with Microsoft's documentation:</p>
+<ul>
+<li><a href="/sharepoint/manage-search-schema">Manage the search schema in SharePoint</a></li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Is your recently-configured <em>Managed Property</em> ready for HCWP filtering or sorting yet? In SharePoint Online, sometimes it takes a little while once you've mapped the Crawled Property to the Managed Property before that Managed Property is available. While you're waiting, test availability via regular SharePoint Search first. If you can search for results by a Managed Property in Search, you can filter content by that same property in your HCWP.</p>
+</div>
+<h3 id="4-using-kql-to-query-filter-and-sort">4. Using KQL to query, filter, and sort</h3>
+<p>Once you've added a HCWP to a page, you'll have to tell the web part <em>where</em> to look, and <em>what</em> to display. At first, the web part's basic filter and sort options seem like they should cover most situations. But as you progress further into more complex projects (and your users realize the capability displaying very specific content on a page) you, the site owner, may find yourself needing to build out HCWPs with Custom Queries using KQL (Keyword Query Language) .</p>
+<p>Good thing you set up all those <em>Managed Properties</em> from <em>Site Columns</em> already! KQL filtering and sorting is one of the payoffs for that work.</p>
+<p>KQL runs a search over a specific area of content and returns results in your HCWP.</p>
+<p>A very basic KQL query in a HCWP might look like:</p>
+<p><code>author:&quot;Patrick Doran&quot;</code></p>
+<p>While a more complex one might look like:</p>
+<p><code>LastModifiedTime&gt;=2021-06-01 AND LastModifiedTime&lt;=2022-04-26</code></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p><strong>Spacing counts</strong> – A space between a colon and a &quot; might return a very different result.</p>
+</div>
+<p>Start learning KQL by reading Microsoft's reference:</p>
+<ul>
+<li><a href="/sharepoint/dev/general-development/keyword-query-language-KQL-syntax-reference">KQL Syntax Reference</a></li>
+</ul>
+<h4 id="kql-pro-tips">KQL Pro Tips</h4>
+<ul>
+<li><p><strong>A <em>Path</em> to success</strong> – The <em>Path</em> property is built -in and can quickly narrow down scope if you know the list(s) and library(s) you want to get content from.</p>
+<p><code>Path:&quot;https://mytenantname.sharepoint.com/sites/HumanResources/Enrollment&quot;</code></p>
+<p>Narrow it down further with the built-in <em>Filetype</em> property:</p>
+<p><code>Path:&quot;https://mytenantname.sharepoint.com/sites/HumanResources/Enrollment&quot; AND Filetype:&quot;XLSX&quot;</code></p>
+</li>
+<li><p><strong>Many conditions</strong> – If you have a lot of conditions, wrap statements in parentheses to make readability easier and enforce what should be AND versus OR.</p>
+<p><code>(Author:&quot;Patrick Doran&quot; OR Author:&quot;Sally SharePoint&quot;) AND (Filetype:xlsx OR Filetype:docx)</code></p>
+</li>
+</ul>
+<h3 id="helpful-built-in-syntax-for-hcwps">Helpful built in syntax for HCWPs</h3>
+<p>Hopefully now you understand the <em>why</em> behind Managed Properties and KQL. Below are examples of helpful KQL search syntax terms that are all built into SharePoint Online (and probably are there for your SharePoint 2019 site). They're already configured and can save a lot of time in many HCWP scenarios.</p>
+<p>Use these to filter and sort your content:</p>
+<table>
+<thead>
+<tr>
+<th>Managed Property</th>
+<th>Type</th>
+<th>Note</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>IsDocument</code></td>
+<td>True or False</td>
+<td>Identifies if content is a Document or Page. List Items are are false here.</td>
+<td><code>IsDocument:&quot;True&quot;</code></td>
+</tr>
+<tr>
+<td><code>Filetype</code></td>
+<td>File extension</td>
+<td>An extension, like XLSX or DOCX or PDF</td>
+<td><code>Filetype:xlsx</code></td>
+</tr>
+<tr>
+<td><code>Author</code></td>
+<td>Someone's name, or the SharePoint property for the current user</td>
+<td>This more or less equates to the SharePoint 'Created By' field.</td>
+<td><code>Author:&quot;Tricia Teams&quot;</code> or <code>Author:{User.Name}</code></td>
+</tr>
+<tr>
+<td><code>Path</code></td>
+<td>A URL, or part of a URL</td>
+<td>It might be a URL of a specific list, library, or everything in the whole tenant. Note you cann use wildcards ('*') here and in other KQL queries.</td>
+<td><code>Path: https://mytenant.sharepoint.com/sites/*</code>.</td>
+</tr>
+<tr>
+<td><code>ContentType</code></td>
+<td>Text</td>
+<td>Any available Content Type that SharePoint Search can access</td>
+<td><code>ContentType: Document</code> or <code>ContentType: EnrollmentDocs</code></td>
+</tr>
+</tbody>
+</table>
+<p>There are many more built in Managed Properties you can use; these are just some of the most commonly useful ones.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>A <em>Find a managed property</em> search in the HCWP filter configuration panel will show you some of what's built in versus what's custom:
+<span class="mx-imgBorder">
+<img src="images/highlighted-content-web-part/hcwp04.png" alt="Screenshot of SharePoint Highlighted Content Web Part user interface, where the user has searched for a managed property in the configuration panel">
+</span>
+</p>
+</div>
+<h3 id="4-using-caml-to-query-and-filter">4. Using CAML to query and filter</h3>
+<p>If your HCWP is displaying content from a <em>specific document or pages library</em>, you can use CAML. If you've ever seen an XML file or RSS feed, CAML looks a lot like that.</p>
+<p>An example CAML statement to filter data in a HCWP might look like:</p>
+<pre><code class="lang-XML">&lt;Query&gt;
+  &lt;Where&gt;
+    &lt;Geq&gt;
+      &lt;FieldRef Name=&quot;Expires&quot;/&gt;
+      &lt;Value Type=&quot;DateTime&quot;&gt;
+        &lt;Today/&gt;
+      &lt;/Value&gt;
+    &lt;/Geq&gt;
+  &lt;/Where&gt;
+  &lt;OrderBy&gt;
+    &lt;FieldRef Name=&quot;Modified&quot;/&gt;
+  &lt;/OrderBy&gt;
+&lt;/Query&gt;
+</code></pre>
+<p>This is looking for a column called <em>Expires</em>, where the value is equal to <em>today or after</em> and its sort order is by Modified date.</p>
+<p>Start learning CAML via Microsoft's documentation:</p>
+<ul>
+<li><a href="/sharepoint/dev/schema/query-schema">Learn about CAML query schema</a></li>
+</ul>
+<hr>
+<div class="NOTE">
+<h5>Note</h5>
+<p><strong>CAML vs KQL: Which one do I use?</strong></p>
+<p>With two Custom Filter options for a Highlighted Content Web Part, picking one comes down to the type of data you're filtering. A HCWP scoped to a single list or Document/Pages library only lets you filter with CAML, while all other scopes let you filter with KQL.</p>
+<p>In many scenarios, KQL  <em>might be able to do everything you need,</em> and may be easier to write versus long, complex nested CAML queries.
+If you want to use KQL in a document library, just set the query to the site (rather than a particular library) and scope it with the <code>Path</code> managed property.</p>
+</div>
+<hr>
+<h2 id="real-world-examples">Real-world examples</h2>
+<p>The rest of this article will provide scenarios and tested examples to show you some possibilities.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Since this article is part of the <strong>Microsoft Community Docs</strong>, you're encouraged to contribute your own scenarios!
+Get started contributing here: <a href="https://github.com/MicrosoftDocs/microsoft-365-community">Microsoft Community Docs</a></p>
+</div>
+<h3 id="scenario-1-contract-documents-across-siloed-department-sites">Scenario 1: Contract documents across siloed department sites</h3>
+<p>In your organization, a new contract process required documents from different departments. The vendor qualification document sat in the <em>Quality</em> team, the contract review doc was with <em>Legal</em>, and the vendor initiation worksheet was with <em>Purchasing</em>. These documents lived in each department's own separate Communications Sites and needed to be presented in on a single page.</p>
+<p>This looks like a job for the Highlighted Content Web Part!</p>
+<p>Your libraries might be in sites like:</p>
+<ul>
+<li><code>https://mytenant.sharepoint.com/sites/Legal/Shared Documents/</code></li>
+<li><code>https://mytenant.sharepoint.com/sites/Quality/Shared Documents/</code></li>
+<li><code>https://mytenant.sharepoint.com/sites/Purchasing/Shared Documents/</code></li>
+</ul>
+<p>As the person setting up the HCWP:</p>
+<ul>
+<li>You'll use a HCWP to retrieve documents from 3 different sites in the same tenant. Each document will have a shared Site Column with a value applied. The HCWP's job is to return any documents with a matching value for this Site Column.</li>
+<li>You'll query based off a Site Column called &quot;Contracts&quot; and will be looking for a value of <em>Legal, Purchasing,</em> or <em>Qualifications</em></li>
+<li>You'll make sure the same <strong>Site Column</strong> is available in all three sites, in the three libraries.</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Adding the Site Column is probably easiest if you can do it the SharePoint Admin Center. Don't forget to publish it!</p>
+</div>
+<h4 id="setup-with-regular-filtering-not-a-custom-query">Setup with regular Filtering (not a Custom Query)</h4>
+<ol>
+<li><p>In your HCWP, set your Source to be <em>All Sites</em> or maybe a <em>Hub Site</em> if you're using one. You could also pick 'Selected Sites' if you're' sure the documents you want to show will only come from <em>Legal, Quality,</em> and <em>Purchasing.</em> libraries. Leave the <em>Type</em> as <em>Documents</em> and <em>Document Type</em> as <em>Any</em>.</p>
+</li>
+<li><p>Under Filter, you could pick <em>Title includes the words</em> and add one filter each for <em>Legal, Quality,</em> and <em>Purchasing</em> as long as those are the file titles. This option is a little riskier because someone could upload another file with those words in the title and they'd also appear in the web part.</p>
+<p>The safer call here is to use SharePoint metadata. Since you've already added the <em>Contracts</em> column as a Site Column, and flagged each file as wither <em>Purchasing, Legal,</em> or <em>Qualification</em>, let's use that instead.</p>
+</li>
+<li><p>In Site Settings, check to see if this column is already a Managed Property with a Crawled Property associated with it. Once that's done, head back to your page, edit your HCWP, and set the Filter values based on your Managed Property. You'll find it using the  word 'Contract' and the Managed Property Name will display soon. In these screen captures, we've added the three filters (of the same type, so they are <strong>OR</strong> not <strong>AND</strong>)</p>
+</li>
+</ol>
+<section class="row">
+<div class="column span">
+<p><span class="mx-imgBorder">
+<img src="images/highlighted-content-web-part/hcwp01.png" alt="Screenshot of SharePoint Highlighted Content Web Part, where content is filtered">
+</span>
+</p>
+</div>
+<div class="column span">
+<p><span class="mx-imgBorder">
+<img src="images/highlighted-content-web-part/hcwp02.png" alt="Another screenshot of SharePoint Highlighted Content Web Part, where content is filtered by the Contract property">
+</span>
+</p>
+</div>
+<div class="column span">
+<p><span class="mx-imgBorder">
+<img src="images/highlighted-content-web-part/hcwp03.png" alt="3rd of three screenshots of SharePoint Highlighted Content Web Part, where content is filtered by Contract Managed Property">
+</span>
+</p>
+</div>
+</section>
+<p>And that should be all you need to do. If you've uploaded and tagged your documents, added the right values to the Site Columns, and configured the Managed Properties correctly, you'll see three docs displaying in the web part.</p>
+<h4 id="setup-up-with-kql">Setup up with <em>KQL</em></h4>
+<p>Assuming you've set up Managed and Crawled properties for the <em>Contracts</em> column in SharePoint Admin center, you should now have a property like <em>ContractsOWSCHCS</em> (though yours might be named differently).</p>
+<p>In your HCWP, choose 'Custom Query' instead of 'Filter' and set the Source to be 'All Sites'. Now enter this in the Query text (KQL) field, and click Apply:</p>
+<p><code>isDocument=true AND (ContractsOWSCHCS: Legal OR ContractsOWSCHCS: Purchasing OR ContractsOWSCHCS: Qualification)</code></p>
+<p>Your HCWP should now show your three documents.</p>
+<h4 id="setting-up-with-caml">Setting up with <em>CAML</em></h4>
+<p>CAML is not supported in this scenario. As we're looking for documents across multiple sites. CAML only shows up as a HCWP custom filter option when you select 'A document library in this site' or 'A page library in this site' for the Query source.</p>
+<h3 id="scenario-2-showing-the-right-content-at-the-right-time">Scenario 2: Showing the right content at the right time</h3>
+<p>Another common scenario might be displaying Human Resources documents on an intranet Communication Site during annual enrollment. There are many supporting documents for medical, dental, vision, wellness, life insurance, etc that an employee might need to access. These benefits documents are changed each year at a specific go-live date for open enrollment, but the structure of the Benefits site generally stays the same.</p>
+<p>There is a short period of time where the current year and future year documents need to both be accessible as well.</p>
+<p>Using SharePoint metadata columns in libraries to indicate <em>benefit type</em> and <em>year</em> - paired with a HCWP - make for easy transitions as the HCWP filtering query just needs to be updated.</p>
+<p>In this scenario we'll assume:</p>
+<ul>
+<li>Our single HCWP will appear on a page in a Communications Site.</li>
+<li>A single SharePoint Document Library with extra two columns – a date one for <em>year</em>, and a choice one for <em>benefit type</em>.</li>
+<li>Since this is a formal process, you'll make a new Content Type and Site Columns up front.</li>
+<li>You, the site owner, will manually change the dates in the queries when enrollment season starts and ends.</li>
+</ul>
+<p>Scenario library setup:</p>
+<ol>
+<li>Create a library</li>
+<li>Create Content Type</li>
+<li>Create site columns for <em>Year</em> and <em>Benefit Type</em> columns and add those to your Content Type.</li>
+<li>Enable the new Content Type in the library. (This will also add your Site Columns.)</li>
+<li>In Site Collection Search, map the Crawled Properties to Managed Properties for both Site Columns. Pay special attention to the <em>Year</em> column, which needs to be a date/time Managed Property.</li>
+<li>Add documents to the library, and make sure you populate the <em>Benefit Type</em> and <em>Year</em> values.</li>
+<li>Go get a coffee or tea and wait for SharePoint Search to crawl your library and site columns.</li>
+</ol>
+<p>Your new library might look like:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Year</strong></th>
+<th><strong>Benefit Type</strong></th>
+<th><strong>Content Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dental for Annual Enrollment.docx</td>
+<td>1/1/2023</td>
+<td>Dental</td>
+<td>Enrollment</td>
+</tr>
+<tr>
+<td>Life Insurance Enrollment.pdf</td>
+<td>1/1/2022</td>
+<td>Life Insurance</td>
+<td>Enrollment</td>
+</tr>
+<tr>
+<td>Medical Insurance Enrollment Form.pdf</td>
+<td>1/1/2023</td>
+<td>Medical</td>
+<td>Enrollment</td>
+</tr>
+<tr>
+<td>Vision Enrollment Form.pdf</td>
+<td>1/1/2023</td>
+<td>Vision</td>
+<td>Enrollment</td>
+</tr>
+<tr>
+<td>Wellness Worksheet.xlsx</td>
+<td>1/1/2022</td>
+<td>Wellness</td>
+<td>Enrollment</td>
+</tr>
+</tbody>
+</table>
+<h4 id="setting-up-with-regular-filtering-not-a-custom-query">Setting up with regular Filtering (not a Custom Query)</h4>
+<p>Add your HCWP to the page, pick Filter instead of Custom query, and set your source to be the document library with your Content Type and Site Columns.</p>
+<p>Under <em>Filter</em>, search for the Enrollment Content type you made. Then add additional Managed Property filters for <em>Year</em> which is a Site Column you added. And because it's a date/time column, the HCWP will ask you to specify a range of time to filter. Before, After, or Between.</p>
+<p>In this case – set <em>Year</em> between 01/01/22 and 12/31/22. The HCWP will show only documents from that library for 2022.</p>
+<h4 id="setting-up-with-kql">Setting up with KQL</h4>
+<p>Add your HCWP and pick Custom Query, and set your source to be the entire site. (If you select Document Library, the HCWP will default to CAML).</p>
+<p>Your KQL query will look something like this:</p>
+<p><code>ContentType: &quot;Enrollment&quot; AND (EnrollmentType: &quot;Vision&quot; OR EnrollmentType: &quot;Dental&quot; OR EnrollmentType: &quot;Medical&quot;) AND (Year&gt;=2022-01-01 AND Year&lt;=2022-12-31)</code></p>
+<p>In this example, <code>ContentType</code> is a built in Managed Property that allows you to reference the Content Type you already associated with your library.</p>
+<h4 id="setting-up-with-caml-1">Setting up with CAML</h4>
+<p>Add your HCWP and set the scope to be this one document library. When you pick Custom Query, the interface will look a lot like the KQL syntax query, but it will specifically request you input CAML.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Valid CAML Query isn't trivial to write. There are a variety of 3rd party tools and plugins designed to connect with your SharePoint site and help you build out the query that'll work in your environment.</p>
+</div>
+<h3 id="scenario-3-showing-very-specific-personalized-list-items">Scenario 3: Showing very specific, personalized list items</h3>
+<p>Often in SharePoint you'll have a list that becomes a database – a source of truth for many users. Often there is some criteria – &quot;top 10 highest grants this month&quot; or &quot;All the grants issued in Hawaii&quot; – that really matter. Those can be put in a page using a HCWP.</p>
+<p>For our scenario, we have a large list (10k items) of grant applications that was imported from a spreadsheet. Customer wants to see cards on a page with just items <em>they've</em> created and just ones from their home territory of <em>Idaho</em>.</p>
+<h4 id="setting-up-with-regular-hcwp-filtering">Setting up with regular HCWP Filtering</h4>
+<p>This is probably the easiest approach. We'll use three filters to meet this customer's needs.</p>
+<p>Set source to <em>All Sites.</em> First filter with be using the built-in Managed Property of <code>Path</code>.</p>
+<section class="row">
+<div class="column span">
+<p><span class="mx-imgBorder">
+<img src="images/highlighted-content-web-part/hcwp05.png" alt="Screenshot of SharePoint Highlighted Content Web Part, where content is filtered by the Path">
+</span>
+</p>
+</div>
+<div class="column span">
+<p><span class="mx-imgBorder">
+<img src="images/highlighted-content-web-part/hcwp06.png" alt="Screenshot of SharePoint Highlighted Content Web Part, where content is filtered by the content Idaho">
+</span>
+</p>
+</div>
+<div class="column span">
+<p><span class="mx-imgBorder">
+<img src="images/highlighted-content-web-part/hcwp07.png" alt="Screenshot of SharePoint Highlighted Content Web Part, where content is filtered by user name">
+</span>
+</p>
+</div>
+</section>
+<h4 id="setting-this-up-with-caml">Setting this up with CAML</h4>
+<p>CAML won't work here – it only works for documents and pages.</p>
+<h4 id="setting-up-this-scenario-with-kql">Setting up this scenario with KQL</h4>
+<p>Add your HCWP and pick Custom Query and set your source to be the entire site. You'll now write KQL syntax that scopes the returned list items to the Path of your List, filters by any item that has the word 'Idaho&quot; in it, and only items where you've created or modified:</p>
+<p><code>(Path:https://mytenant.sharepoint.com/sites/DemoSite/Lists/Demo%20Grant%20List AND &quot;Idaho&quot; AND Author:{User.Name})</code></p>
+<hr>
+<h2 id="pro-hcwp-tips">Pro HCWP Tips</h2>
+<ul>
+<li>The built-in Managed Property <code>Path</code> has real power. It lets you specify scope all the way from a single list item to an entire tenant. No configuration required. With some wildcards and a little time, you can build some useful KQL to bring back content you want.</li>
+<li>If you <em>can</em> configure your Managed and Crawled Properties in the SharePoint admin center, you should.</li>
+<li>Once you get proficient at HCWPs, you might rely exclusively on Custom Queries with KQL for filtering. But if you <em>can</em> use the built-in filters under <em>Filter and Sort</em>, maybe you should? The next person coming along to update your web part might not have read this article and HCWP's built-in filters are a little easier to read if you're new.</li>
+<li>The built-in filtering guidance from Microsoft's documentation is worth remembering: &quot;<em>When you use multiple filters, your results will be based on <strong>OR</strong> operations for filters of the same type, and <strong>AND</strong> operations for filters of different types.</em>&quot;</li>
+<li>The <em>Trending</em> sort and filter pulls from OneDrive, too. That may/may not be what you want.</li>
+<li>If you want to enable Audience Targeting in your HCWP, you need to also enable it in the list/library first.</li>
+</ul>
+<h2 id="keep-reading">Keep Reading</h2>
+<p>The time you invest in learning the HCWP will help you in other areas of the Microsoft 365 platform, especially with SharePoint search. Keep learning:</p>
+<ul>
+<li><p><a href="https://joannecklein.com/2018/09/12/content-type-filters-in-modern-sharepoint/">Content Type Filters in Modern SharePoint</a> from Joanne Klein</p>
+</li>
+<li><p><a href="https://lightningtools.com/blog/modern-sharepoint-web-parts-highlighted-content-web-part">Modern SharePoint Web Parts: Highlighted Content Web Part</a> from Lightning Tools</p>
+</li>
+<li><p><a href="https://lightningtools.com/sharepoint/highlighted-content-web-part-KQL-caml">Highlighted Content Web Part Custom Query</a> from Lighting Tools</p>
+</li>
+<li><p><a href="https://sharepointmaven.com/6-ways-to-benefit-from-managed-properties-in-sharepoint-online/">Managed Properties in SharePoint Online</a> and <a href="https://sharepointmaven.com/crawled-vs-managed-properties-in-sharepoint-online/">Crawled vs Managed Properties in SharePoint Online</a> from SharePoint Maven</p>
+</li>
+<li><p><a href="https://www.spguides.com/sharepoint-online-highlighted-content/">SharePoint Online Highlighted Content Web Part</a> from SPGuides.com</p>
+</li>
+<li><p><a href="https://www.spguides.com/caml-query-builder/">CAML Query Examples in SharePoint</a> from SPGuides.com</p>
+</li>
+<li><p><a href="/microsoft-365/community/how-do-site-columns-become-managed-properties-thus-available-for-search">How Do Site Columns Become Managed Properties - Thus Available for Search</a> from Microsoft Community Docs</p>
+</li>
+<li><p><a href="/sharepoint/technical-reference/crawled-and-managed-properties-overview">Crawled and Managed Properties Overview</a> from Microsoft</p>
+</li>
+<li><p><a href="https://social.technet.microsoft.com/wiki/contents/articles/53252.sharepoint-how-to-display-a-list-of-sub-sites-on-a-modern-site-page.aspx">How to Display a list of sites on a Modern Web Part page</a> from TechNet</p>
+</li>
+<li><p><a href="https://www.techmikael.com/2014/03/s15e01-kql-basics.html">KQL Basics in SharePoint</a> from Mikael Svenson</p>
+</li>
+<li><p><a href="https://www.sharepointcafe.net/2015/06/caml-query-in-sharepoint.html">CAML Query Syntax in SharePoint</a> from SharePoint Cafe</p>
+</li>
+</ul>
+<hr>
+<p><strong>Principal author</strong>: <a href="https://www.linkedin.com/in/PatrickDoran">Patrick M. Doran</a>. Thanks to Emily Mancini for contributing scenario examples.</p>
+<hr>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Maturity Model for Microsoft 365</span><br><span>Generated by <strong>DocFX</strong></span>
+            <img src="https://m365-visitor-stats.azurewebsites.net/pnpcoresdk/docs" alt="spacer">
+          </div>
+        </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+</html>
