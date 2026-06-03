@@ -39,7 +39,7 @@ The first thing that should make your heart beat faster at this stage is the sli
 
 So unless you're absolutely sure that you want to keep it that way, slide down one level immediately!
 
-![Image of the SharePoint sharing settings slider for SharePoint and OneDrive.](images\managing-sharepoint-online-security-a-team-effort\external-sharing-settings-default.png)
+![Image of the SharePoint sharing settings slider for SharePoint and OneDrive.](images/managing-sharepoint-online-security-a-team-effort/external-sharing-settings-default.png)
 
 > [!NOTE]
 > You don't even need to know the exact company policy for OneDrive for Business at this point. The slider will also follow the SharePoint setting down one level. That's because you can't have a more permissive sharing policy for OneDrive for Business than you have for SharePoint.
@@ -120,7 +120,7 @@ Site sharing will differ if your site is connected to a Microsoft 365 Group or n
 
 If your site is _not_ connected to a group, then not much has changed really. Despite the modern interface, SharePoint aficionados will still recognize how to share a site, or be familiar with the _Advanced Permissions Settings_.
 
-![Image of the Share site button on the Permissions pane.](images\managing-sharepoint-online-security-a-team-effort\share-site-not-connected.png)
+![Image of the Share site button on the Permissions pane.](images/managing-sharepoint-online-security-a-team-effort/share-site-not-connected.png)
 
 #### Sites _connected_ to Microsoft 365 groups
 
@@ -128,7 +128,7 @@ When connected to a group, you still have the possibility to **share the _Site O
 
 If however, you wish to share the site as well as including the user(s) within all the resources provisioned with the Microsoft 365 group, then you need to select **Invite people** >> **Add members to group**. The choice is yours! 😉
 
-![Image of the Invite people button on the SharePoint permissions pane with options to Add members to group or Share site only.](images\managing-sharepoint-online-security-a-team-effort\sharing-site-connected-to-group.png)
+![Image of the Invite people button on the SharePoint permissions pane with options to Add members to group or Share site only.](images/managing-sharepoint-online-security-a-team-effort/sharing-site-connected-to-group.png)
 
 #### Change how members can share
 
@@ -146,7 +146,7 @@ While the 3rd bullet point is self explanatory, we can imagine that it might pre
 
 This option could be used if your users are new to SharePoint, pending training for them to be more confident in sharing, or simply because you really want to prevent them from sharing.
 
-![Image of the Site sharing settings pane.](images\managing-sharepoint-online-security-a-team-effort\how-members-can-share.png)
+![Image of the Site sharing settings pane.](images/managing-sharepoint-online-security-a-team-effort/how-members-can-share.png)
 
 ### Access Requests
 
@@ -185,7 +185,7 @@ Ideally, this should be directed by company requirements, thoughtfully planned, 
 
 More options are available within the SharePoint Online Admin Center, but may rely on an Azure subscription.
 
-![Image of the Access control settings.](images\managing-sharepoint-online-security-a-team-effort\access-control.png)
+![Image of the Access control settings.](images/managing-sharepoint-online-security-a-team-effort/access-control.png)
 
 The following documentation is very interesting to help understand how Microsoft is protecting the SharePoint and OneDrive for Business data, as well as providing other links for your reference: [How SharePoint and OneDrive safeguard your data in the cloud](/sharepoint/safeguarding-your-data).
 

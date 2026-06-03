@@ -61,13 +61,13 @@ It is important to note that some organizations are already using Viva Engage fo
 
 One issue we see with Shared Channels is just how confusing the whole experience seems to be for end-users. Firstly now users have a choice of 3 types of channels that they can create:
 
-![Shared Channel Challenges 1](images/using-shared-channels-for-internal-collaboration\sharedchannels2_1.png)
+![Shared Channel Challenges 1](images/using-shared-channels-for-internal-collaboration/sharedchannels2_1.png)
 
 This can be confusing as users rarely know the different channel type (Public vs Private) but now there is another one in the mix. This will require significant knowledge on behalf of users to understand the subtle difference.
 
 Also when sharing a Shared Channel the options are even more strange and confusing:
 
-![Shared Channel Challenges 2](images/using-shared-channels-for-internal-collaboration\sharedchannels2_2.png)
+![Shared Channel Challenges 2](images/using-shared-channels-for-internal-collaboration/sharedchannels2_2.png)
 
 The options are confusing to many users. While the choice of 'People' is straightforward, selecting a 'Team' actually prompts the user to find a Team Owner, not a Team. This Team Owner will decide where the Channel will be placed. Again this leads to all sort of confusion to what exactly a Shared Channel is, who is a member and who can access it.
 
@@ -83,7 +83,7 @@ The options are confusing to many users. While the choice of 'People' is straigh
 
 **The result:**
 
-![Shared Channel Result](images/using-shared-channels-for-internal-collaboration\sharedchannels2_3.png)
+![Shared Channel Result](images/using-shared-channels-for-internal-collaboration/sharedchannels2_3.png)
 
 ---
 

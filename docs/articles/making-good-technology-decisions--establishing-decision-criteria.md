@@ -32,7 +32,7 @@ Some of these decision criteria are discrete; others are continuous. It’s poss
 
 Knowing where your organization sits in the technology adoption life cycle is one way to think about things, but there’s much more to it if you go a layer deeper.
 
-![Rogers’ bell curve from Wikipedia](images\making-good-technology-decisions--establishing-decision-criteria\MarcAnderson-TechDecisions-01-01.png)
+![Rogers’ bell curve from Wikipedia](images/making-good-technology-decisions--establishing-decision-criteria/MarcAnderson-TechDecisions-01-01.png)
 
 Figure 1: Rogers' bell curve from Wikipedia
 

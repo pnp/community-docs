@@ -51,7 +51,7 @@ Shared Channels promised to resolve a list of common challenges with effective c
 - **Reduce Team proliferation**: Instead of creating a long list of barebones and shallow Teams, merely to support a sharing across organizations, we can now facilitate fewer but 'architecturally deeper' Teams
 - **Improve visibility of information and reduce duplication of content**: By allowing for centralized channels, we can reduce and eliminate channels created for the same purposes but spread across multiple teams, and reduce them with a single source of truth which also simplifies the management and monitoring of information within the channel
 
-![Shared Channel Benefits](images/using-shared-channels-for-external-collaboration\sharedchannels1_1.png)
+![Shared Channel Benefits](images/using-shared-channels-for-external-collaboration/sharedchannels1_1.png)
 
 ## Potential Challenges
 
@@ -59,7 +59,7 @@ Without getting into the technical details, Teams Connect (Shared Channels) reli
 
 The key portion here is that B2B Direct Connect requires **a mutual trust relationship between two Microsoft Entra organizations** to allow access to each other's resources. Both the resource organization and the external organization need to mutually enable B2B Direct Connect in their cross-tenant access settings. While this may not seem like the end of the world, it does seem counter to the well-known concept in Cyber Security of Zero Trust, especially its well-known adage 'never trust, always verify.'
 
-![Shared Channel Mutual Trust](images/using-shared-channels-for-external-collaboration\sharedchannels1_2.png)
+![Shared Channel Mutual Trust](images/using-shared-channels-for-external-collaboration/sharedchannels1_2.png)
 
 A more 'trusting' security stance may be possible for organizations with subsidiaries, or companies that all operate under shared ownership, we feel this is going to be a massive challenge for most organizations, especially those with strict security policies. This is hugely disappointing and we've heard this sentiment echoed by many clients and partners with whom we've discussed the topic.
 
@@ -77,7 +77,7 @@ A more 'trusting' security stance may be possible for organizations with subsidi
 
 **The result:**
 
-![Shared Channel Result](images/using-shared-channels-for-external-collaboration\sharedchannels1_3.png)
+![Shared Channel Result](images/using-shared-channels-for-external-collaboration/sharedchannels1_3.png)
 
 Note: This sample opened up bi-directional sharing for all users in both organizations. Microsoft allows further granular controls on B2B direct connect and many additional security settings.
 

@@ -182,7 +182,7 @@ At this level you can expect the following:
 - There are no standards or expectations for how emails should be managed; staff frequently have thousands of emails in their Inbox, many unread. Flagging, storage in email folders or offloading of content and actions to other systems is not well understood and adopted.
 - List items tend to be created in spreadsheets, allowing a limited degree of item level management and versioning. Some users understand how to sort and filter. Headings, field types and structure remain inconsistent. Default names are used rather using a naming convention
 - List items are not connected, centralized, or created for reuse.
-![ Lifecycle Management - Level 200]( media/microsoft365-maturity-model--management-of-content/lifecycle-management-level-200.jpg)
+![ Lifecycle Management - Level 200](images/microsoft365-maturity-model--management-of-content/lifecycle-management-level-200.jpg)
 
 ##### 200 Identification
 
@@ -244,7 +244,7 @@ At this level you can expect the following:
 - Items previously stored in freeform documents or in Excel are beginning to be managed in dedicated List applications. This allows granular management of each item, with item level security, version history etc.
 - The use of List applications enables content reuse, with list items able to act as data sources. Column/field headings show some evidence of standardization as a result. Column/Field types are generally appropriate; some consistency and standards are emerging.
 
-![Lifecycle Management - Level 300]( media/microsoft365-maturity-model--management-of-content/lifecycle-management-level-300.jpg)
+![Lifecycle Management - Level 300](images/microsoft365-maturity-model--management-of-content/lifecycle-management-level-300.jpg)
 
 ##### 300 Identification
 
@@ -304,8 +304,8 @@ At this level you can expect the following:
 - SchemaSchemas exist for common list types, often based on open standards, to ensure consistency and interoperability. Extensions to the schema are carefully considered, reviewed against other schemas in use and rolled out in an integrated way that updates all dependent lists.
 - Content classes are developed based on the agreed schema.
 
-![Lifecycle Management - Level 400a]( media/microsoft365-maturity-model--management-of-content/lifecycle-management-level-400a.jpg)
-![Lifecycle Management - Level 400b]( media/microsoft365-maturity-model--management-of-content/lifecycle-management-level-400b.jpg)
+![Lifecycle Management - Level 400a](images/microsoft365-maturity-model--management-of-content/lifecycle-management-level-400a.jpg)
+![Lifecycle Management - Level 400b](images/microsoft365-maturity-model--management-of-content/lifecycle-management-level-400b.jpg)
 
 ##### 400 Identification
 
@@ -364,7 +364,7 @@ At this level you can expect the following:
 - Role-based access, governance and protection are deeply embedded in processes and are designed with minimal "friction" for the task or process.
 - Live, multi-author use of content via links, active discovery and graph-based personalization is the norm, ensuring content remains live, up to date and relevant.
 
- ![Lifecycle Management - Level 500]( media/microsoft365-maturity-model--management-of-content/lifecycle-management-level-500.jpg)
+ ![Lifecycle Management - Level 500](images/microsoft365-maturity-model--management-of-content/lifecycle-management-level-500.jpg)
 
 ##### 500 Identification
 

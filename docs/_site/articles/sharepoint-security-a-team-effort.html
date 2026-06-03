@@ -83,7 +83,11 @@
                   </div>
   <h1 id="managing-sharepoint-online-security-a-team-effort">Managing SharePoint Online Security: A Team Effort</h1>
 
-[!include[content-disclaimer](../includes/content-disclaimer.md)]
+<div class="NOTE">
+<h5>Note</h5>
+<p>This is an open-source article with the community providing support for it.  For official Microsoft content, see <a href="/microsoft-365">Microsoft 365 documentation</a>.</p>
+</div>
+
 <p>Security has always been an important topic, and even more nowadays.
 We want our users to securely access the environment, share files, and our IT team to sleep at night don't we?</p>
 <p>In this article, we'll look at the <em>most important settings</em> in Microsoft 365 to help you secure your SharePoint Online environment, and see how it involves more than SharePoint administrators!</p>
@@ -98,7 +102,7 @@ We want our users to securely access the environment, share files, and our IT te
 <p>To access the Sharing settings (<em>tenant level</em>), navigate to the SharePoint Admin Center, under <em>Policies</em>, select <em>Sharing</em>.</p>
 <p>The first thing that should make your heart beat faster at this stage is the slider for SharePoint and OneDrive being at the same level as the word &quot;Anyone&quot;. Isn't it a scary thing to read that <em><strong>users can share files and folders using links that don't require sign-in</strong></em> from the recipient? ANY recipient for that matter.</p>
 <p>So unless you're absolutely sure that you want to keep it that way, slide down one level immediately!</p>
-<p><img src="images%5Cmanaging-sharepoint-online-security-a-team-effort%5Cexternal-sharing-settings-default.png" alt="Image of the SharePoint sharing settings slider for SharePoint and OneDrive."></p>
+<p><img src="images/managing-sharepoint-online-security-a-team-effort/external-sharing-settings-default.png" alt="Image of the SharePoint sharing settings slider for SharePoint and OneDrive."></p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>You don't even need to know the exact company policy for OneDrive for Business at this point. The slider will also follow the SharePoint setting down one level. That's because you can't have a more permissive sharing policy for OneDrive for Business than you have for SharePoint.</p>
@@ -160,11 +164,11 @@ Add your account (to keep access), then <em>remove</em> the default SharePoint g
 <p>Site sharing will differ if your site is connected to a Microsoft 365 Group or not. The modern interface allows for a more comprehensive way to control permissions, and offers more granularity when sharing.</p>
 <h4 id="sites-not-connected-to-microsoft-365-groups">Sites <em>not connected</em> to Microsoft 365 groups</h4>
 <p>If your site is <em>not</em> connected to a group, then not much has changed really. Despite the modern interface, SharePoint aficionados will still recognize how to share a site, or be familiar with the <em>Advanced Permissions Settings</em>.</p>
-<p><img src="images%5Cmanaging-sharepoint-online-security-a-team-effort%5Cshare-site-not-connected.png" alt="Image of the Share site button on the Permissions pane."></p>
+<p><img src="images/managing-sharepoint-online-security-a-team-effort/share-site-not-connected.png" alt="Image of the Share site button on the Permissions pane."></p>
 <h4 id="sites-connected-to-microsoft-365-groups">Sites <em>connected</em> to Microsoft 365 groups</h4>
 <p>When connected to a group, you still have the possibility to <strong>share the <em>Site Only</em></strong>. Meaning that you don't have to share other resources associated with a Microsoft 365 group (<em>i.e.: shared mailbox, Planner, etc...</em>).</p>
 <p>If however, you wish to share the site as well as including the user(s) within all the resources provisioned with the Microsoft 365 group, then you need to select <strong>Invite people</strong> &gt;&gt; <strong>Add members to group</strong>. The choice is yours! 😉</p>
-<p><img src="images%5Cmanaging-sharepoint-online-security-a-team-effort%5Csharing-site-connected-to-group.png" alt="Image of the Invite people button on the SharePoint permissions pane with options to Add members to group or Share site only."></p>
+<p><img src="images/managing-sharepoint-online-security-a-team-effort/sharing-site-connected-to-group.png" alt="Image of the Invite people button on the SharePoint permissions pane with options to Add members to group or Share site only."></p>
 <h4 id="change-how-members-can-share">Change how members can share</h4>
 <p>Something else that might also mitigate how sharing occurs, is the possibility to select between the following 3 options:</p>
 <ul>
@@ -178,7 +182,7 @@ Add your account (to keep access), then <em>remove</em> the default SharePoint g
 <p>With regards to first 2 bullet points, the difference is that in option 2, only the site owner will be able to share the entire site. Members will not. I have to admit, it confused me at first, and I had to read it a few times!</p>
 <p>While the 3rd bullet point is self explanatory, we can imagine that it might prevent users from performing their tasks? What if you need to share something with a colleague or a customer? And this will also add more work for the site owner...</p>
 <p>This option could be used if your users are new to SharePoint, pending training for them to be more confident in sharing, or simply because you really want to prevent them from sharing.</p>
-<p><img src="images%5Cmanaging-sharepoint-online-security-a-team-effort%5Chow-members-can-share.png" alt="Image of the Site sharing settings pane."></p>
+<p><img src="images/managing-sharepoint-online-security-a-team-effort/how-members-can-share.png" alt="Image of the Site sharing settings pane."></p>
 <h3 id="access-requests">Access Requests</h3>
 <p>If you observed the screenshot above, we also had <em>Access Requests</em> turned on by default. What is this?</p>
 <p>This feature has been around for a while, and is better that the dreaded &quot;Access denied&quot; message with no possible interaction whatsoever! Although there is more configuration to be done in SharePoint on-premises, everything is ready to go in SharePoint Online!
@@ -203,7 +207,7 @@ We don't have to worry about anything else than choosing who should receive thos
 </div>
 <h3 id="devices-accessing-sharepoint-data">Devices Accessing SharePoint Data</h3>
 <p>More options are available within the SharePoint Online Admin Center, but may rely on an Azure subscription.</p>
-<p><img src="images%5Cmanaging-sharepoint-online-security-a-team-effort%5Caccess-control.png" alt="Image of the Access control settings."></p>
+<p><img src="images/managing-sharepoint-online-security-a-team-effort/access-control.png" alt="Image of the Access control settings."></p>
 <p>The following documentation is very interesting to help understand how Microsoft is protecting the SharePoint and OneDrive for Business data, as well as providing other links for your reference: <a href="/sharepoint/safeguarding-your-data">How SharePoint and OneDrive safeguard your data in the cloud</a>.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>As we've seen throughout this article, SharePoint security is not only a matter of having SharePoint admin permissions. It definitely is a team effort where so many other roles are involved!</p>

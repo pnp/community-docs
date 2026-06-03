@@ -2,5 +2,4 @@
 
 Learn about Microsoft 365 from the community! All content is community generated.
 
-
-Enjoy the [articles](./articles/), and if you have something to share, please submit it via the [contributing guidelines](./contributing.md).
+Enjoy the [articles](articles/glossary.md), and if you have something to share, please submit it via the [contributing guidelines](./contributing.md).
