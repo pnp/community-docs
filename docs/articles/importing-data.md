@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # Importing data into SharePoint
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 This guide will help users understand the various options available to import files and data into SharePoint. We cover several different approaches:
 

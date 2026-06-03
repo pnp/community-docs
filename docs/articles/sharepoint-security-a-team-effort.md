@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # Managing SharePoint Online Security: A Team Effort
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 Security has always been an important topic, and even more nowadays.
 We want our users to securely access the environment, share files, and our IT team to sleep at night don't we?

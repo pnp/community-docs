@@ -14,7 +14,7 @@ ms.collection: M365Community
 ---
 # Working with modern client-side pages using PnP PowerShell
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 > [!NOTE]
 > The below sample codes is updated to work with the PnP.PowerShell version 1.11.0

@@ -14,7 +14,7 @@ ms.collection: M365Community
 
 # Groups in Microsoft 365 and Azure, and Which is Right for You
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## What's With All These Groups?
 

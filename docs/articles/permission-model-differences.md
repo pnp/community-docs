@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # Planning Permissions with Group-based SharePoint Sites... when you're used to Regular SharePoint Permissions
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## Basic Idea
 

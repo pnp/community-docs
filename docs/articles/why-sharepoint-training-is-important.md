@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # Why SharePoint Training is Important
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## Share what?
 

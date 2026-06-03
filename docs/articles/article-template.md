@@ -14,7 +14,7 @@ ms.collection: M365Community
 
 # Main title
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 Replace the following values in the metadata section above:
 

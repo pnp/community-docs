@@ -15,7 +15,7 @@ ms.collection: M365Community
  
 # Empowering Your Microsoft 365 Champions
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 What is so different about a Microsoft 365 champions group from a site owner's group? It depends on your organization. Some companies may expect their site owners to only focus on content management to keep the intranet up to date with valuable information supporting the governance plan. Microsoft 365 champions can also be site owners though their support of the platform extends past content ownership. Champions are dedicated to contributing to the roadmap of Office 365 at your organization. They are interested in providing feedback, testing beta releases for new solutions, and sharing their knowledge with the company to drive engagement in the platform.
 

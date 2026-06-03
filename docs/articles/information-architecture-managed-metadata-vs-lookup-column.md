@@ -14,7 +14,7 @@ ms.collection: M365Community
 ---
 # Information Architecture - Managed Metadata versus Lookup columns
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 Before we jump to the topic at hand, a little recap of the terminology involved:
 

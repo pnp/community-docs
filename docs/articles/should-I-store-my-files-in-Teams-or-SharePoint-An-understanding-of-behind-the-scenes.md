@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # Should I store my files in Microsoft Teams or in SharePoint? An understanding of behind the scenes
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 To use a product efficiently, it's important to understand a minimum about it. What it does, what can you do with it, what are the limitations, etc.
 

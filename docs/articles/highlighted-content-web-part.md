@@ -14,7 +14,7 @@ ms.collection: M365Community
   
 # Advanced Highlighted Content Web Part
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## Highlighted Content Web Part - tl;dr
 

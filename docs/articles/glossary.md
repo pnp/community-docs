@@ -14,7 +14,7 @@ ms.collection: M365Community
 
 # Microsoft 365 Glossary
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 As with any technology, there are lots of terms we toss around to explain things. Just understanding what each term means can be half the battle. Whether you are entirely new to Microsoft 365 or have been using it for years, there are always new terms to learn. The fact that Microsoft uses common English words for many capabilities can add an additional layer of confusion.
 

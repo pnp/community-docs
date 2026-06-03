@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # How Do Site Columns Become Managed Properties - Thus Available for Search
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 Before we jump to the topic at hand, a little recap of the terminology involved:
 

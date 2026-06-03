@@ -14,7 +14,7 @@ ms.collection: M365Community
 ---
 # Designing your solution for scale
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## Introduction
 

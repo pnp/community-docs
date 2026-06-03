@@ -14,7 +14,7 @@ ms.collection: M365Community
 
 # Maturity Model for Microsoft 365 - Management of Content Competency
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ![Maturity Model for Microsoft 365](images/maturity-model-for-microsoft-365/M365MM.png)
 
@@ -450,7 +450,7 @@ Burgeoning automation and AI make achieving high levels of maturity realistic fo
 - There are a variety of helpful documents on lists, libraries, information architecture, plus related competencies such as [search](principles-of-search.md), communication, and collaboration on this site.
 - The slides we've used in this article are available in the backing repo on Github as [Management of Content - Content Lifecycle](https://github.com/MicrosoftDocs/microsoft-365-community/blob/master/Community/media/microsoft365-maturity-model--management-of-content/Management%20of%20Content%20-%20Content%20Lifecycle.pptx?raw=true)
 
-[!INCLUDE [mm4m365-practitioners](includes/mm4m365-practitioners.md)]
+[!INCLUDE [mm4m365-practitioners](../includes/mm4m365-practitioners.md)]
 
 ---
 
@@ -467,4 +467,4 @@ Burgeoning automation and AI make achieving high levels of maturity realistic fo
 
 ---
 
-[!INCLUDE [mm4m365-core-team](includes/mm4m365-core-team.md)]
+[!INCLUDE [mm4m365-core-team](../includes/mm4m365-core-team.md)]

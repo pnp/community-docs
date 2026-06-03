@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # Power Automate - Send SharePoint files as attachments
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## Scenario
 

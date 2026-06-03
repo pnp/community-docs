@@ -14,7 +14,7 @@ ms.collection: M365Community
 
 # Performing guests reviews with Azure Identity Governance
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 For most organizations using Microsoft 365, guest management is simply not a "manageable" task with the tools they have. Most administrators feel ill-equipped to get a full understanding of the extent of guest access within their tenant, let alone make decisions on whether current guests and their access are still legitimate, or not. As collaboration scenarios grow in complexity, organizations mature in their usage patterns of the Microsoft 365 platform, and digital security becomes an increasingly scrutinized part of the enterprise – the challenge of managing guests is reaching a tipping point where it can no longer be ignored.
 

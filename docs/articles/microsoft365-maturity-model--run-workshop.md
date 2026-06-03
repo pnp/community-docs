@@ -15,7 +15,7 @@ ms.collection: SPCommunity
 
 # How to run a Maturity Model for Microsoft 365 workshop
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ![Maturity Model for Microsoft 365](images/maturity-model-for-microsoft-365/M365MM.png)
 
@@ -154,4 +154,4 @@ As before, use these to refine the action plan, redirect focus onto new areas of
 
 ---
 
-[!INCLUDE [mm4m365-core-team](includes/mm4m365-core-team.md)]
+[!INCLUDE [mm4m365-core-team](../includes/mm4m365-core-team.md)]

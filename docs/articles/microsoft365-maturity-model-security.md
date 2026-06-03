@@ -14,7 +14,7 @@ ms.collection: M365Community
 
 # The Microsoft 365 Maturity Model – Security Competency
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ![logo for the Maturity Model for Microsoft 365](images/maturity-model-for-microsoft-365/M365MM.png)
 
@@ -466,4 +466,4 @@ Security maturity is an ongoing journey of continuous improvement. The threat la
 
 ---
 
-[!INCLUDE [mm4m365-core-team](includes/mm4m365-core-team.md)]
+[!INCLUDE [mm4m365-core-team](../includes/mm4m365-core-team.md)]

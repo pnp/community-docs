@@ -14,7 +14,7 @@ ms.collection: SPCommunity
 
 # Link vs News Link vs Link to a Document
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 SharePoint Online provides several ways to link to web-hosted content. You can use hyperlinks in Text web parts, Quick Links, Hero, Call to Action, and more. In lists and libraries, Hyperlink columns are available. For automatic redirection, SharePoint offers three primary features: **Link**, **News Link**, and **Link to a Document**.
 

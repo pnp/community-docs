@@ -15,7 +15,7 @@ ms.collection: M365Community
   
 # Query String URL Tricks for SharePoint and Microsoft 365
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 The URL is a core tenet of our online lives. Despite all the apps, browsers, and tools that occasionally obfuscate it, behind the scenes the Internet is glued together in part by the Uniform Resource Locator (URL). The data that populates the Teams app on your phone wouldn't make it there without the URL of the Graph API endpoint.
 

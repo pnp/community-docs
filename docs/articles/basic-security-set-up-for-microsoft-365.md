@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # Basic Security Set Up for Microsoft 365
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## Security within Microsoft 365
 

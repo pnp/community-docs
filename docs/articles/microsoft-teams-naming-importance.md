@@ -14,7 +14,7 @@ ms.collection: M365Community
 
 # The importance of a Teams naming convention
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 Names are important as they imply meaning, and in many experiences such as Microsoft Teams, names serve as a key navigational aid for end users in locating the correct Team quickly and easily. However, with many organizations, it is difficult – if not impossible – to enforce consistent Microsoft Teams naming standards, even if Team and Group creation is limited to a small number of individuals. While this enforcement cannot be completely overcome without a third-party tool, the first step is to define a single or set of consistent naming standards that will enable better adoption and success when it comes to its usage of Microsoft Teams.
 

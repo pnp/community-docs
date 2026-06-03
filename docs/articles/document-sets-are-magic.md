@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # Document Sets for Fast Legacy Process Automation
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 _Before you run, you should walk_
 

@@ -14,7 +14,7 @@ ms.collection: M365Community
 ---
 # Site Builder/Owner: New Site Checklist
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 The purpose of this guide is to help document the initial setup of a site and provide resources for next steps and ongoing support. Consider this a starting checklist, which you may well adapt for your own purposes.
 

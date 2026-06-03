@@ -14,7 +14,7 @@ ms.collection: SPCommunity
 
 # How can I use Learning Pathways in my organization?
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## Introduction
 

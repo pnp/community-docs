@@ -14,7 +14,7 @@ ms.collection: M365Community
 ---
 # Use the Government Cloud for SharePoint and Microsoft 365
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 Working for the government can be a privilege, a job that comes with a feeling of pride and satisfaction in working on behalf of your fellow citizen. If you're a SharePoint site owner or Microsoft 365 expert who's working in the United States government (Federal, state, local or Tribal) you may be working in the _government cloud._ Read on to learn about what that means to you and to your customers.
 

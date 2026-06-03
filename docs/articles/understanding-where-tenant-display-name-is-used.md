@@ -14,7 +14,7 @@ ms.collection: M365Community
 
 # Understanding where your tenant's display name is used
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
   
 You can make changes to your organization profile, such as your organization name, but this change has far reaching implications as explained below. **You must be a global admin to update this information.**
 For instructions on changing your organizational profile, see [this article](/microsoft-365/admin/manage/change-address-contact-and-more?view=o365-worldwide&preserve-view=true).

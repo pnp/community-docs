@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # Versioning in SharePoint
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## Basic Idea
 

@@ -15,7 +15,7 @@ ms.collection:  SPCommunity
 
 # Power Automate vs Logic Apps
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## What are these services
 

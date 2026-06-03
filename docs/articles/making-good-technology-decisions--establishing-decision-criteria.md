@@ -18,7 +18,7 @@ ms.collection: M365Community
 * Part 2: [Microsoft 365 - Making Good Technology Decisions: Data Storage](making-good-technology-decisions--data-storage.md)
 * Part 3: [Microsoft 365 - Making Good Technology Decisions: Front End](making-good-technology-decisions--front-end.md)
 
-[!INCLUDE [cc-data-platform-banner](includes/cc-data-platform-banner.md)]
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 The longer I work in technology, the more I realize that few things are absolute. In fact, I often say “All absolute statements are wrong.” When people think about building solutions in the Microsoft 365 ecosystem, they tend to think about the ways they’ve solved problems in the past. If you’re a SharePoint person, you’re likely to think about using a bunch of SharePoint lists. If you’re a Dynamics person you’re going to think about using Dataverse. If you’re an old school database developer, you might think about using SQL. The point isn’t that any one of those is wrong, it’s that it’s important to consider the various options you have available to you within the Microsoft ecosystem. The requirements for the thing you are trying to build should drive your decision-making, not just what you already know.
 

@@ -15,7 +15,7 @@ ms.collection: M365Community
  
 # Identifying Your Microsoft 365 Champions
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 Many organizations have a small team supporting all aspects of their environment from break/fix through development of new solutions. There is not enough time in the day to add crucial change management tasks to ensure adoption on top of this already heavy workload, so it is commonly skipped. This risks engagement, adoption, clear insight into departmental challenges, and maintaining open communication for collaborative development.
 

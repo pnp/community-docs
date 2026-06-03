@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # Maturity Model for Microsoft 365 * Elevating Communication
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ![Maturity Model for Microsoft 365](images/maturity-model-for-microsoft-365/M365MM.png)
 
@@ -81,7 +81,7 @@ Organizational communication is much broader than email and newsletters. Effecti
 
 ## Resources
 
-[!INCLUDE [mm4m365-practitioners](includes/mm4m365-practitioners.md)]
+[!INCLUDE [mm4m365-practitioners](../includes/mm4m365-practitioners.md)]
 
 ## Related documents
 
@@ -104,4 +104,4 @@ Organizational communication is much broader than email and newsletters. Effecti
 
 ---
 
-[!INCLUDE [mm4m365-core-team](includes/mm4m365-core-team.md)]
+[!INCLUDE [mm4m365-core-team](../includes/mm4m365-core-team.md)]
