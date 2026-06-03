@@ -1,11 +1,6 @@
----
-_layout: landing
----
+# Microsoft 365 Community Content
 
-# This is the **HOMEPAGE**.
+Learn about Microsoft 365 from the community! All content is community generated.
 
-Refer to [Markdown](http://daringfireball.net/projects/markdown/) for how to write markdown files.
 
-## Quick Start Notes:
-
-1. Add images to the *images* folder if the file is referencing an image.
+Enjoy the [articles](./articles/), and if you have something to share, please submit it via the [contributing guidelines](./contributing.md).
