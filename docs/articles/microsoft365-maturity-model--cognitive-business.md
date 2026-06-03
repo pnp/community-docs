@@ -14,7 +14,7 @@ ms.collection: SPCommunity
 
 # Maturity Model for Microsoft 365 - AI & Cognitive Business Competency
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ![Maturity Model for Microsoft 365](images/maturity-model-for-microsoft-365/M365MM.png)
 
@@ -325,7 +325,7 @@ At this level the organization fluidly adopts AI alongside staff in order to exc
 - [MS - Governing AI:  A Legal and Regulatory Blueprint for the Future](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RW14Gtw)
 - [Responsible AI](/azure/cloud-adoption-framework/innovate/best-practices/trusted-ai)
 
-[!INCLUDE [mm4m365-practitioners](includes/mm4m365-practitioners.md)]
+[!INCLUDE [mm4m365-practitioners](../includes/mm4m365-practitioners.md)]
 
 ---
 
@@ -335,4 +335,4 @@ At this level the organization fluidly adopts AI alongside staff in order to exc
 
 ---
 
-[!INCLUDE [mm4m365-core-team](includes/mm4m365-core-team.md)]
+[!INCLUDE [mm4m365-core-team](../includes/mm4m365-core-team.md)]

@@ -488,4 +488,4 @@ Achieving compliance is not a project. It is an ongoing process that needs embed
 
 ---
 
-[!INCLUDE [mm4m365-core-team](includes/mm4m365-core-team.md)]
+[!INCLUDE [mm4m365-core-team](../includes/mm4m365-core-team.md)]

@@ -14,7 +14,7 @@ ms.collection: M365Community
 ---
 # Team Site vs. Communication Site: Which one should I choose?
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 Choosing between a [team site](https://support.microsoft.com/office/what-is-a-sharepoint-team-site-75545757-36c3-46a7-beed-0aaa74f0401e) and a [communication site](https://support.microsoft.com/article/what-is-a-sharepoint-communication-site-94a33429-e580-45c3-a090-5512a8070732) should start with your intent and desired business outcomes. Though there are nuances to explore, at the most basic, think about these two use cases:
 

@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # What is a Site Column?
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## Basic Idea
 

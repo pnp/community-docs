@@ -15,7 +15,7 @@ ms.collection:  SPCommunity
 
 # Power Automate vs Logic Apps
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## What are these services
 
@@ -62,10 +62,10 @@ Both tools have a rich web-based design tool to author the Flows, connect to ser
 Since both tools have this, learning Power Automate can be easily transferrable to Logic Apps if your requirements are better suited in the other product.
 
 **Power Automate - web based designer**
-![Power Automate Web Designer.](images\power-automate-vs-logic-apps\power-automate-example.png)
+![Power Automate Web Designer.](images/power-automate-vs-logic-apps/power-automate-example.png)
 
 **Azure Logic Apps - web based designer**
-![Azure Logic Apps - web based designer](images\power-automate-vs-logic-apps\azure-logic-app-example.png)
+![Azure Logic Apps - web based designer](images/power-automate-vs-logic-apps/azure-logic-app-example.png)
 
 Power Automate flows created before September 2020 can be exported to Logic Apps. If you are working with the Azure Portal it will require some knowledge of JSON, or for a friendlier experience using Visual Studio, check out the docs to consider your approach: [Export flows from Power Automate and deploy to Azure Logic Apps](/azure/logic-apps/export-from-microsoft-flow-logic-app-template)
 
@@ -80,7 +80,7 @@ For iOS and Android, there is a Power Automate app that can allow you to build F
 * manage existing flows - if you want to quickly create a Flow on the move
 * there isn't an expression builder or the ability to add parallel branches.
 
-![Mobile view of Power Automate.](images\power-automate-vs-logic-apps\mobile.jpg)
+![Mobile view of Power Automate.](images/power-automate-vs-logic-apps/mobile.jpg)
 
 ### Visual Studio
 
@@ -98,7 +98,7 @@ Applies to: **Logic Apps**
 
 Visual Studio Code is a free and open-source code editor with wide-range support for programming languages with IntelliSense, extensions to select the tools you work with extending the functionality of the tool as best fits the project you are working on.
 
-![Visual Studio Code.](images\power-automate-vs-logic-apps\example-visual-studio-code.png)
+![Visual Studio Code.](images/power-automate-vs-logic-apps/example-visual-studio-code.png)
 
 You can install the extension (Azure Logic Apps for Visual Studio Code) from the Marketplace - [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-logicapps)
 

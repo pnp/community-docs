@@ -83,7 +83,11 @@
                   </div>
   <h1 id="using-shared-channels-teams-connect-for-external-collaboration">Using Shared Channels (Teams Connect) for External Collaboration</h1>
 
-[!include[content-disclaimer](includes/content-disclaimer.md)]
+<div class="NOTE">
+<h5>Note</h5>
+<p>This is an open-source article with the community providing support for it.  For official Microsoft content, see <a href="/microsoft-365">Microsoft 365 documentation</a>.</p>
+</div>
+
 <p>One of the most exciting <a href="https://techcommunity.microsoft.com/t5/microsoft-teams-blog/what-s-new-in-microsoft-teams-microsoft-ignite-2021/ba-p/2118226">announcements</a> from <strong>Ignite 2021</strong> was that of <strong>Shared Channels (Microsoft Teams Connect)</strong> which seemingly promised to finally resolve the considerable friction involved with cross-tenant collaboration (collaborating with other organizations using Microsoft 365). The idea of Shared Channels was simple, yet powerful. Instead of moving between Tenants to access information, allow for that same information to be available within your home tenant! Now that we've been able to see it in action in the Public Preview, what do we think? Has it realized the hype from last year?</p>
 <h2 id="what-are-shared-channels">What Are Shared Channels</h2>
 <p>At its simplest, a Shared Channel is essentially a 'collaboration space' that can be re-used in multiple places. Because it is reused, it implies that it can be accessed by different users than those who are in the Team. Only members of the Shared Channel can access it.</p>
@@ -113,11 +117,11 @@
 <li><strong>Reduce Team proliferation</strong>: Instead of creating a long list of barebones and shallow Teams, merely to support a sharing across organizations, we can now facilitate fewer but 'architecturally deeper' Teams</li>
 <li><strong>Improve visibility of information and reduce duplication of content</strong>: By allowing for centralized channels, we can reduce and eliminate channels created for the same purposes but spread across multiple teams, and reduce them with a single source of truth which also simplifies the management and monitoring of information within the channel</li>
 </ul>
-<p><img src="images/using-shared-channels-for-external-collaboration%5Csharedchannels1_1.png" alt="Shared Channel Benefits"></p>
+<p><img src="images/using-shared-channels-for-external-collaboration/sharedchannels1_1.png" alt="Shared Channel Benefits"></p>
 <h2 id="potential-challenges">Potential Challenges</h2>
 <p>Without getting into the technical details, Teams Connect (Shared Channels) relies on something called Azure B2B Direct Connect, which is different than B2B Collaboration used for External Collaboration (Guests). The big difference is that this requires organizations to trust one another's security (essentially to 'federate' identities) in order for this feature to be available.</p>
 <p>The key portion here is that B2B Direct Connect requires <strong>a mutual trust relationship between two Microsoft Entra organizations</strong> to allow access to each other's resources. Both the resource organization and the external organization need to mutually enable B2B Direct Connect in their cross-tenant access settings. While this may not seem like the end of the world, it does seem counter to the well-known concept in Cyber Security of Zero Trust, especially its well-known adage 'never trust, always verify.'</p>
-<p><img src="images/using-shared-channels-for-external-collaboration%5Csharedchannels1_2.png" alt="Shared Channel Mutual Trust"></p>
+<p><img src="images/using-shared-channels-for-external-collaboration/sharedchannels1_2.png" alt="Shared Channel Mutual Trust"></p>
 <p>A more 'trusting' security stance may be possible for organizations with subsidiaries, or companies that all operate under shared ownership, we feel this is going to be a massive challenge for most organizations, especially those with strict security policies. This is hugely disappointing and we've heard this sentiment echoed by many clients and partners with whom we've discussed the topic.</p>
 <h2 id="how-to-set-it-up">How To Set It Up</h2>
 <ol>
@@ -132,7 +136,7 @@
 <li>Approve Shared Channel Placement (Host Tenant)</li>
 </ol>
 <p><strong>The result:</strong></p>
-<p><img src="images/using-shared-channels-for-external-collaboration%5Csharedchannels1_3.png" alt="Shared Channel Result"></p>
+<p><img src="images/using-shared-channels-for-external-collaboration/sharedchannels1_3.png" alt="Shared Channel Result"></p>
 <p>Note: This sample opened up bi-directional sharing for all users in both organizations. Microsoft allows further granular controls on B2B direct connect and many additional security settings.</p>
 <hr>
 <p><strong>Principal author</strong>: <a href="https://www.linkedin.com/in/dfrancoeur/">David Francoeur</a></p>

@@ -15,9 +15,9 @@ ms.collection: M365Community
 
 # Dataverse and Model-Driven Apps Standards and Naming Conventions
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
-[!INCLUDE [cc-data-platform-banner](includes/cc-data-platform-banner.md)]
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 In any technology or programming language, there are generally accepted better practices when it comes to naming conventions, thinking about data structures, etc. It's no different with the Power Platform. Even if you are the lone person working on a solution, future you will appreciate following some consistent standards. If you are a part of a team, then that team should agree on a set of standards.
 

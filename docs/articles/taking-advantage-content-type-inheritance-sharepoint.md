@@ -14,7 +14,7 @@ ms.collection: M365Community
 ---
 # Taking Advantage of the Content Type Inheritance Model in SharePoint
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 Taking advantage of the Content Type hierarchy is an important part of a powerful information architecture, regardless whether you're working with documents, list items, pages, etc.
 

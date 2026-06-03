@@ -18,7 +18,7 @@ ms.collection: M365Community
 * Part 2: Microsoft 365 - Making Good Technology Decisions: Data Storage (this article)
 * Part 3: [Microsoft 365 - Making Good Technology Decisions: Front End](making-good-technology-decisions--front-end.md)
 
-[!INCLUDE [cc-data-platform-banner](includes/cc-data-platform-banner.md)]
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Once you’ve thought through the decision criteria for your specific solution (as covered in part 1) – which ought to fit into the broader decision criteria for your portfolio of solutions – you can turn to the technical specifics. The next few parts of the series are probably where people argue the most about purity and “best fit”. Sometimes the best fit isn’t just a technical fit: you need to take those other criteria into account. The best technical solution isn’t always the same one for everyone. If you frame the technical decisions based on the decision criteria, you’ll be likely to make technical choices which have a higher potential for success. You may even find yourself arriving at different choices than you might otherwise expect.
 

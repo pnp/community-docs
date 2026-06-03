@@ -14,7 +14,7 @@ ms.collection: M365Community
 
 # Microsoft 365 Search Technologies
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 In Microsoft 365, content can be searched for using various search technologies. The existing variants are based on the same search index, but differ in usage and configuration.
 

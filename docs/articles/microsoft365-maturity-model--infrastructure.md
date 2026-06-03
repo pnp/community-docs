@@ -18,7 +18,7 @@ ms.collection: M365Community
 
 # Maturity Model for Microsoft 365 - Infrastructure Competency
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ![Maturity Model for Microsoft 365](images/maturity-model-for-microsoft-365/M365MM.png)
 

@@ -14,7 +14,7 @@ ms.collection: M365Community
 
 # Which Task Management Tool is Right For Me
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 There are a number of ways to manage tasks in Microsoft 365, some of which overlap, while others don’t. Where are all the places we can create tasks?
 

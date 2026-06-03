@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # Content Type Propagation
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 Content types are a central part of SharePoint. This article will not go into deep details on how to use content types because it depends too much on the use case. This article will cover the backend "stuff" that propagates the content types to our end users.
 

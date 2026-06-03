@@ -16,7 +16,7 @@ ms.collection: M365Community
 
 # Creating Useful Views for Lists & Libraries
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## All Items
 

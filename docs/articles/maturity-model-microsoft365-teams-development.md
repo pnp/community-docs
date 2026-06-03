@@ -14,7 +14,7 @@ ms.collection: M365Community
 
 # Maturity Model for Microsoft 365 and Teams Development
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 Working as a developer on Microsoft Teams solutions you might not have heard about the [Microsoft 365 Maturity Model](/microsoft-365/community/microsoft365-maturity-model--intro). Yet it is a great resource to get familiar with! The model is based on the [Capability Maturity Model](/microsoft-365/community/microsoft365-maturity-model-origin-story#underpinnings-the-capability-maturity-model) and with some imagination you can apply the same logic for the building blocks of Microsoft Teams.
 

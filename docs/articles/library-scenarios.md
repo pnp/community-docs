@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # Library scenarios
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 This guide will provide scenario-based guidance for the planning of SharePoint document libraries.
 

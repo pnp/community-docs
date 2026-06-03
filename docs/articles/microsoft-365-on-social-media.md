@@ -14,7 +14,7 @@ ms.collection: M365Community
 
 # Follow Microsoft 365 on Social Media
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## The Value of Social Media
 

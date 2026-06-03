@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # Using Site Templates to Manage Project Life Cycles
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 One possible use for Site Templates (which used to be called Site Designs) is to manage the life cycle of a unit of work. Site Templates allow us to do such things as create lists and libraries, apply a theme, install an add-in or solution, set permissions, etc. (See: [Site template JSON schema](/sharepoint/dev/declarative-customization/site-design-json-schema))
 

@@ -16,7 +16,7 @@ ms.collection: M365Community
 
 # How to Share Org-Wide Communication in Microsoft 365
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 Org-wide communication supports employees’ understanding of the organization, sharing timely updates, creating the company culture, driving employee engagement, sending crisis communications, and creating opportunities for discussion, innovation, and feedback. Relying on one communication channel - typically email - to get all these different messages across risks losing your audience to the deluge of emails in their inbox and reduced employee engagement. Within Microsoft 365, organizations have many communications channels to choose from (email, Teams, Viva Engage, SharePoint), and the best solution in each case will ultimately depend on:
 

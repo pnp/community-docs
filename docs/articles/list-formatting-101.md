@@ -14,7 +14,7 @@ ms.collection: M365Community
 
 # List and Library Formatting
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 Gone are the days when SharePoint Lists and Libraries made for a dull and boring experience.
 

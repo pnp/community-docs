@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # The Power Platform Data Loss Prevention (DLP) policies you should be considering on Day 1
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## Why do I need to consider DLP?
 

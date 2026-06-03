@@ -14,7 +14,7 @@ ms.collection: M365Community
 
 # Why Microsoft 365 adoption projects fail
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## Intro for the challenge
 

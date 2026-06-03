@@ -14,7 +14,7 @@ ms.collection: M365Community
 ---
 # Changing Microsoft Teams from Private to Public, what to expect in SharePoint?
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## Privacy settings
 

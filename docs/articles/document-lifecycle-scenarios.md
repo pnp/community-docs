@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # Document Lifecycle Scenarios
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 Not all documents are created equal. Based on the relative weight and importance of a document, we may decide on quite different ways to manage a document through its lifecycle. In this article, I present several different scenarios for managing a document lifecycle.
 

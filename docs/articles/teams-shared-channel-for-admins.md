@@ -15,7 +15,7 @@ ms.collection: M365Community
 
 # Teams Shared Channels for Admins
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 A Teams "Shared Channel" is one of the greatest, if not THE Greatest new feature released to Teams in 2022.
 

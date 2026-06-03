@@ -14,7 +14,7 @@ ms.collection: M365Community
 
 # Practical Scenarios - Enhancing Brand Management
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ## Overview
 
@@ -171,4 +171,4 @@ Effective branding is far more than simply a logo and some colors. It should be 
 
 ---
 
-[!INCLUDE [mm4m365-core-team](includes/mm4m365-core-team.md)]
+[!INCLUDE [mm4m365-core-team](../includes/mm4m365-core-team.md)]

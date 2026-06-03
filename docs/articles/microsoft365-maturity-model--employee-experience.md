@@ -14,7 +14,7 @@ ms.collection: M365Community
 
 # Maturity Model for Microsoft 365 - Employee Experience Competency
 
-[!INCLUDE [content-disclaimer](includes/content-disclaimer.md)]
+[!INCLUDE [content-disclaimer](../includes/content-disclaimer.md)]
 
 ![Maturity Model for Microsoft 365](images/maturity-model-for-microsoft-365/M365MM.png)
 
@@ -413,7 +413,7 @@ Use of technologies can help, but these must always be blended with good managem
 - [Employee Experience vs Employee Engagement](https://peopleinsight.co.uk/employee-experience-vs-engagement/) | People Insight
 - [Back To Basics: Employee Engagement Vs. Employee Experience](https://www.forbes.com/sites/ericmosley/2020/08/27/back-to-basics-employee-engagement-vs-employee-experience/) - Forbes   
 
-[!INCLUDE [mm4m365-practitioners](includes/mm4m365-practitioners.md)]
+[!INCLUDE [mm4m365-practitioners](../includes/mm4m365-practitioners.md)]
 
 ---
 
@@ -424,4 +424,4 @@ Use of technologies can help, but these must always be blended with good managem
 
 ---
 
-[!INCLUDE [mm4m365-core-team](includes/mm4m365-core-team.md)]
+[!INCLUDE [mm4m365-core-team](../includes/mm4m365-core-team.md)]
