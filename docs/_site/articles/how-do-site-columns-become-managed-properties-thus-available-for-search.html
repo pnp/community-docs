@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How Do Site Columns Become Managed Properties - Thus Available for Search? | Microsoft 365 Community Content </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How Do Site Columns Become Managed Properties - Thus Available for Search? | Microsoft 365 Community Content ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../mm4m365logo-small.svg" alt="Microsoft 365 Community Content">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <label class="glyphicon glyphicon-search" for="search-query"></label>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+                
+                  <div class="contribution-panel mobile-hide pull-right">
+                      <a href="https://github.com/sympmarc/Community-Docs/blob/main/docs/articles/how-do-site-columns-become-managed-properties-thus-available-for-search.md/#L1" title="Edit this page" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                  </div>
+  <h1 id="how-do-site-columns-become-managed-properties---thus-available-for-search">How Do Site Columns Become Managed Properties - Thus Available for Search</h1>
+
+[!include[content-disclaimer](includes/content-disclaimer.md)]
+<p>Before we jump to the topic at hand, a little recap of the terminology involved:</p>
+<ul>
+<li><a href="glossary.html#metadata">Metadata</a>: means information about something, in SharePoint usually information about documents, pages or list items</li>
+<li><a href="glossary.html#site-column">Site Column</a>: is a metadata column that has been created for a whole site collection, thus available to be used by any list/library in that site.</li>
+<li><a href="glossary.html#crawled-property">Crawled Property</a>: A crawled property is content and metadata that is extracted from an item, such as a document or a URL, during a crawl.</li>
+<li><a href="glossary.html#managed-property">Managed Property</a>: Is a list of useful content and metadata included in the search index, we normally map useful crawled properties to managed properties to make search more easy.</li>
+</ul>
+<p>For more details about the SharePoint search schema visit <a href="/sharepoint/manage-search-schema">Microsoft official documentation</a> to learn more.</p>
+<p>Also head over here to read more about <a href="https://microsoft-search.github.io/pnp-modern-search/">PnP Modern Search Solution</a>, I will be using this to show a quick usage of Site Columns in Search.</p>
+<h2 id="how-to-create-a-site-column">How to create a site column</h2>
+<h3 id="where">Where</h3>
+<p>A Site Column can be created generally in two places:</p>
+<ol>
+<li>In the <a href="glossary.html#content-type-hub">Content Type Hub</a> - Using the Content Type Hub will make the column available to all sites in your SharePoint tenant.</li>
+<li>In the <a href="glossary.html#site-collection">Site Collection</a> (or modern site - which is a Site Collection) where you will be using the column</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This article doesn't discuss in detail the Information Architecture decisions about when and where to create Site Columns.</p>
+</div>
+<h3 id="using-what">Using What</h3>
+<p>There are a lot of tools you can use to create a Site Column</p>
+<ol>
+<li>Manually clicking in the SharePoint page, this is what we'll be using in this article</li>
+<li>Using PnP PowerShell</li>
+<li>Using Site Scripts &amp; Site Designs</li>
+<li>Using code</li>
+</ol>
+<h3 id="how">How</h3>
+<p>In SharePoint, navigate to your Site Settings and choose Site Columns. The Site Columns page will contain all the metadata columns currently available in your site, except for hidden system columns.</p>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch01.png" alt="Site settings page."></p>
+<p>Choose <strong>Create</strong></p>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch02.png" alt="Create new site column."></p>
+<p>A Site Column can be created for many different information types, including: Single line of text, Number, Date and Time, etc. In fact, all the same column types you might add directly to a list or library are available to you.</p>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch03.png" alt="New site column creation."></p>
+<p>When you are done with the settings for you new Site Column, scroll down to the bottom of the page and choose <strong>OK</strong>. The new Site Column will be created and listed in the Site Columns page in the Group you have chosen.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>By putting your custom Site Columns into a group (or groups) preceded by &quot;_&quot; or &quot;.&quot;, you'll see your own Site Columns at the top of the listing page.</p>
+</div>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch04.png" alt="Site column group."></p>
+<h3 id="where-to-use-site-columns">Where to use Site Columns</h3>
+<p>Site Columns, are normally used in <a href="glossary.html#document-library">Document Libraries</a> or <a href="glossary.html#list">lists</a>.</p>
+<p>Locate your list or library and navigate to <strong>List settings</strong> or <strong>Library settings</strong>.</p>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch05.png" alt="Navigate to library settings."></p>
+<p>In the column section, choose to add a column from an existing Site Column.</p>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch06.png" alt="Add site column to library."></p>
+<p>The Site Column is now ready to be used in the library, and you can now add values to the column in the list or library.</p>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch07.png" alt="Site column available in the library view."></p>
+<p>Next, you need to wait for SharePoint Online to do its magic. This magic takes the form of the search crawler indexing the column and its values. This generally takes only a few minutes in SharePoint Online, though it can take longer.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Site Columns will become Crawled Properties automatically if:</p>
+<ul>
+<li>You have created content using the Site Column. Just defining the Site Column is not sufficient; there must be content to crawl.</li>
+<li>If the site is a Communication Site, the Site Columns should then become Crawled Properties.</li>
+<li>If you are creating Site Columns in a modern Team Site (which has an associated Microsoft 365 Group), you must be a Site Collection Administrator <em>explicitly</em> for the crawled and managed properties to appear in the schema admin UX. The properties do exist and work for search, but makes it hard to do custom mapping. This means adding yourself as an <em>individual</em> to the Site Collection Administrators. It is <em>not</em> sufficient to be an Owner of the Team Site (and thus of the underlying Microsoft 365 Group).</li>
+</ul>
+</div>
+<p>In the meantime you can navigate to your tenant's Search Administration page: <strong>SharePoint Admin Center</strong> / <strong>More features</strong> / <strong>Search</strong> / <strong>Manage search schema</strong> (https://[TenantName]-admin.sharepoint.com/_layouts/15/searchadmin/TA_SearchAdministration.aspx) page to review the current settings. You will need the <strong>SharePoint Administrator</strong> role to be able to access this page.</p>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch08.png" alt="Search administration page."></p>
+<p>Navigate to <strong>Crawled properties</strong> and search for your custom column, if the search crawl has done it's job, you should see your site column as a crawled property.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Crawled Property names don't match the Site Column names exactly. Often, the Crawled Property will look like <code>ows_[SiteColumnInternalName]</code>, for example, <code>ows_MyCustomColumnForSearch</code>. Different column types will have different naming. Searching for a significant fragment of the Site Column's name should help you find it, such as &quot;MyCustom&quot; or &quot;ForSearch&quot; for the column above.</p>
+</div>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch09.png" alt="Crawled search page."></p>
+<p>You may then find one or more crawled properties:</p>
+<ul>
+<li><code>ows_MyCustomColumnForSearch</code> - This is the one we will <em>generally</em> use to map to our managed property for search.</li>
+<li><code>ows_q_Text_MyCustomColumnForSearch</code> - This is automatically created by search and shouldn't be used.</li>
+</ul>
+<p>In SharePoint Online, we're not allowed to create new Managed Properties in the search schema that are &quot;Refinable&quot; or &quot;Sortable&quot;. Microsoft has created a number of Managed Properties that we can use in order to extend the search experience. These properties take the form:</p>
+<p>&quot;Refinable&quot; + type of column + number -&gt; RefinableString00 or RefinableDate03</p>
+<p>In the managed properties page, search for &quot;refinablestring&quot; or &quot;refinabledate&quot;. For example, use &quot;refinabledate&quot; if your Site Column is a Date and Time type column.</p>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch10.png" alt="Refinable string search."></p>
+<p>Pick a RefinableString Managed Property which is available, meaning not already mapped to other Crawled Properties, for example &quot;RefinableString01&quot;. These Managed Properties have been pre-defined with everything turned on: Query, Refine, etc.</p>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch11.png" alt="RefinableString01 settings."></p>
+<p>Scroll down to the bottom of the page, and map the Crawled Property to the Managed Property. You may also want to add an Alias to help you identify things in the Managed Property listing. For example: <strong>MyCustomColumnForSearchRefinable</strong>. These aliases don't show up in many places, but they can help you stay organized. Click <strong>OK</strong>.</p>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch12.png" alt="Mapping of crawled properties to mapped properties."></p>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch13.png" alt="RefinableString01 mapped to crawled property."></p>
+<p>After this you will need to wait for the search index to be refreshed with the new Managed Property. Search crawls in Microsoft 365 are frequent, and this usually takes less than one hour, often only a few minutes.</p>
+<p>To make sure that the index maps your Site Column and its content in the next search crawl, you can navigate back to your site, and in Site Settings, choose &quot;Search and offline availability&quot;.</p>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch14.png" alt="Search and offline availability menu item."></p>
+<p>Click <strong>Reindex site</strong> then OK, then wait… [Insert patience here]</p>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch15.png" alt="Search and offline availability."></p>
+<p>When the index has been updated you will be able to search for content that has your Site Column metadata as shown below.</p>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch16.png" alt="Search by using your new managed property 1."></p>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch17.png" alt="Search by using your new managed property 2."></p>
+<hr>
+<p>To extend the search experience you can use the <a href="https://microsoft-search.github.io/pnp-modern-search/">PnP Modern Search Web Parts.</a> solution to build custom search page(s) with its powerful Web Parts:</p>
+<ul>
+<li>Search Box Web Part</li>
+<li>Search Vertical Web Part</li>
+<li>Search Refiner Web Part</li>
+<li>Search Results Web Part</li>
+</ul>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch18.png" alt="PnP Modern Search web part."></p>
+<p>You can also embed a SharePoint search page in Teams as a personal app by following <a href="/sharepoint/dev/features/embed-pages-to-teams">this guide</a></p>
+<p><img src="images/how-do-site-columns-become-managed-properties-thus-available-for-search/sposearch19.png" alt="PnP Modern Search page in Teams."></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This article has only scratched the surface of what is possible with Microsoft 365 Search. By creating Managed Properties specific to your content and processes, you'll be laying down an important foundation for more sophisticated search-driven solutions.</p>
+<hr>
+<p><strong>Principal author</strong>: <a href="https://www.linkedin.com/in/jimmyhang/">Jimmy Hang, MCT, MCSE: Productivity</a></p>
+<hr>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Maturity Model for Microsoft 365</span><br><span>Generated by <strong>DocFX</strong></span>
+            <img src="https://m365-visitor-stats.azurewebsites.net/pnpcoresdk/docs" alt="spacer">
+          </div>
+        </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+</html>

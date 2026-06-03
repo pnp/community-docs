@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to deploy Teams App templates into your tenant | Microsoft 365 Community Content </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to deploy Teams App templates into your tenant | Microsoft 365 Community Content ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../mm4m365logo-small.svg" alt="Microsoft 365 Community Content">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <label class="glyphicon glyphicon-search" for="search-query"></label>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+                
+                  <div class="contribution-panel mobile-hide pull-right">
+                      <a href="https://github.com/sympmarc/Community-Docs/blob/main/docs/articles/how-to-deploy-teams-app-templates.md/#L1" title="Edit this page" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                  </div>
+  <h1 id="how-to-deploy-teams-app-templates-into-your-tenant">How to deploy Teams App templates into your tenant</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>This blog post shall guide you through the process of App deployments with Microsoft Teams App templates.</p>
+<p>Microsoft Teams is an excellent hub for collaboration, and the most fantastic thing about it is its extensibility. Custom development can close some gaps between out of the box features and specific business needs. But we do not always need to reinvent the wheel completely. You can find amazing ready-to-deploy app templates. Of course, as a developer, you may want to tweak those templates, but they are ready to use in production and, of course, it's great to understand how deployment works in Azure.</p>
+<p>⚡ Please don’t test in your production environment. If you are new to this, get a free Microsoft 365 developer tenant: it’s way safer for you for testing.</p>
+<p>As an example, I will use the <a href="/microsoftteams/platform/samples/app-templates#group-activities">Group Activities App</a> to show the steps that we usually need to do to deploy an app in our tenant.</p>
+<p>You can get the complete documentation, including all files, deployment guides, and architecture overview on <a href="https://github.com/OfficeDev/microsoft-teams-apps-groupactivities">GitHub</a>.</p>
+<p><a name='register-an-app-in-azure-ad'></a></p>
+<h2 id="register-an-app-in-microsoft-entra-id">Register an App in Microsoft Entra ID</h2>
+<p>First, you will need to register an Application in Microsoft Entra ID, create an app secret and enable Graph API permissions.</p>
+<p>Remember to save your App secret immediately after creating it – you won’t be able to read or copy it once you click on something else in the Azure Portal. To understand which permissions you need, read the documentation for the specific app template. Don’t forget to grant admin consent for the permissions.</p>
+<p><img src="images/how-to-deploy-teams-app-templates/1registeraapp.gif" alt="Step 1: Register app in AD."></p>
+<h2 id="deploy-template">Deploy template</h2>
+<p>As we deal with One-Click-Deployment, you will need to click that magic deploy to Azure button in the deployment guide and</p>
+<p>create a new resource group
+paste Tenant ID, AppID, App Secret into the form,
+be a little bit patient. It can take a while. You don’t need to stay on that site. You can check later on as well.</p>
+<p><img src="images/how-to-deploy-teams-app-templates/2deploy.gif" alt="Step 2: Deploy template."></p>
+<h2 id="add-authentication">Add authentication</h2>
+<p>Microsoft Entra ID can easily manage authentication, connect our bot with it, and set the scope as in our app registration.</p>
+<p><img src="images/how-to-deploy-teams-app-templates/3addauthentication.gif" alt="Step 3: Add authentication."></p>
+<h2 id="package-app">Package App</h2>
+<p>Now it’s already time to create our App package. For this, we will need the manifest.json file and two .png files as App icons which we will find in the GitHub repo.</p>
+<p>In the manifest.json we will replace placeholders for</p>
+<ul>
+<li>developer name,</li>
+<li>URLs for
+<ul>
+<li>site,</li>
+<li>privacy,</li>
+<li>terms of use,</li>
+</ul>
+</li>
+<li>BOT ID (our App ID),</li>
+<li>validDomains –&gt; [BaseResourceName].azurewebsites.net,</li>
+</ul>
+<p>and zip this <code>manifest.json</code> with <code>outline.png</code> and <code>color.png</code> from GitHub repo in a <code>GroupActivities.zip</code> file.</p>
+<p>⚡ Watch out, sometimes the <code>outline.png</code> provided on GitHub are not transparent, and then your app won’t pass App validation. If this is the case for you, make it transparent, add it again to your .zip file.</p>
+<p><img src="images/how-to-deploy-teams-app-templates/4package.gif" alt="package your app."></p>
+<h2 id="publish">Publish</h2>
+<p>The easiest way to publish your app is via Microsoft Teams App Studio – but you can also do it with Visual Studio Code Teams Toolkit.</p>
+<p>If you choose App Studio, upload your .zip file and select publish and then app catalog.</p>
+<p>If you choose Teams Toolkit, you can see potential error even before trying to publish, and the error/warning notifications give you more detail about what was wrong, while App Studio just returns a ‘Something went wrong.’</p>
+<p><img src="images/how-to-deploy-teams-app-templates/6publish.gif" alt="publish."></p>
+<p>Time for a happy dance!</p>
+<hr>
+<p><strong>Principal author</strong>: <a href="https://www.linkedin.com/in/LuiseFreese">LuiseFreese</a></p>
+<hr>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Maturity Model for Microsoft 365</span><br><span>Generated by <strong>DocFX</strong></span>
+            <img src="https://m365-visitor-stats.azurewebsites.net/pnpcoresdk/docs" alt="spacer">
+          </div>
+        </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Auto Apply Retention Labels in Office 365 Using Content Types and Metadata | Microsoft 365 Community Content </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Auto Apply Retention Labels in Office 365 Using Content Types and Metadata | Microsoft 365 Community Content ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../mm4m365logo-small.svg" alt="Microsoft 365 Community Content">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <label class="glyphicon glyphicon-search" for="search-query"></label>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+                
+                  <div class="contribution-panel mobile-hide pull-right">
+                      <a href="https://github.com/sympmarc/Community-Docs/blob/main/docs/articles/auto-apply-retention-labels-in-office-365-using-content-types-and-metadata.md/#L1" title="Edit this page" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                  </div>
+  <h1 id="auto-apply-retention-labels-in-office-365-using-content-types-and-metadata">Auto Apply Retention Labels in Office 365 Using Content Types and Metadata</h1>
+
+[!include[content-disclaimer](includes/content-disclaimer.md)]
+<p>I think we all agree automating as much retention as possible is a good thing. The less we have to rely on information workers to manually apply a retention label, the better. The information architecture you've diligently defined in your tenant can now be leveraged using auto-apply conditions to automatically set a Purview retention label.</p>
+<blockquote>
+<p>Microsoft continues to publish new machine learning trainable classifiers to help with the growing amount of corporate &quot;dark data&quot; (not within a well-defined information architecture). This will apply out-of-the-box and custom classifiers to intelligently apply retention across your tenant by classifying content based on meaning and context. These will not be covered in this post.</p>
+</blockquote>
+<p>Licensing... the capability to auto-apply labels described in this post requires a license for each user who has permissions to edit content that's been automatically labeled in a site. Users who simply have read-only access do not require a license:</p>
+<ul>
+<li>Microsoft 365 E5/A5/G5</li>
+<li>Microsoft 365 E5/A5/G5/F5 Compliance and F5 Security &amp; Compliance</li>
+<li>Microsoft 365 E5/A5/F5/G5 Information Protection and Governance</li>
+<li>Office 365 E5/A5/G5</li>
+</ul>
+<p>Retention labels can currently be auto-applied based on 4 conditions:</p>
+<ul>
+<li>apply label to content containing a sensitive information type (both out-of-the-box and custom)</li>
+<li>apply label to content containing keywords, phrases, or properties (i.e., content types and metadata)</li>
+<li>apply label to content matching a trainable classifier</li>
+<li>apply label to cloud attachments shared in Exchange and Teams (new)</li>
+</ul>
+<p>This post describes the second option above to demonstrate the auto-apply behavior across several column data types and content types in SharePoint. Due to the fact that the retention label isn't applied immediately (controlled by a back-end process that may take up to 7 days to apply the label), this is not a quick test to do. I've spent the time testing this, so I'm sharing the results and learning with you! Please refer to the 'Important things to know' section at the end of this post for some key takeaways on this functionality. I will update the takeaways as I learn more.</p>
+<h4 id="apply-a-retention-label-based-on-a-content-type">Apply a Retention Label based on a Content Type</h4>
+<p>Content type called <em>Contract document</em> has been added to a document library. Retention label called <em>Contract</em> has been created and auto-applied based on the Keyword Query Language (KQL) condition below:</p>
+<p><strong>ContentType:'Contract document'</strong></p>
+<p>The result? Within a week, the <em>Contract</em> retention label was applied to all documents with the content type of <em>Contract document</em> on all SharePoint sites the retention label was published to.</p>
+<h4 id="apply-a-retention-label-based-on-a-choice-metadata-column">Apply a Retention Label based on a Choice Metadata column</h4>
+<p>A choice metadata column, <em>ContractType</em>, has been added to a library. I want to use one of the choice values to set a retention label. The auto-generated managed property from the search schema cannot be used in the auto-apply condition. You must manually map the crawled property to a RefinableString property between 00 and 99 (this Refinable property is pre-built by Microsoft and has all of the correct settings to use it as a condition in an auto-apply policy). For this example, I've mapped the crawled property generated for metadata column, ContractType, to RefinableString00. Retention label called <em>Hardware</em> has been created and auto-applied based on the condition below:</p>
+<p><strong>RefinableString00:Hardware</strong></p>
+<p>The result? Within a week, the <em>Hardware</em> retention label applied to all documents with a choice value of 'Hardware' on the <em>ContractType</em> metadata column on all SharePoint sites the retention label was published to.</p>
+<h4 id="apply-a-retention-label-on-a-compound-condition">Apply a Retention Label on a compound condition</h4>
+<p>What about combining conditions? You can do this too! This test combined a content type name of <em>Contract document</em> with a choice value of <em>Software.</em> A retention label called <em>Software</em> has been created and auto-applied based on the condition below:</p>
+<p><strong>ContentType:'Contract document' AND RefinableString00:Software</strong></p>
+<p>The result? Within a week, the <em>Software</em> retention label applied to all documents with a content type of <em>Contract document</em> and a choice value of 'Software' on the <em>ContractType</em> metadata column on all SharePoint sites the retention label was published to.</p>
+<h4 id="apply-a-retention-label-on-a-date-column--today">Apply a Retention Label on a Date column &lt;= Today</h4>
+<p>Can you include date logic in the condition? Yes. I have added an optional date column, <em>DateExpired</em>, to a library and want to apply the retention label once a date has been entered and is today or in the past. To filter on a date column, you must map it's crawled property to a <em>RefinableDate</em> column (it's queryable), so in this case I mapped it to <em>RefinableDate01.</em> A retention label called <em>Expired Contract</em> has been created and auto-applied based on the condition below:</p>
+<p><strong>RefinableDate01&lt;=TODAY</strong></p>
+<p>The result? Within a week, the <em>Expired Contract</em> retention label applied to all documents when a date either equal to today or in the past has been entered into the <em>DateExpired</em> metadata column on all SharePoint sites the retention label was published to. Note: if a date isn't entered in the column OR a future date is entered in the column, a retention label is not applied.</p>
+<h2 id="important-things-to-know">Important things to know</h2>
+<p>Here are some important things to understand:</p>
+<ol>
+<li>The back-end process to apply the retention label can currently take up to 7 days. If it is your expectation that the label will be updated soon after the metadata or content type is updated, this is incorrect.</li>
+<li>If a retention label is already applied on a document, the auto-apply process will NEVER override/replace the label even if an auto-apply condition is met. Example: if you set the column <em>Contract Type</em> to Software and this auto-applied a label called 'Software', and then you subsequently change the <em>Contract Type</em> to Hardware, the label will not change to 'Hardware' if you had an auto-apply condition set to that condition. The original label, <em>Software</em>, would remain.</li>
+<li>The columns filled in when the label is auto-applied are: <em>Retention label, Retention label applied,</em> and <em>Label setting.</em> The <em>Label applied by</em> is filled in with <em>System Account</em>.</li>
+<li>You can manually remove an automatically-applied retention label by editing the properties (except if the label is a record label, then only a site collection admin can remove it. If the label is a regulatory record label, it cannot be removed). If you remove the retention label, the next time the back-end process runs, it will re-assess the document based on the auto-apply conditions and, if met, re-apply the correct label.</li>
+<li>A simple way to test your conditions before creating your label policies is to enter the query directly into the <em>Microsoft Search</em> box thru the SharePoint UI. It will return the same results.</li>
+<li>Although I've seen other posts where an auto-apply condition was based on a managed metadata term value, my testing only shows success when the managed metadata term set is from the tenant-level term store defined in the SharePoint Admin Center.</li>
+</ol>
+<hr>
+<p><strong>Principal author</strong>: <a href="https://www.linkedin.com/in/joannecklein">Joanne Klein, MVP</a></p>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Maturity Model for Microsoft 365</span><br><span>Generated by <strong>DocFX</strong></span>
+            <img src="https://m365-visitor-stats.azurewebsites.net/pnpcoresdk/docs" alt="spacer">
+          </div>
+        </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+</html>

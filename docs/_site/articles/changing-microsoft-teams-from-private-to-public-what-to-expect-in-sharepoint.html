@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Changing Microsoft Teams from Private to Public, what to expect in SharePoint? | Microsoft 365 Community Content </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Changing Microsoft Teams from Private to Public, what to expect in SharePoint? | Microsoft 365 Community Content ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../mm4m365logo-small.svg" alt="Microsoft 365 Community Content">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <label class="glyphicon glyphicon-search" for="search-query"></label>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+                
+                  <div class="contribution-panel mobile-hide pull-right">
+                      <a href="https://github.com/sympmarc/Community-Docs/blob/main/docs/articles/changing-microsoft-teams-from-private-to-public-what-to-expect-in-sharepoint.md/#L1" title="Edit this page" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                  </div>
+  <h1 id="changing-microsoft-teams-from-private-to-public-what-to-expect-in-sharepoint">Changing Microsoft Teams from Private to Public, what to expect in SharePoint?</h1>
+
+[!include[content-disclaimer](includes/content-disclaimer.md)]<h2 id="privacy-settings">Privacy settings</h2>
+<p>As you may already know, when creating a <a href="https://products.office.com/en-gb/microsoft-teams/group-chat-software">Microsoft Teams</a>, you can choose the privacy settings to be:</p>
+<ul>
+<li>Private</li>
+<li>Public</li>
+<li>Org-wide</li>
+</ul>
+<p><em>Private</em> means only the members added will be able to join the Teams, while <em>Public</em> means that anyone with the link to the Teams can join the fun.
+<em>Org-wide</em> is pretty self explanatory :simple_smile:</p>
+<h2 id="relationship-with-sharepoint-online">Relationship with SharePoint Online</h2>
+<p>Creating a Microsoft Teams will automatically provision/create a SharePoint site. And the privacy settings you've chosen (above) should be respected.</p>
+<p>This means that if you've chosen your Team to be <em>Private</em>, added a few members, then the SharePoint site will only allow access to those members.</p>
+<p>If you navigate to the site, click on the &quot;number&quot; of members on the top right corner of the page, you should see the <strong>Group membership</strong>, which is whoever you've added when creating the Team.</p>
+<p><img src="images/changing-microsoft-teams-from-private-to-public/SiteMembership.png" alt="Site Membership"></p>
+<p>And <strong>Site Permissions</strong> should look like this:</p>
+<p><img src="images/changing-microsoft-teams-from-private-to-public/SitePermissions.png" alt="Site Permissions"></p>
+<h2 id="change-privacy-from-private-to-public">Change privacy from Private to Public</h2>
+<p>Let's change the privacy settings to Public (<em>Your Team -&gt; ellipses -&gt; Edit Team</em>), and go back to SharePoint. Can you spot what changed?</p>
+<p>At the first glance, not much to be honest 😐</p>
+<p>The Group membership is still the same, BUT if you have a look at the <em>Site permissions</em>, there's something new!</p>
+<p><img src="images/changing-microsoft-teams-from-private-to-public/NEWSitePermissions.png" alt="New Site Permissions"></p>
+<p>The &quot;<strong><em>Everyone except external users</em></strong>&quot; group just got added automatically.</p>
+<h3 id="what-does-this-mean">What does this mean?</h3>
+<p>This means that if a user (<em>with the correct licences</em>) knows the site URL, she/he can access the content, and will have <strong>Edit</strong> permissions.</p>
+<p>If the user clicks on the &quot;Conversations&quot; tab in SharePoint, she/he is also part of the Office 365 group fun.</p>
+<p>As for Teams, when the user opens the desktop app or browser version, clicks on <strong>Join or create a Team</strong> on the bottom left corner, the public team is showing up, and the user can join.</p>
+<p><img src="images/changing-microsoft-teams-from-private-to-public/JoinPublicTeams.png" alt="Join Public Teams"></p>
+<p>Changing the privacy settings should be thoughtfully decided, because Public means Public!</p>
+<p><strong>Note:</strong> <em>Joining a public Team doesn't require any approval. Therefore, the user(s) will automatically become Members in Teams and in SharePoint.</em></p>
+<hr>
+<p><strong>Principal author</strong>: <a href="https://www.linkedin.com/in/veronique-lengelle-48a71b31">Veronique Lengelle, MVP</a></p>
+<hr>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Maturity Model for Microsoft 365</span><br><span>Generated by <strong>DocFX</strong></span>
+            <img src="https://m365-visitor-stats.azurewebsites.net/pnpcoresdk/docs" alt="spacer">
+          </div>
+        </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Can Machine Learning be used to assign managed metadata attributes for items? | Microsoft 365 Community Content </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Can Machine Learning be used to assign managed metadata attributes for items? | Microsoft 365 Community Content ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../mm4m365logo-small.svg" alt="Microsoft 365 Community Content">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <label class="glyphicon glyphicon-search" for="search-query"></label>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+                
+                  <div class="contribution-panel mobile-hide pull-right">
+                      <a href="https://github.com/sympmarc/Community-Docs/blob/main/docs/articles/machine-learning-and-managed-metadata.md/#L1" title="Edit this page" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                  </div>
+  <h1 id="can-machine-learning-be-used-to-assign-managed-metadata-attributes-for-items">Can Machine Learning be used to assign managed metadata attributes for items?</h1>
+
+[!include[content-disclaimer](includes/content-disclaimer.md)]
+<p>Metadata adoption is tough.  With the introduction of Machine Learning into the SharePoint ecosystem, Administrators and System Architects are asking if it can be leveraged to reduce our dependency on Users to assign metadata.  This article shares the results of an exploration into the technical capabilities of Machine Learning as it relates to SharePoint Managed Metadata.</p>
+<h2 id="basic-idea">Basic Idea</h2>
+<p>Managed metadata is used to apply structure to unstructured data.  It adds information about the properties of items and their relationships to each other and to the business.  This information is usually not immediately available or easy to parse from the ‘human’ version of the item.  Managed metadata must be accurate and trustworthy, as it drives find-ability, workflow, data governance and lifecycle activities.</p>
+<p>Machine learning uses algorithms to build a mathematical model based on sample data, known as &quot;training data”.  It uses that model to make predictions or decisions without being explicitly programmed to perform the task.</p>
+<p>In machine learning systems, metadata is often used as criteria in the algorithms.  Machine learning, therefore, uses a foundation of managed metadata to work.</p>
+<p>Unsupervised Learning techniques and Active Learning algorithms (outlined in the detail section of this article) may be applicable to informal folksonomy tagging.  However, due to the need for accurate selections, It is not a solution for assigning the more formal and authoritative managed metadata.</p>
+<p>Machine learning is an emerging service where much advancement and evolution are expected over the next few years.</p>
+<h2 id="the-details">The Details</h2>
+<h3 id="metadata-schema">Metadata Schema</h3>
+<p>Your Schema is your metadata organization model, it is the language of your business.  It is the lists and terms needed, what you’ll call them, their hierarchy and what the options are.  The Schema allows you to identify relationships between an item and the organization.</p>
+<p>Our Managed Metadata Schema allows us to describe how these entities are connected, and to define their properties. It is a map of the business that gets applied to information, so people know the context of what they’re looking at.</p>
+<h3 id="machine-learning--ai">Machine Learning / AI</h3>
+<p>A metadata schema is a foundation for Machine Learning/AI.  Without a schema there is no authoritative structure to your business.  Without a schema, machine learning and other emerging and future systems, processes and software don’t understand the relationships of things or how they relate to the business.</p>
+<h3 id="the-purpose-of-metadata">The Purpose of Metadata</h3>
+<p>With Managed Metadata, you can “talk to the search engine and to your Users.  You can tell them a lot about what the piece of content/item/file/data is about.  This provides important context that relates the information to the business.  People and search engines grasp it instantly.</p>
+<p>Context examples include:</p>
+<ul>
+<li>How does this piece of information pertain to my business structure, which divisions or business units is it relevant to.</li>
+<li>What department, titles or people does it relate to.</li>
+<li>Which of my products or customers is it relevant to.</li>
+<li>Where in our workflow and processes does this piece of information have meaning.</li>
+<li>And within each of these criteria’s lifecycles; where is the item today.</li>
+</ul>
+<h2 id="extra-detail">Extra Detail</h2>
+<h3 id="machine-learning-as-it-relates-to-managed-metadata">Machine Learning (as it relates to managed metadata)</h3>
+<p>Machine learning algorithms build a mathematical model based on sample data, known as &quot;training data&quot;, in order to make predictions or decisions without being explicitly programmed to perform the task.</p>
+<p>A few machine learning approaches that relate to Metadata:</p>
+<ul>
+<li><p><strong>Supervised learning</strong> maps an input to an output based on example input-output pairs.</p>
+<ul>
+<li>The algorithm builds a mathematical model from a set of data that contains both the inputs and the desired outputs.</li>
+<li>Example:
+<ul>
+<li>Task to determine whether an image contained a certain object</li>
+<li>Training data would include images with and without that object (the input)</li>
+<li>Each training image would have a label (the output) designating whether it contained the object.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Classification algorithms</strong> identify which set of categories a new item belongs.  They are used when the outputs are restricted to a limited set of values.</p>
+<ul>
+<li>Examples:
+<ul>
+<li>Task that filters emails
+<ul>
+<li>Input would be an incoming email</li>
+<li>Output would be the name of the folder in which to file the email.</li>
+</ul>
+</li>
+<li>Task that identifies spam emails
+<ul>
+<li>Output would be the prediction of either &quot;spam&quot; or &quot;not spam&quot;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Unsupervised learning</strong> is also known as <strong>self-organization</strong>, or <strong>spontaneous order</strong>. Is a process where some form of overall order arises from mathematical cluster analysis.</p>
+<ul>
+<li>Its primary use is in data analysis</li>
+<li>The algorithm builds a mathematical model from a set of data which contains only inputs and no desired output labels.</li>
+<li>Finds structure in the data, like grouping or clustering of data points.</li>
+<li>Discovers patterns in the data, and can group the inputs into categories.</li>
+</ul>
+</li>
+<li><p><strong>Active learning</strong> algorithms are a special interactive case of machine learning where possible results are presented to a human user for selection.</p>
+<ul>
+<li>Its most common uses:
+<ul>
+<li>Predict choice selections from long lists and present a narrowed-down list to the user.</li>
+<li>Unlabeled data is abundant but manual labeling is expensive—such as during technical migrations.</li>
+</ul>
+</li>
+<li>May be a useful way to narrow-down long managed metadata selection lists.</li>
+</ul>
+</li>
+<li><p><strong>Specialized</strong> algorithms are mostly experimental today and have not found standard interpretation.</p>
+<ul>
+<li>One such algorithm is <strong>Meta learning</strong>, where the main goal is to use metadata to improve the performance of existing algorithms or to invent the learning algorithm itself.</li>
+</ul>
+</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>People need managed metadata to find, work with, synthesize and make decisions about or with an item.  Systems need it too, as does workflow.  This information must be accurate and is critical to, among other things, effectively manage and administer data.  For example, you have to understand what the item is in order to decide if it should be retired/archived.</p>
+<p>Your Schema is your metadata organization model, it is the language of your business.  The Schema allows you to identify relationships between an item and the organization.  A metadata schema is a foundation for Machine Learning/AI.  Without a schema there is no authoritative structure to your business data.</p>
+<p>Businesses should focus on developing a schema that is complete and accurately represents all aspects of the business.  Applying that schema to items with managed metadata selections is a human-based activity.  It may be possible for advanced techniques in machine learning to reduce the choices of longer selection lists, however human action is required.</p>
+<p>While this article has focused on technical capabilities, the information outlined does align with statements Microsoft has published about their strategic position for AI.  The following is from their AI product page.  (<strong>emphasis is mine</strong>)
+<em>&quot;We believe that, <strong>when designed with people at the center, AI can extend your capabilities</strong>, free you up for more creative and strategic endeavors, and help you or your organization achieve more.&quot;</em></p>
+<hr>
+<p>Principal author: <a href="https://www.linkedin.com/in/beth-hall-stm">Beth Hall</a></p>
+<hr>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Maturity Model for Microsoft 365</span><br><span>Generated by <strong>DocFX</strong></span>
+            <img src="https://m365-visitor-stats.azurewebsites.net/pnpcoresdk/docs" alt="spacer">
+          </div>
+        </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+</html>

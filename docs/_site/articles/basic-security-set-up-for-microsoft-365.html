@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Basic Security Set Up for Microsoft 365 | Microsoft 365 Community Content </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Basic Security Set Up for Microsoft 365 | Microsoft 365 Community Content ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../mm4m365logo-small.svg" alt="Microsoft 365 Community Content">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <label class="glyphicon glyphicon-search" for="search-query"></label>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+                
+                  <div class="contribution-panel mobile-hide pull-right">
+                      <a href="https://github.com/sympmarc/Community-Docs/blob/main/docs/articles/basic-security-set-up-for-microsoft-365.md/#L1" title="Edit this page" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                  </div>
+  <h1 id="basic-security-set-up-for-microsoft-365">Basic Security Set Up for Microsoft 365</h1>
+
+[!include[content-disclaimer](includes/content-disclaimer.md)]<h2 id="security-within-microsoft-365">Security within Microsoft 365</h2>
+<p>Microsoft 365, as a service, contains many administration portals, options, and configuration settings focused solely on Security. Each service is protected predominantly by Microsoft Entra ID for Authentication, with each application authorizing users to access either the app itself content that resides within. Out of the box, newer tenants have the Security Defaults enabled that implement some necessary and best-practice capabilities. These are a great start; however, they shouldn't be the only configuration organizations should use. Organization-specific security controls and procedures should augment all out of the box configuration.</p>
+<p>Security within Microsoft 365 is not just about enabling features and controls; it also involves the human side of teaching and guiding users to understand the restrictions and what they should be doing to help. Organization Security is a combination of Security Controls and Protection, combined with end-user training and guidance.</p>
+<h2 id="security-licensing">Security Licensing</h2>
+<p>With all of the Microsoft 365 services, many-core security components come with the standard licensing. Features, such as the <strong>Security Defaults</strong>, are included in core licenses; however, most advanced Security capabilities are not. These features are either available as separate add-on licenses or bundled into the either the <strong>Enterprise Mobility + Security E3/A3/G3</strong>, <strong>Enterprise Mobility + Security E5/A5/G5</strong>, <strong>Microsoft 365 E3/A3/G3</strong>, <strong>Microsoft 365 E5/A5/G5</strong>, <strong>Microsoft 365 E5/A5/G5 Security</strong>, and <strong>Microsoft 365 Business Premium</strong>.</p>
+<h2 id="enabling-the-security-defaults">Enabling the Security Defaults</h2>
+<p>The Security Defaults within Microsoft 365 reside within Microsoft Entra ID. By default, all Microsoft 365 Tenants, created on or after October 22nd, 2019, are equipped with these features. Tenants created previous to this date will not be enabled, though they may be available. These controls are available at no extra cost to the organizational license cost.</p>
+<p>These defaults enable five of the most common security features and controls.</p>
+<ol>
+<li>Enforcing Azure Multi-Factor Authentication registration for all users</li>
+<li>Forcing Administrators to use Multi-Factor Authentication</li>
+<li>Block Legacy Authentication protocols</li>
+<li>Requiring all users to perform Multi-Factor Authentication when needed</li>
+<li>Protect privilege access</li>
+</ol>
+<p>A caveat to using these controls is that if you have custom created Conditional Access Policies, you cannot utilize them.</p>
+<p>To enable the Security Defaults:</p>
+<ol>
+<li>Sign in to the <a href="https://entra.microsoft.com">Microsoft Entra admin center</a> as least a <a href="/entra/identity/role-based-access-control/permissions-reference#security-administrator">Security Administrator</a>.</li>
+<li>Browse to <strong>Identity</strong> &gt; <strong>Overview</strong> &gt; <strong>Properties</strong>.</li>
+<li>Select <strong>Manage security defaults</strong>.</li>
+<li>Set <strong>Security defaults</strong> to <strong>Enabled</strong>.</li>
+<li>Select <strong>Save</strong>.</li>
+</ol>
+<p>You can also choose to disable these features and create your own set of security rules and controls, by either not enabling the Security Defaults or if they are enabled setting Security Defaults toggle to <strong>Disabled</strong>. Learn more about the <a href="/azure/active-directory/fundamentals/concept-fundamentals-security-defaults#enabling-security-defaults">Security Defaults provided out of the box</a>.</p>
+<h2 id="custom-security-configuration">Custom Security Configuration</h2>
+<p>There is not a perfect configuration of Security controls or features that can meet every organizational need. There is not a single product that can achieve this, either. Best practice has mandated a mix of controls, features, services, and products to gain a better Security posture for a long time. Microsoft 365 security features are hierarchical, with Microsoft's highest level at the overall service level. Next is the Tenant level, which is then unique to your organization, with a core emphasis on Authentication and Authorization, including perimeter protection. Lastly, are the features available within each application and component, including shared options that span multiple components.</p>
+<p>This design allows more granular control and protections that can cater to your organizational specific configuration. The advantage to this over the Security Defaults is that they are unique to what you need, and the level of risk you wish to accept.</p>
+<h2 id="accepting-the-risk">Accepting the Risk</h2>
+<p>The type of Security protections you might enable or deploy comes down to the level of risk you are willing to accept as an organization. Enabling or Disabling the Security Defaults will be precisely that. For example, when working within Microsoft 365 for Education, the Security Defaults are not the most efficient security controls to use. You may wonder why? If you remember, a core Security Default is forcing all users to register for Multi-Factor Authentication. If you are within a school, such as a High School, this will force all Students to register their Mobile Devices to access services. This approach forces all Students through the registration process, which would require extensive planning and support.</p>
+<p>It then becomes a decision on assuming the risk. If you understand the risk, then the control for this becomes negated. Designing a Security plan for any organization will require this level of thinking and may not provide the security level that an organization needs.</p>
+<h2 id="basic-security-setup">Basic Security Setup</h2>
+<p>Every Microsoft 365 Tenant needs a Security configuration. The out of the box capabilities provide the first line of defense at the service level. Even though Authentication controls are in place, they are not the only controls required.</p>
+<p>There are ten core security controls and features, which will provide a solid foundation for other protections that can be applied as needed by the organization if enabled within all Tenants.</p>
+<p>The following list of Security controls and features outlines the <strong>Business and Security Risk</strong>, <strong>the Protection Features or Components</strong>, and links for <strong>How to Enable</strong> the required protections.</p>
+<h3 id="multi-factor-authentication">Multi-Factor Authentication</h3>
+<p><strong>Risk:</strong> In nearly every Data and Security breach involving a compromised account, simply enabling Multi-Factor Authentication would have blocked the attack. Forcing every authentication request to validate a second factor, such as using an SMS or Token, will limit any malicious actors' ability to use the account.</p>
+<p><strong>Protection:</strong> Best practice dictates not to use SMS/Text messages where possible, as this has been under attack for a long time and is not as secure as it once was. Require end-users to install an Authentication app on their mobile devices that push the request to the device where they can approve as needed. These applications also provide in-time tokens that last a specific time and are available in situations where push notifications are not appropriate or cannot work.</p>
+<p>Multi-Factor Authentication can be explicitly assigned to users or administrators or enforced using Conditional Access Policies. The preferred approach to implementing Conditional Access Policies. These policies provide more granularity when users need to provide the second factor, versus it having to be every time. Administrator Multi-Factor Authentication using Conditional Access Policies can be created and enabled for free, whereas end-user configuration does require every user to have a license that allows this to work.</p>
+<p><strong>How:</strong> To learn how to implement Administrator and User Multi-Factor Conditional Access Policies, use the links below.</p>
+<ul>
+<li><a href="/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa#create-a-conditional-access-policy">Enable a Conditional Access Policy for Multi-Factor for Administrator Accounts</a></li>
+<li><a href="/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa#create-a-conditional-access-policy">Enable a Conditional Access Policy for Multi-Factor for all User Accounts</a></li>
+</ul>
+<p><strong>NOTE:</strong> Be aware that adding a single Microsoft Entra ID P1 or P2 (Plan 1 or Plan 2) for an Administrator will enable the features, but not license it for every user.</p>
+<h3 id="sign-out-inactive-users-automatically">Sign Out Inactive Users Automatically</h3>
+<p><strong>Risk:</strong> Long or non-existent session timeouts leave sessions vulnerable to re-use by people other than the current user. Users of a public computer might close the browser, thinking that they would automatically log them out. An attacker might then re-open the browser some time afterward, re-entering the same session. An attacker with access to the user ID might be able to re-enter the session without re-authenticating.</p>
+<p><strong>Protection:</strong> The Idle session sign-out lets organizations specify when end-users receive a warning and automatically sign out of Microsoft 365. After the specified period of inactivity within SharePoint Online and OneDrive for Business, automatic sign-out occurs. This sign-out activity works using end-user requests sent to SharePoint Online or OneDrive for Business, not by moving the mouse in the browser when accessing either service.</p>
+<p>Users will be signed out from all Microsoft 365 services with a time specified, not just SharePoint Online and OneDrive for Business unless they have selected to stay signed-in. The end-user experience is different if they are inactive in other browser tabs but not in a SharePoint Online or OneDrive for Business one; then, all tabs will stay signed in.</p>
+<p><strong>How:</strong> Learn how to <a href="/sharepoint/sign-out-inactive-users#specify-idle-session-sign-out-settings-in-the-new-sharepoint-admin-center">implement Idle Session Sign-out</a>.</p>
+<h3 id="block-legacy-authentication">Block Legacy Authentication</h3>
+<p><strong>Risk:</strong> Legacy authentication protocols use basic authentication. These protocols, such as POP, SMTP, IMAP, and MAPI, can't enforce any second-factor authentication, making them preferred entry points for malicious actors attacking the organization. More than 99 percent of all password spray attacks within Microsoft Entra ID, utilized legacy authentication. To add, more than 97 percent of all Credential Stuffing attacks against Microsoft Entra ID also used legacy authentication.</p>
+<p><strong>Protection:</strong> Though blocking legacy authentication is critical to the Microsoft 365 Tenant's Security, you need to ensure that all applications and mail protocols used to support the modern authentication approach and work without the legacy capabilities. Such applications and services that utilize legacy authentication are:</p>
+<ul>
+<li><em>Authenticated</em></li>
+<li><em>SMTP</em></li>
+<li><em>Autodiscover (used by Outlook)</em></li>
+<li><em>Exchange ActiveSync</em></li>
+<li><em>Exchange Online PowerShell</em></li>
+<li><em>Exchange Web Services</em></li>
+<li><em>IMAP4</em></li>
+<li><em>MAPI over HTTP (used by Outlook 2010 and later)</em></li>
+<li><em>Offline Address Book</em></li>
+<li><em>Outlook Anywhere (RPC over HTTP)</em></li>
+<li><em>Outlook Service POP3</em></li>
+<li><em>Reporting Web Services</em></li>
+</ul>
+<p>To help identify legacy authentication used within your organization, you can filter the Microsoft Entra Sign-ins and validate that legacy is either required or can be disabled.</p>
+<ol>
+<li>Sign in to the <a href="https://portal.azure.com">Azure Portal</a> as either a Security Administrator or Conditional Access Administrator.</li>
+<li>Click on <strong>Microsoft Entra ID</strong>, then click <strong>Sign-ins</strong></li>
+<li>Add the Client App column by clicking <strong>Columns</strong>, then <strong>Client App</strong></li>
+<li>Click <strong>Add Filters</strong>, then <strong>Client App</strong></li>
+<li>Select all <strong>Legacy Authentication Protocols</strong>, then click <strong>Apply</strong></li>
+</ol>
+<p>Filtering will only show you the attempted sign-ins that used legacy authentication protocols. To view the actual protocol used, you can click onto an entry, and it is displayed.</p>
+<p>Blocking legacy authentication is performed by configuring conditional access policies.</p>
+<p><strong>How:</strong> Learn how to <a href="/azure/active-directory/conditional-access/block-legacy-authentication">block legacy authentication</a>.</p>
+<h3 id="set-user-passwords-to-never-expire">Set User Passwords to Never Expire</h3>
+<p><strong>Risk:</strong> When enforcing periodic password resets, passwords become less secure. Users tend to pick a weaker password and vary it slightly for each reset. This type of behavior can often lead to the re-use of existing passwords, as well as malicious attackers, guessing the password. If a user creates a secure password (long, complicated, and without any pragmatic words present), it should remain as strong in 60 days as it is today.</p>
+<p><strong>Protection:</strong> It is now recommended by the National Institute of Standards and Technology (NIST) to disable password expiration. The guidance is only to force a change or update a password if an account is confirmed as compromised. Microsoft Entra ID provides the ability to set password expiration policies and disable it for specific users or all users.</p>
+<p>There are two options for disabling expiration of passwords:</p>
+<ol>
+<li>Disable password expiration either on a per-user or for the organization within Microsoft Entra ID</li>
+<li>Sync passwords from On-premises Active Directory using Microsoft Entra Connect. This sync includes password policies</li>
+</ol>
+<p><strong>How:</strong> Learn how to implement password expiration policies using the links below.</p>
+<ul>
+<li><a href="/microsoft-365/admin/manage/set-password-expiration-policy">Set the password expiration policy for your organization</a></li>
+<li><a href="/microsoft-365/admin/add-users/set-password-to-never-expire">Set an individual user's password to never expire</a></li>
+</ul>
+<h3 id="banned-password-list">Banned Password List</h3>
+<p><strong>Risk:</strong> It is common practice for end-users to reuse existing passwords across multiple services, whether personal or business. It is also common for easy to discover passwords to be used. When accounts use either common or simple passwords, there is a higher chance of account breach.</p>
+<p><strong>Protection:</strong> Microsoft Entra ID includes a global banned password list, that protects all Microsoft 365 services. Microsoft Entra ID also provides organizations the ability to add a list of banned passwords. As users change their passwords in the cloud, if the new password matches any of the prohibited passwords, the end-user will be notified, and they will need to change the password they typed. The custom banned password feature is limited to 1000 words. It is not for blocking large lists of passwords.</p>
+<p><strong>How:</strong> Learn how to <a href="/azure/active-directory/authentication/tutorial-configure-custom-password-protection">implement a banned password list</a></p>
+<h3 id="external-sharing">External Sharing</h3>
+<p><strong>Risk:</strong> External sharing of content is always a risk for any organization. Due to how SharePoint assigns permissions and control access, data such as Personally Identifiable Information (PII) data might get shared externally with no protections, especially if any external email is allowed. <em>SharePoint External Sharing</em> is a top-level configuration setting which controls sharing content from SharePoint to anyone, including non-corporate accounts. This setting is available at the Tenant organization level, which is utilized at lower levels within Office 365 unless set explicitly at the application level.</p>
+<p><strong>Protection:</strong> Microsoft 365 provides external sharing settings at the tenant and application levels. The decision to modify these settings should be business-related. Setting this to <strong>Only people in your organization</strong>, limits external sharing capabilities. Content can then only be shared using accounts that already exist within the existing Microsoft Entra ID, whether internal users or external guest accounts. Adding external accounts then becomes a controlled process.</p>
+<p><strong>How:</strong> Learn how to <a href="/sharepoint/turn-external-sharing-on-or-off">implement external sharing protections</a></p>
+<h3 id="account-lockout-threshold">Account Lockout Threshold</h3>
+<p><strong>Risk:</strong> Many successful account compromises happen because simple protections aren't defined. The most common is the number of times a password can be entered incorrectly before locking the account. The higher the number, the more times a malicious actor has to <strong>guess</strong> the password freely.</p>
+<p><strong>Protection:</strong> Microsoft Entra Smart lockout uses cloud intelligence to lock out malicious actors trying to guess end-users passwords. The intelligence platform recognizes sign-ins from valid users and treats those differently from those that attackers and other unknown sources. The smart lockout can lock out the attackers yet still allow users to continue to access their accounts. Smart lockout is on by default within all Microsoft Entra instances; however, organizations can customize them as needed. The default setting is ten failed sign-ins, with the recommendation to set lower as required and in conjunction with the organization.</p>
+<p><strong>How:</strong> Learn how to <a href="/azure/active-directory/authentication/howto-password-smart-lockout">implement account lockout threshold</a></p>
+<h3 id="mobile-application-management-policy">Mobile Application Management Policy</h3>
+<p><strong>Risk:</strong> When end-users connect mobile devices to Microsoft 365 if they are Bring-Your-Own-Devices (BYOD), they could sync OneDrive and SharePoint content locally off the corporate network and devices.</p>
+<p><strong>Protection:</strong> Microsoft 365 provides rules that ensure an organization's data remains safe or contained in a managed app. These policies can include rules that block the user's attempt to access or move <em>corporate</em> data or are a set of prohibited or monitored actions users can perform when in the app. Mobile application management policies are independent of a Mobile Device Management (MDM) solution and do not require enrollment of devices.</p>
+<p>The core benefits of Mobile application management (MAM) policies are:</p>
+<ol>
+<li>Protect organizational data at the app level</li>
+<li>End-user productivity isn't affected</li>
+<li>Policies don't apply when app use is in a personal context</li>
+<li>App protection policies make sure that app protections are in place</li>
+</ol>
+<p>Using Mobile application management (MAM) policies will require end-users to have a license for Microsoft Intune assigned to their Microsoft Entra account.</p>
+<p><strong>How:</strong> Learn how to <a href="/mem/intune/apps/app-protection-policies">implement mobile application management policies</a></p>
+<h3 id="block-client-forwarding-rules">Block Client Forwarding Rules</h3>
+<p><strong>Risk:</strong> Client Rules Forwarding Block lets you manage email auto-forwarding in your organization. Using client-side forwarding rules to exfiltrate data to external recipients is becoming an increasingly used vector for attackers.</p>
+<p><strong>Protection:</strong> Exchange Online provides the ability to enable client forwarding rules and disable them. There are three core options:</p>
+<ul>
+<li><strong>Remote Domains</strong> - Set 'Allow automatic forwarding' to disable</li>
+<li><strong>Role-Based Access Control (RBAC)</strong> - Use RBAC to limit the impact by creating a new management role that restricts forwarding and delivery</li>
+<li><strong>Transport Rules</strong> - Implementing a Transport Rule can stop emails set to be Auto-Forwarded to an external address. These transport rules use 'IF' logic. The rule checks if the sender is located 'Inside the organization', along with if the recipient is located 'Outside the organization', and if the message type is 'Auto-Forward', then it rejects the message.</li>
+</ul>
+<p><strong>How:</strong> Learn how to <a href="https://support.microsoft.com/office/stop-auto-forwarding-emails-in-microsoft-365-f9d693ba-5c78-47c0-b156-8e461e062aa7">block and control client forwarding rules</a></p>
+<h3 id="do-not-allow-users-to-grant-consent-to-un-managed-applications">Do not allow users to grant consent to un-managed applications</h3>
+<p><strong>Risk:</strong> Before an application can access organizational data, a end-user must grant the application permissions. By default, all users can consent to applications for permissions that don't require administrator consent. By allowing users to give apps access to data, users can easily acquire useful applications and be productive. However, this configuration can represent a risk if it's not monitored and controlled carefully. There is even a possibility of data exfiltration from the tenant. Attackers can maintain persistent access to services through these integrated apps, without relying on compromised accounts.</p>
+<p><strong>Protection:</strong> Microsoft Entra ID provides two core protections to mitigate the risk.</p>
+<ul>
+<li>Modify how end-user consent applications</li>
+<li>Enable the administrator consent workflow</li>
+</ul>
+<p>When modifying how end-user consent applications, organizations can choose from three options:</p>
+<p>Disable user consent - End-users cannot grant permissions to any apps.
+Users can consent to apps - End-users can only consent to apps published by a verified publisher and registered in the tenant.
+Users can consent to all apps - This option allows all end-users to consent to any permission, which doesn't require admin consent.</p>
+<p><strong>How:</strong> Learn how to manage end-user and administrator app consent, use the links below.</p>
+<ul>
+<li><a href="/azure/active-directory/manage-apps/configure-user-consent">Configure how end-users consent to applications</a></li>
+<li><a href="/azure/active-directory/manage-apps/configure-admin-consent-workflow#enable-the-admin-consent-workflow">Configure the admin consent workflow</a></li>
+</ul>
+<h2 id="security-considerations">Security Considerations</h2>
+<p>With any security configuration, they are only as good as the attacks that are known. New attack types are surfacing almost daily, which could make these controls ineffective. To help mitigate Microsoft 365 provides multiple logging capabilities and reports. Some are straight reports or log entries; others provide feedback or even instruction on how to mitigate.</p>
+<p>It is essential to continually monitor and review these reports and logs, not only to ensure they are working but also to implement further controls and capabilities as they are needed.</p>
+<hr>
+<p><strong>Principal author</strong>: <a href="https://www.linkedin.com/in/liamcleary">Liam Cleary</a></p>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Maturity Model for Microsoft 365</span><br><span>Generated by <strong>DocFX</strong></span>
+            <img src="https://m365-visitor-stats.azurewebsites.net/pnpcoresdk/docs" alt="spacer">
+          </div>
+        </div>
+      </footer>    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>  </body>
+</html>
