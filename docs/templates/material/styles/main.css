@@ -132,6 +132,10 @@ article h4 {
   color: var(--header-ft-color);
 }
 
+.navbar-brand > svg {
+  height: inherit;
+}
+
 .navbar {
   border: none;
   /* Both navbars use box-shadow */
