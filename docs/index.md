@@ -1,5 +1,41 @@
-# Microsoft 365 Community Content
+# Welcome to the Microsoft 365 Community Docs
 
-Learn about Microsoft 365 from the community! All content is community generated.
+* This repo backs the [Microsoft 365 Community Docs](/community-docs) content. If you have suggestion or corrections, read on...
+* If you just landed here, and you have no idea what GitHub is, please go to [Getting Started](https://github.com/MicrosoftDocs/microsoft-365-community/wiki/Getting-Started). If you'd like to learn even more about how to use Github in this context, visit the [Sharing Is Caring Initiative](/sharing-is-caring).
 
-Enjoy the [articles](articles/glossary.md), and if you have something to share, please submit it via the [contributing guidelines](contributing.md).
+## Introduction
+
+This repository is here for YOU. The goal is to build an open source set of content to help people like Information Architects, Business Analysts, "Makers" (aka Citizen Developers), and Site Owners who want to use the Microsoft 365 platform better.
+
+There are lots of other resources for developers, so that isn't our target audience. We may include some code samples or snippets of code in the context of getting something done, but for the most part, any code in this repository will exist to help facilitate conversations between the folks listed above and the developers with whom they work.
+
+Contribute and be a part of history!
+
+## Questions & Help
+
+If you are looking for documentation about something which you feel fits this mold but are coming up short, here are some things you can do by raising an Issue in the Issues list:
+
+* Explain what you need and why, but be realistic about the time frames in which you may see a result. This is an open source effort and we all have day jobs.
+* Suggest an article or set of articles you've seen in blogs or other electronic formats which you think start(s) to get at the issue and might make a good addition here.
+* Write something to fill the gap. Whether it's a germ of an explanation or a full-fledged article, whatever you write can add value to the repository.
+
+## Updates & Feedback
+
+To keep track of Microsoft 365 Community Docs updates, please follow us:
+
+* Twitter: [@M365CommDocs](https://twitter.com/M365CommDocs) and the [#M365CommunityDocs](https://twitter.com/hashtag/M365CommunityDocs) hashtag
+* [Microsoft 365 Community Docs](https://learn.microsoft.com/microsoft-365/community/)
+
+## Have Fun
+
+While we want the content in this repository to be extremely useful, it doesn't need to be dry and flavorless. We want to characterize the feel and joy of getting things done well in addition to the mechanics. Specific examples or analogies can be very useful to make this happen.
+
+## Contributing
+
+This repository is sanctioned by Microsoft and therefore there are some contribution guidelines to follow. If you want to contribute to the discussions, ideas, or articles, you need to have a Github account. We do not want Github to be a barrier to your contributions.
+
+---
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
+contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.

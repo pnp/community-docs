@@ -52,7 +52,7 @@ The goal with documents like this - perhaps a company policy or regulatory filin
 
 ## References
 
-* [Maturity Model for Microsoft 365 - Management of Content Competency](microsoft365-maturity-model--management-of-content.md)
+* [Maturity Model for Microsoft 365 - Management of Content Competency](/maturity-model/competencies/microsoft365-maturity-model--management-of-content.md)
 
 ---
 
