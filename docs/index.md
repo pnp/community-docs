@@ -1,8 +1,5 @@
 # Welcome to the Microsoft 365 Community Docs
 
-* This repo backs the [Microsoft 365 Community Docs](/community-docs) content. If you have suggestion or corrections, read on...
-* If you just landed here, and you have no idea what GitHub is, please go to [Getting Started](https://github.com/MicrosoftDocs/microsoft-365-community/wiki/Getting-Started). If you'd like to learn even more about how to use Github in this context, visit the [Sharing Is Caring Initiative](/sharing-is-caring).
-
 ## Introduction
 
 This repository is here for YOU. The goal is to build an open source set of content to help people like Information Architects, Business Analysts, "Makers" (aka Citizen Developers), and Site Owners who want to use the Microsoft 365 platform better.
@@ -29,13 +26,3 @@ To keep track of Microsoft 365 Community Docs updates, please follow us:
 ## Have Fun
 
 While we want the content in this repository to be extremely useful, it doesn't need to be dry and flavorless. We want to characterize the feel and joy of getting things done well in addition to the mechanics. Specific examples or analogies can be very useful to make this happen.
-
-## Contributing
-
-This repository is sanctioned by Microsoft and therefore there are some contribution guidelines to follow. If you want to contribute to the discussions, ideas, or articles, you need to have a Github account. We do not want Github to be a barrier to your contributions.
-
----
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
