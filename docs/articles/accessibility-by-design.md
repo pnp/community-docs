@@ -1,7 +1,7 @@
 ---
 title: Accessibility by design
 author: MichaelRoth42
-ms.date: 4/11/2021
+ms.date: 9/10/2026
 ms.reviewer: pamgreen
 manager: pamgreen
 ms.topic: overview
@@ -16,7 +16,7 @@ ms.collection: M365Community
 
 ## Introduction
 
-Recently, the topics inclusion and diversity have gained more and more attention. The tech community, in general, is very diverse and does a lot to include people from different backgrounds. But those topics are much bigger than many people realize. Way more people are affected than most of us assume. 
+Recently, the topics inclusion and diversity have gained more and more attention. The tech community, in general, is very diverse and does a lot to include people from different backgrounds. But those topics are much bigger than many people realize. Way more people are affected than most of us assume.
 
 At the same time there are a lot of positive statements, like "We don't want to exclude anyone!". This is a very good starting point, but when we get to the bottom of the statement and ask what is being done to include people from different backgrounds, the discussion often becomes difficult. Many people want to live inclusion actively but don't know how.
 

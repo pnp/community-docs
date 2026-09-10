@@ -1,6 +1,6 @@
 ---
 title: Basic Security Set Up for Microsoft 365
-ms.date: 7/9/2020
+ms.date: 9/10/2026
 author: helloitsliam
 ms.reviewer: pamgreen
 manager: pamgreen
@@ -34,7 +34,7 @@ The Security Defaults within Microsoft 365 reside within Microsoft Entra ID. By 
 These defaults enable five of the most common security features and controls.
 
 1. Enforcing Azure Multi-Factor Authentication registration for all users
-2. Forcing Administrators to use Multi-Factor Authentication
+2. Requiring Administrators to use Multi-Factor Authentication
 3. Block Legacy Authentication protocols
 4. Requiring all users to perform Multi-Factor Authentication when needed
 5. Protect privilege access
@@ -43,7 +43,7 @@ A caveat to using these controls is that if you have custom created Conditional 
 
 To enable the Security Defaults:
 
-1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com) as least a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator).
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com) as least a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) role.
 1. Browse to **Identity** > **Overview** > **Properties**.
 1. Select **Manage security defaults**.
 1. Set **Security defaults** to **Enabled**.
