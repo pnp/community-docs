@@ -1,6 +1,6 @@
 ---
 title: File Naming on an Intranet
-ms.date: 2/13/2023
+ms.date: 9/10/2026
 author: sympmarc
 ms.reviewer: pamgreen
 manager: pamgreen
@@ -19,7 +19,7 @@ ms.collection: M365Community
 
 ## Basic Idea
 
-Over time, you'll want to keep the documents you offer the organization up to date. One problem you'll run into is SharePoint thinking files with different names are totally different, when in fact you want them to be considered versions of the same file.
+We all update documents. The question comes when how do we track and note those updates. Over time, you'll want to keep the documents you offer the organization up to date. One problem you'll run into is SharePoint thinking files with different names are totally different, when in fact you want them to be considered versions of the same file.
 
 ## Examples of Bad Filenames
 

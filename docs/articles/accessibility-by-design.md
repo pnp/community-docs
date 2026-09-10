@@ -1,7 +1,7 @@
 ---
 title: Accessibility by design
 author: MichaelRoth42
-ms.date: 4/11/2021
+ms.date: 9/10/2026
 ms.reviewer: pamgreen
 manager: pamgreen
 ms.topic: overview
