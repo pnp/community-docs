@@ -67,7 +67,7 @@ Note: DLP policies enforce rules for which connectors can be used together by cl
 
 ## Recommendation
 
-It can get relatively complicated when defining your DLP policies, and certainly a consideration that plays a part of defining your Power Platform Environment Strategy, but my recommendation for a day 1 policy is to block everything you can (Note: you can’t block the Microsoft connectors!) and only allow access where there is a justifiable business reason.
+It can get relatively complicated when defining your DLP policies, and certainly a consideration that plays a part of defining your Power Platform Environment Strategy, but my recommendation for a day 1 policy is to block everything you can and only allow access where there is a justifiable business reason. Some core Microsoft connectors are non-blockable, but many Microsoft-owned premium connectors can be placed in the Blocked group. Microsoft ownership alone does not determine whether a connector can be blocked; see Microsoft's [current list of connectors that you can't block](https://learn.microsoft.com/power-platform/admin/dlp-connector-classification#list-of-connectors-that-you-cant-block).
 
 If you want to get clever, then creating DLP policies that are deployed to specific Power Platform Environments and allow access to a single connector such as DocuSign solely for the purpose of a Power Automate solution that runs on your Contracts Management document management site, would be an option.
 
