@@ -1,6 +1,6 @@
 ---
 title: Can Machine Learning be used to assign managed metadata attributes for items?
-ms.date: 3/3/2020
+ms.date: 10/1/2026
 author: sympmarc
 ms.reviewer: pamgreen
 manager: pamgreen
@@ -27,7 +27,7 @@ Machine learning uses algorithms to build a mathematical model based on sample d
 
 In machine learning systems, metadata is often used as criteria in the algorithms.  Machine learning, therefore, uses a foundation of managed metadata to work.
 
-Unsupervised Learning techniques and Active Learning algorithms (outlined in the detail section of this article) may be applicable to informal folksonomy tagging.  However, due to the need for accurate selections, It is not a solution for assigning the more formal and authoritative managed metadata.
+The unsupervised learning techniques and active learning algorithms outlined in this article may be applicable to informal folksonomy tagging.  At the time of this article's original exploration, they were not considered a reliable solution for assigning formal, authoritative managed metadata.  This discussion predates SharePoint Premium taxonomy tagging, described below.
 
 Machine learning is an emerging service where much advancement and evolution are expected over the next few years.
 
@@ -99,7 +99,7 @@ People need managed metadata to find, work with, synthesize and make decisions a
 
 Your Schema is your metadata organization model, it is the language of your business.  The Schema allows you to identify relationships between an item and the organization.  A metadata schema is a foundation for Machine Learning/AI.  Without a schema there is no authoritative structure to your business data.
 
-Businesses should focus on developing a schema that is complete and accurately represents all aspects of the business.  Applying that schema to items with managed metadata selections is a human-based activity.  It may be possible for advanced techniques in machine learning to reduce the choices of longer selection lists, however human action is required.
+Businesses should focus on developing a schema that is complete and accurately represents all aspects of the business.  The conclusions above reflect the techniques explored when this article was written; managed metadata tagging is not necessarily a human-only activity today.  SharePoint Premium taxonomy tagging can automatically apply terms from an organization's term store to supported documents in SharePoint document libraries.  It requires a configured managed metadata column and supports only certain file types; scanned PDFs aren't supported, and existing files are processed when edited rather than automatically when tagging is enabled.  See the [Taxonomy tagging overview](https://learn.microsoft.com/microsoft-365/documentprocessing/taxonomy-tagging-overview) for current requirements and limitations.  Human review remains important to ensure tags are accurate.
 
 While this article has focused on technical capabilities, the information outlined does align with statements Microsoft has published about their strategic position for AI.  The following is from their AI product page.  (**emphasis is mine**)
   *"We believe that, **when designed with people at the center, AI can extend your capabilities**, free you up for more creative and strategic endeavors, and help you or your organization achieve more."*
