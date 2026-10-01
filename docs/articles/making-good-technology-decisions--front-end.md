@@ -26,7 +26,7 @@ In the prior two articles in this series, I’ve gone over how to evaluate your 
 
 SharePoint list forms often are pooh-poohed even by the people who use them. The best thing about them is that when we set up a list, we get those forms for “free”. The forms will ensure that you are entering the right data types and handle all the CRUD operations. The forms are even Content Type aware (and I am a big Content Type fan!); if you change the Content Type, the forms automagically adjust to reflect the appropriate metadata. If you have a list which stands alone with relatively straightforward input needs, the out of the box forms are probably all you will ever need.
 
-A shortcoming of these forms in modern SharePoint is that you cannot build conditional logic between any two or more columns as things currently stand. We used to add JavaScript and CSS to the out of the box forms in classic SharePoint (huzzah, SPServices?), but this is not possible in modern SharePoint. If you are still in classic and you are customizing forms with JavaScript and CSS, read on…
+Modern SharePoint list and library forms support conditional column visibility: you can show or hide a column based on values in other columns. For more involved form behavior, such as cascading dropdowns or logic beyond conditional visibility, you may need to customize the form with Power Apps. Unlike classic SharePoint forms, modern forms do not support adding JavaScript and CSS directly. For details, see [Show or hide columns in a SharePoint form](https://learn.microsoft.com/sharepoint/dev/declarative-customization/list-form-conditional-show-hide).
 
 ## Customized List Forms with Power Apps (Canvas Apps)
 
