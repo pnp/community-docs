@@ -104,26 +104,26 @@ This Power Automate flow creates items in our SharePoint list. Go to [make.power
 
 Create a new list and add columns Teamname, Description, Owner, Privacy, Status, etc.
 
-## Chatbot in Power Virtual Agents
+## Chatbot in Copilot Studio
 
 We will now:
 
-- create a  ChatBot in Power Virtual Agent (PVA)
-- create a Power Automate flow that's called from PVA
+- create an agent in Copilot Studio
+- create a Power Automate flow that's called from Copilot Studio
 - create a 2nd Power Automate flow to provision a Team based on the information we got out of the first flow
-- add our bot as an App to Teams to publish it
+- publish our agent to Teams
 
-### Create a Bot in Power Virtual Agent
+### Create an agent in Copilot Studio
 
-Go to [Power Virtual Agents](https://powerva.microsoft.com) to create a new bot. Create a new topic and enter some trigger phrases. Don't try to be too formal: the chatbot supports natural language understanding powered by LUIS.
+Go to [Copilot Studio](https://copilotstudio.microsoft.com/) to create a new agent. Create a new topic and add trigger phrases so users can ask for a Team in their own words. Copilot Studio provides the conversational authoring and natural language understanding capabilities that were previously available in Power Virtual Agents; LUIS is not required. Learn more about [Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/fundamentals-what-is-copilot-studio).
 
-Outline the conversation in the Authoring Canvas. Ask all the questions we need to have answered to provision a Team like: team name, description, owner, and visibility. You can also ask for the first members or channel names. Save all inputs as Variables and give them easily recognizable names like VarOwner or VarTeamName.
+Outline the conversation in the authoring canvas. Ask all the questions we need to have answered to provision a Team like: team name, description, owner, and visibility. You can also ask for the first members or channel names. Save all inputs as variables and give them easily recognizable names like VarOwner or VarTeamName.
 
-### A flow that's called from PVA
+### A flow that's called from Copilot Studio
 
-Click on the + sign to create the next node after your last question / message in Power Virtual Agent and click on CALL AN ACTION and then CREATE A FLOW
+After your last question or message in Copilot Studio, add a node to call a Power Automate flow. Create a flow for the action, then map the agent's variables to the flow's inputs.
 
-The PVA template will open up in a new browser tab. Save this template with a new name.
+The flow template opens in a new browser tab. Save it with a new name.
 
 ![flow from pva](images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-flow-from-pva.png)
 
@@ -168,20 +168,20 @@ If the user passes the test, he/she will be added to the Educated Group and we l
 ![provisioning flow](images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-provisioningflow.png)
 
 **Microsoft Graph**
-Power Automate doesn't provide an action "Create a Team". Therefore, we will call Microsoft Graph to create teams, add members, create channels, and a lot more, but we first need to authenticate to make this magic happen.
+The [Microsoft Teams connector](https://learn.microsoft.com/connectors/teams/) in Power Automate includes a **Create a team** action. Use that action when it meets your provisioning needs. This example uses Microsoft Graph to create a Microsoft 365 group and then provision a Team from that group; Graph also supports adding members and creating channels. To call Graph, first register an app and configure the required permissions.
 
 <a name='register-an-app-in-azure-ad'></a>
 
 ### Register an app in Microsoft Entra ID
 
-Go to portal.azure.com and click on APP REGISTRATIONS, and click NEW REGISTRATION. Give it a name and save the ID of your tenant and the ID of our App (Client) After that, click on API PERMISSIONS (use APPLICATION) and select MICROSOFT GRAPH. We need to add the `Group.Read.Write.All` permission and grant admin consent for that as well.
+Go to portal.azure.com and click on APP REGISTRATIONS, and click NEW REGISTRATION. Give it a name and save the ID of your tenant and the ID of our App (Client). Then click on API PERMISSIONS, select MICROSOFT GRAPH and add the application permissions required for the Graph operations used in this flow: `Group.ReadWrite.All` to create the Microsoft 365 group and `Team.Create` to create the Team. Grant admin consent. Review the [Create a team](https://learn.microsoft.com/graph/api/team-post?view=graph-rest-1.0) documentation for the current least-privileged permissions and requirements.
 ![Application](images/should-everyone-create-teams/LuiseFreese-LowCodeTeamsProvisioning-Application.png)
 
 To make it work, we also need an App Secret. Please, save this. In this minimal viable product, I just saved it in a variable, better to use Key Vault for that. Regardless where we store the App Secret: You only have ONE chance to save it, as soon as you leave this blade, you can't see it anymore.
 
 ### This is what you need to do in the 2nd flow in Power Automate
 
-Your trigger is WHEN A NEW ITEM IS CREATED (remember, the PVA flow will end with this action, so basically, the PVA flow kicks off our second flow).
+Your trigger is WHEN A NEW ITEM IS CREATED (remember, the Copilot Studio flow will end with this action, so basically, the agent's request kicks off our second flow).
 
 Now we need to initialize the following variables:
 
@@ -218,9 +218,9 @@ Now it's time to use another two HTTP calls for creating the Team and adding the
 
 Please keep in mind to expand the SHOW ADVANCED OPTIONS and enter all authentication information as shown in the Create a group step. Now update your SharePoint list (status is no created) and inform your user with another Adaptive Card in Teams:
 
-### Publish our Bot & add it as an App in Teams
+### Publish our agent & add it as an App in Teams
 
-To publish your Bot, just click on PUBLISH in PVA and choose Microsoft Teams as Channel. Copy the APP ID and open App Studio in Teams, where you can create apps. Paste in this App ID and fill in Name, Description, and some links for your privacy statement and terms of use. As valid Domain use token.botframework.com. Download your app as a package and then install it from Teams App Catalogue.
+Publish your agent from Copilot Studio and make it available in the Microsoft Teams channel. Follow the publishing instructions in Copilot Studio to add the agent to Teams; the available publishing and installation steps depend on your tenant and Teams app policies.
 
 This is our result as a gif:
 
@@ -237,8 +237,8 @@ If you don't like the chatbot approach, you can also work with a request form in
 Licensing for this solution isn't covered by Microsoft 365 E3 or E5 subscription:
 
 - The HTTP connector is a Premium connector and requires therefore a Power Automate Standalone Plan [Learn more about Power Platform licensing.](/power-platform/admin/powerapps-flow-licensing-faq)
-- Power Virtual Agents needs to be purchased separately, [more info here](https://powervirtualagents.microsoft.com/pricing/)
-- If you use a Power Apps Canvas App instead of Power Virtual Agents, you will still need a Standalone License because of the HTTP connector.
+- Copilot Studio licensing is separate from Microsoft 365 E3 or E5; review [Copilot Studio pricing](https://www.microsoft.com/microsoft-copilot-studio/pricing).
+- If you use a Power Apps Canvas App instead of Copilot Studio, you will still need a Standalone License because of the HTTP connector.
 
 ---
 
