@@ -1,6 +1,6 @@
 ---
 title: The Power Platform DLP policies you should be considering on Day 1
-ms.date: 2026/10/1
+ms.date: 10/1/2026
 author: aaronrendell
 ms.reviewer: pamgreen
 manager: pamgreen
